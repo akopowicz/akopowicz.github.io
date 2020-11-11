@@ -1,0 +1,23 @@
+.outer {
+  width: 400px;
+  height: 400px;
+  background-color: #a6a9b6;
+  position: relative;
+  border: 10px solid #666360;
+}
+
+.inner {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+
+div div:first-child {
+  background-color: #ff912e;
+  bottom: 0;
+}
+
+div div:last-child {
+  background-color: #e4e4e4;
+  right: 0;
+}
