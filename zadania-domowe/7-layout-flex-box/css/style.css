@@ -78,3 +78,23 @@ footer {
         height: 8vh;
     }
 }
+
+@media (min-width: 992px) {
+
+    .container {
+        font-size: 1.7em;
+    }
+
+    article {
+        flex-basis: 60%;
+    }
+
+    .aside-right {
+        flex-basis: 20%;
+    }
+
+    .aside-left {
+        flex-basis: 20%;
+        order: -3;
+    }
+}
