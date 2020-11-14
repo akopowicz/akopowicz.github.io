@@ -298,11 +298,11 @@ footer {
         display: none;
     }
 
-    #drop-nav:checked + .ul {
+    #drop-nav:checked + ul {
         display: block;
     }
 
-    .main-menu ul li {
+    .main-menu ul .menu-item {
         display: block;
         text-align: right;
         margin: 0;
