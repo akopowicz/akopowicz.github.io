@@ -1,0 +1,89 @@
+#pracownicy {
+  background-color: rgb(250, 250, 250); 
+  width: 40%;
+  padding: 10px;
+  box-shadow: 1px 1px 5px rgb(220, 224, 230);
+}
+  
+h2 {
+  color: rgb(49, 57, 65);
+}
+  
+#title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: rgb(62, 70, 78);
+}
+  
+div[id^="pracownik"] {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 2px -2px rgb(150, 161, 170);
+}
+  
+.pracownik {
+  position: absolute;
+}
+  
+.czas {
+  width: 100px;
+  margin-left: 230px;
+  font-size: 14px;
+  border: none;
+  background-color: rgb(250, 250, 250);
+  color: rgb(73, 86, 109);
+}
+  
+.stawka {
+  width: 120px;
+  font-size: 14px;
+  border: none;
+  background-color: rgb(250, 250, 250);
+  color: rgb(73, 86, 109);
+}
+  
+.wyplata {
+  color: rgb(40, 54, 80);
+  font-size: 17px;
+}
+  
+#oblicz {
+  margin-top: 30px;
+  padding: 5px 10px;
+  border: none;
+  height: 40px;
+  width: 150px;
+  background-color: rgb(57, 67, 85);
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+}
+  
+#oblicz:hover {
+  background-color: rgb(29, 54, 100);
+}
+
+h3 {
+  color: rgb(10, 33, 161);
+}
+
+#najlepsi-pracownicy {
+  display: flex;
+  color: rgb(10, 33, 161);
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.red-background,
+.red-background > .pracownik,
+.red-background > .wyplata,
+.red-background > .czas,
+.red-background > .stawka   {
+  background-color: rgb(134, 0, 52);;
+  color: white;
+  margin-top: 5px;
+}
