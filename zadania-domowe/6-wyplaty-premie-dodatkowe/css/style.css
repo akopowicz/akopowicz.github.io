@@ -80,10 +80,10 @@ h3 {
 }
 
 .red-background,
-.red-background > .pracownik,
-.red-background > .wyplata,
-.red-background > .czas,
-.red-background > .stawka   {
+.red-background .pracownik,
+.red-background .wyplata,
+.red-background .czas,
+.red-background .stawka   {
   background-color: rgb(134, 0, 52);;
   color: white;
   margin-top: 5px;
