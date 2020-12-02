@@ -19,7 +19,6 @@ const ocenyKoncowe = () => {
           przedmiot.setAttribute('value', ocenaDodatkowa);
         }
   
-  
         if (przedmiot.value == 1) {
           uczen.classList.add('zli-uczniowie')
         }
