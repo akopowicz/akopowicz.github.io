@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#pracownicy {
+    background-color: #f4fafc;
+    width: 75%;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 0 4px 7px #CFD8DC, 0 2px 3px #afb7bb;
+    position: relative;
+}
+
+h2 {
+    color: #455A64;
+    margin-left: 20px;
+}
+
+#title {
+    margin-top: 20px;
+    font-weight: 600;
+    color: #536DFE;
+}
+
+.uczen {
+    position: absolute;
+    left: 30px;
+}
+
+#title .uczen {
+    left: 0;
+}
+
+.matematyka  {
+    margin-left: 220px;
+}
+
+#title span {
+    margin-left: 30px;
+}
+
+#title .matematyka {
+    margin-left: 200px; 
+}
+
+div#pracownicy div[id^='uczen']  {
+    margin-top: 10px;
+    box-shadow: 0 2px 3px -2px #CFD8DC;
+    padding-top: 3px;
+}
+
+input[type=number] {
+    background-color: #f4fafc;
+    width: 3%;
+    border: none;
+    text-align: right;
+}
+
+div[id^='uczen'] .polski {
+    margin-left: 80px;
+}
+
+div[id^='uczen'] .biologia {
+    margin-left: 30px;
+}
+
+div[id^='uczen'] .geografia {
+    margin-left: 60px;
+}
+
+div[id^='uczen'] .fizyka {
+    margin-left: 50px;
+}
+
+div[id^='uczen'] .chemia {
+    margin-left: 40px;
+}
+
+div[id^='uczen'] .informatyka {
+    margin-left: 60px;
+}
+
+.srednia {
+    position: absolute;
+    right: 40px;
+}
+
+div[id^='uczen'] .srednia {
+    position: absolute;
+    right: 60px;
+}
+
+.zajecia-dodatkowe {
+    margin-left: 40px;
+    width: 200px;
+    background-color: #f4fafc;
+    border: none;
+    text-align: center;
+}
+
+#title .zajecia-dodatkowe {
+    margin-left: 50px;
+}
+
+#oblicz {
+    display: block;
+    margin: 40px auto 20px;
+    padding: 10px 120px;
+    background-color: #455A64;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    font-weight: 600;
+}
+
+#oblicz:hover {
+    background-color: #536DFE;
+}
+
+
+.najlepsi-uczniowie,
+.najlepsi-uczniowie input[type=number], 
+.najlepsi-uczniowie input[type=text]  {
+    background-color: rgb(14, 128, 136);
+    color: white;
+    padding: 2px 0;
+}
+
+.zli-uczniowie,
+.zli-uczniowie input[type=number], 
+.zli-uczniowie input[type=text] {
+    background-color: rgb(206, 64, 100);
+    color: white;
+    padding: 2px 0;
+}
