@@ -20,14 +20,14 @@
 .first {
     right: 130px;
     animation-name: jump;
-    animation-duration: .5s;
+    animation-duration: .7s;
     animation-iteration-count: infinite; 
 }
   
 .second {
     right: 90px;
     animation-name: jump;
-    animation-duration: .5s;
+    animation-duration: .7s;
     animation-iteration-count: infinite;
     animation-delay: .1s;
 }
@@ -35,7 +35,7 @@
 .third {
     right: 50px;
     animation-name: jump;
-    animation-duration: .5s;
+    animation-duration: .7s;
     animation-iteration-count: infinite;
     animation-delay: .2s;
 }
@@ -43,7 +43,7 @@
 .fourth {
     right: 10px;
     animation-name: jump;
-    animation-duration: .5s;
+    animation-duration: .7s;
     animation-iteration-count: infinite;
     animation-delay: .3s;
 }
