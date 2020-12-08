@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#preloader {
+    display: none;
+}
+  
+.ball {
+    display: inline-block;
+    background-color: #13326c;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 0;
+}
+  
+.first {
+    right: 130px;
+    animation-name: jump;
+    animation-duration: .5s;
+    animation-iteration-count: infinite; 
+}
+  
+.second {
+    right: 90px;
+    animation-name: jump;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-delay: .1s;
+}
+  
+.third {
+    right: 50px;
+    animation-name: jump;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-delay: .2s;
+}
+  
+.fourth {
+    right: 10px;
+    animation-name: jump;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-delay: .3s;
+}
+  
+  
+@keyframes jump {
+    0%, 100% {
+        bottom: 0;
+        background-color: #13326c;;
+    }
+  
+    50% {
+        bottom: 20px;
+        background-color: #ff7900;
+    }
+}
