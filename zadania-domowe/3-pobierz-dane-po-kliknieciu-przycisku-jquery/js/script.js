@@ -7,7 +7,7 @@ $(document).ready(function() {
 
         //     let pId = $('<p></p>').text(`Id: ${data.id}`);
         //     let pUserId = $('<p></p>').text(`User Id: ${data.userId}`);
-        //     let pTitle = $('<p></p>').text(`Title: ${data.text}`);
+        //     let pTitle = $('<p></p>').text(`Title: ${data.title}`);
         //     let pBody = $('<p></p>').text(`Body: ${data.body}`);
         //     let hr = $('<hr />');
 
