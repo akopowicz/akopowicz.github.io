@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nauka rosyjskego</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <title>Nauka Rosyjskiego</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
     <header>
         <nav class="navigation">
             <div id="hamburger">
@@ -40,47 +43,66 @@
                     <p class="right-4">язык</p>
                 </div>
             </div>
-
+        
 
             <div id="quotes">
                 <div id="quotes-pl">
                     <div id="quote"></div>
                     <div id="autor"></div>
                 </div>
+
+                <div id="quotes-rus">
+                    <div id="quote-rus"></div>
+                    <div id="autor-rus"></div>
+                </div>
             </div>
         </div>
     </header>
 
-    <div class="section-2 image-background">
+
+    <section id="photo" class="section-2 image-background">
         <div class="color-overlay"></div>
-        <h2>Привет!</h2>
+        <h2></h2>
         <p>Gotowy na naukę rosyjskiego?</p>
 
         <a href="" class="button">Zaczynamy!</a>
-        
-    </div>
+    </section>
 
     <section class="section-3">
         <div class='part-1'>
-            <h3>Cześć!</h3>
-            <p>Miło mi, że moja strona zainteresowała Cię. Przygotowałam specjalnie dla Ciebie serię kilku darmowych lekcji.</p>
-            <p>Czekają na Ciebie m.in. <a href="">alfabet rosyjski</a>, <a href="">liczby</a>, <a href="">słownictwo związanem z kulturą i sztuką</a> i wiele więcej. Nie czekaj dłużej i przejdź do pierwszej lekcji! </p>
+            <h3>Informacje</h3>
+            <p>Miło mi, że moja strona Cię zainteresowała. Przygotowałam <span>specjalnie dla Ciebie</span> serię kilku darmowych lekcji.</p>
+            <p>Czekają na Ciebie m.in. <a href="">alfabet rosyjski</a>, <a href="">liczby</a>, słownictwo związane z <a href="">kulturą i sztuką</a> i wiele więcej. Nie czekaj dłużej i przejdź do pierwszej lekcji!</p>
+            <p>To co zaczynamy?</p>
+            <div class="button-container">
             <a href="" class="button">Zaczynamy!</a>
+             </div>
             <div class="matrioshka"></div>
         </div>
-        
 
         <div class='part-2'>
             <h3>Kilka słów o mnie</h3>
             <p>Mam na imię Ania i jestem kreatywną znawczynią jezyka rosyjskiego a ostatnio również wielką miłośniczką programowania i projektowania stron internetowych.</p>
             <p>Postanowiłam połączyć swoje umiejętności i zainteresowania i w ten oto sposób powstała ta strona. Mam nadzieję, ze zainspiruje Cię ona do nauki a także do zgłębienia wiedzy o kulturze rosyjskiej. </p>
-            <p>Życzę Ci przyjemnego pobytu na mojej stronie!</p>
+            <p class="wishes">Życzę Ci przyjemnego pobytu na mojej stronie!</p>
             <div class="my-photo"></div>
         </div>
         <div class='part-1'></div>
     </section>
 
-   <footer>Copyrights Anna Kopowicz</footer>
+    <section id="footer" class="footer">
+    <footer>
+        <h3>Przydatne linki:</h3>
+        <ul class="links">
+            <li class="przydatne-linki"><a href="https://www.hermitagemuseum.org/wps/portal/hermitage/panorama/virtual_visit/panoramas-m-1/?lng=pl" target="_blank">Muzeum Ermitaż</a></li>
+            <li class="przydatne-linki"><a href="https://rusneb.ru/" target="_blank" rel="noopener noreferrer">Biblioteka online</a></li>
+            <li class="przydatne-linki"><a href="https://www.culture.ru/" target="_blank" rel="noopener noreferrer">Kultura</a></li>
+            <li class="przydatne-linki"><a href="https://arzamas.academy/" target="_blank">Arzamas Academy</a></li>
+            <li class="przydatne-linki"><a href="https://postnauka.ru/" target="_blank">Postnauka</a></li>
+        </ul>
+        <hr>
+        <p>Copyrights Anna Kopowicz</p></footer>
+    </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-compat/3.0.0-alpha1/jquery.min.js"
         integrity="sha512-4GsgvzFFry8SXj8c/VcCjjEZ+du9RZp/627AEQRVLatx6d60AUnUYXg0lGn538p44cgRs5E2GXq+8IOetJ+6ow=="

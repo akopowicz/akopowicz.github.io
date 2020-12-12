@@ -4,7 +4,6 @@
     font-family: "Roboto", sans-serif;
     box-sizing: border-box;
     overflow-x: hidden;
-    
 }
 
 
@@ -12,7 +11,6 @@
     position: absolute;
     opacity: 0;
 }
-
 
 #hamburger {
     width: 30px;
@@ -56,40 +54,73 @@ ul .navigation-list {
 
 ul .navigation-list:first-of-type {
     padding-top: 100px;
-    
 }
 
-ul li a {
+.side-menu li a {
     text-decoration: none;
     color: black;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 24px;
     text-transform: uppercase;
 }
 
-
 #quotes {
-    background-color: white;
-    width: 90%;
-    min-height: 250px;
-    margin: auto;
-    text-align: right;    
+    margin: 80px 0 0 0;
+    width: 100%;
+    height: 200px;
+    position: relative;
 }
 
-
+#quotes-pl {
+    width: 85%;
+    position: absolute;
+    right: 10px;
+}
 
 #quote {
-    padding-top: 90px;
-    font-size: 18px;
+    font-size: 24px;
+    color: rgb(1, 98, 140);
+    font-weight: 600;
+    text-align: right;
 }
 
 #autor {
-    font-style: italic;
-    margin-top: 5px;
-    font-size: 12px;
+    color: rgb(116, 127, 132);
+    font-size: 18px;
+    text-align: right;
+    margin-top: 15px;
 }
 
+#quotes-rus {
+    width: 85%;
+    position: absolute;
+    right: 10px;
+    background-color: white;
+    opacity: 0;
+    transition: all .8s;
+}
 
+#quotes-rus.visible {
+   opacity: 1;
+}
+
+#quote-rus {
+    font-size: 24px;
+    color: rgb(1, 98, 140);
+    font-weight: 600;
+    text-align: right;
+}
+
+#autor-rus {
+    color: rgb(116, 127, 132);
+    font-size: 18px;
+    text-align: right;
+    margin-top: 15px;
+}
+
+.section-2 {
+    margin-top: 10px;
+}
 
 .image-background {
     width: 100%;
@@ -97,9 +128,9 @@ ul li a {
     position: relative;
     background-image: url(../images/pexels-vierro-3629813.jpg);
     background-size: cover;
-    
-    
-}
+    text-align: center;  
+    box-shadow: 0 4px 3px rgba(214, 221, 224, 1);  
+} 
 
 .color-overlay {
     width: 100%;
@@ -107,103 +138,182 @@ ul li a {
     background: rgba(0, 0, 0, .9);
     opacity: .6;
     position: absolute;
-  }
+}
 
-
-  h2 {
+h2 {
     position: relative;
     color: rgb(255, 152, 0);
     z-index: 10;
-    left: 50px;
-    top: 90px;
+    font-size: 30px;
+   top: 90px;
+  }
+
+  h2::after {
+    content: "";
+    animation-name: hi;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
   }
 
   .image-background p {
       position: relative;
     color: rgb(255, 212, 149);
     z-index: 10;
-    left: 50px;
-    top: 100px;
+  font-size: 24px;
+  top: 100px;
+
   }
-
-
 
   .button {
-      background-color: rgb(12, 154, 216);
-      padding: 10px 18px;
-      left: 90px;
-      top: 150px;
-      z-index: 10;
-      position: relative;
-      text-decoration: none;
-      color: white;
-      font-weight: 600;
-      border-radius: 20px;
-  }
+    background-color: rgb(12, 154, 216);
+    padding: 14px 20px;
+    top: 150px;
+    z-index: 10;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 50px;
+    font-size: 18px;
+    transition: all .2s;
+}
 
-.part-1 {
-    margin-top: 80px;
-    width: 80%;
-    margin-left: 45px;
+.button:hover {
+    background-color: rgba(1, 98, 140, 1);
+}
+
+.section-3 {
+    padding: 60px 0;
+    background-color: rgba(245, 249, 251, 1);
+}
+
+.part-1,
+.part-2 {
+    width: 85%;
+    margin-left: auto;
 }
 
 h3 {
-    color: rgb(12, 154, 216);
+    color: rgb(1, 98, 140);
+    font-size: 24px;
     margin-bottom: 25px;
 }
 
 .section-3 p {
     margin-bottom: 20px;
+    text-align: justify;
+    width: 90%;
+    color: rgb(98, 104, 112);
+    font-size: 18px;
+}
+
+.section-3 p span {
+    font-weight: 600;
 }
 
 .part-1 p:last-of-type {
-    margin-bottom: 40px; 
+    margin-bottom: 20px;
+    color: rgb(245, 183, 91); 
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
 }
+
 .part-1 a {
     text-decoration: none;
-    color: rgb(5, 96, 163);
+    color: rgb(12, 154, 216);
+    transition: .2s;
+}
+
+.part-1 a:hover {
+    color: rgb(245, 183, 91);
+}
+
+.button-container {
+    width: 90%;
+    text-align: center;
+    height: 60px;
 }
 
 .part-1 .button {
     color: white;
-    top: 5px;
-    left: 50px;
-   
-
+    top: 20px;  
 }
+
+.part-1 .button:hover {
+    color: white;
+}
+
   .matrioshka {
       background-image: url(../images/pexels-cottonbro-4966168.jpg);
       background-repeat: no-repeat;
-      width: 90%;
-      height: 200px;
+      width: 300px;
+      height: 300px;
       background-position: 0px -125px;
       background-size: 100%;
-      margin-top: 30px;
-      
-    
+      margin: 50px 0 70px 0;
+      box-shadow: 0 3px 3px rgba(214, 221, 224, 1);
   }
 
-  .part-2 {
-    width: 80%;
-    margin-left: 45px;
-    margin-top: 60px;
-}
 
 .my-photo {
     background-image: url(../images/IMG_2586-1-2.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 90%;
-    height: 200px;
-    background-position: 0px 0px;
-    margin-top: 30px;
-    box-shadow: 0 4px 2px -2px gray;
+    width: 300px;
+    height: 400px;
+    background-position: 0px -5px;
+    margin: 50px 0 70px 0;
+    box-shadow: 0 3px 6px rgba(214, 221, 224, 1);
+  
 }
 
-footer {
-    background-color: rgb(5, 96, 163);
+.part-2 .wishes {
+    color: rgb(245, 183, 91);
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+
+.footer {
+    background-color: rgb(1, 98, 140);
     color: white;
     padding: 10px; 
     text-align: center;
-    margin-top: 50px;
 }
+
+.footer h3 {
+    color: white;
+}
+
+.footer ul .przydatne-linki a {
+    text-decoration: none;
+    font-size: 24px;
+    color: rgb(255, 243, 224);
+}
+
+.footer hr {
+    border-color: rgba(91, 169, 203, 1);
+    margin: 20px 0;
+}
+
+.footer p {
+    margin: 20px 0;
+}
+
+
+
+
+
+
+ @keyframes hi {
+      0% {
+          content: "Привет!";
+      }
+     
+      100% {
+          content: "Cześć!";
+      }
+  } 
