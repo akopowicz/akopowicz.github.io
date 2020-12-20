@@ -3,10 +3,8 @@ let navItem = document.getElementsByClassName('navigation-item');
 let navActive = document.querySelector('.visible');
 
 let hamburger = document.querySelector('.hamburger');
-console.log(hamburger)
 
-let navbarMenu = document.querySelector('.navbar-menu');
-console.log(navbarMenu)
+let navbarMenu = document.querySelector('.navigation-menu');
 
 const menuItem = () => {
     navbarMenu.classList.toggle('show-menu');
