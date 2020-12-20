@@ -1,0 +1,16 @@
+footer {
+    text-align: center;
+    margin: 0;
+    
+    hr {
+        border-bottom: none;
+        border-color: $primary-color;
+        width: 80%;
+        margin: auto;
+    }
+
+    p {
+        padding: 10px 0;
+        color: $primary-color;
+    }
+}
