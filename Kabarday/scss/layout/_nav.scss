@@ -1,0 +1,180 @@
+.main-navigation {
+    width: 100%;
+
+    &.absolute {
+        position: absolute;
+        top: 0;
+    }
+
+    .container {
+        display: flex;
+        height: 80px;
+        position: relative;
+
+        .logo {
+            height: 80px;
+            background-color: rgba(0, 0, 0, .3);
+            position: absolute;
+            left: 0;
+            z-index: 10000;
+            transition: all 5s;
+
+            &:hover {
+                height: 60vh;
+            }
+
+            img {
+                height: 100%;
+            }
+        } 
+
+        .hamburger {
+            color: white;
+            font-size: 1.8em;
+            position: absolute;
+            z-index: 2000;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .navigation-menu {
+            position: absolute;
+            top: -400px;
+            opacity: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, .6);
+            z-index: 1000;
+            padding: 0;
+            height: auto;
+            transition: all 1s;
+            
+            &.show-menu {
+                opacity: 1;
+                top: 80px;
+            }
+
+            li {
+                padding: 10px;
+                width: 200px;
+                text-align: center;
+                font-size: 30px;
+                            
+                .navigation-item {
+                    color: white;
+                    text-transform: uppercase;
+                }
+            }
+        } 
+    }
+
+    &.reverse {
+        .container {
+            
+            .logo {
+                background-color: rgba(0, 0, 0, .7);
+            }
+            .hamburger {
+                color: $primary-color;
+            }
+
+            .navigation-menu {
+                background-color: rgba(0, 0, 0, .8);
+            }
+        }
+    }
+}
+
+@media all and (min-width: $medium) {
+
+    .main-navigation {
+        
+        .container {
+    
+            .logo {
+    
+                &:hover {
+                    height: 100vh;
+                    animation-name: logo-animation;
+                    animation-duration: 10s;
+                }
+            } 
+    
+            .hamburger {
+               display: none;
+            }
+    
+            .navigation-menu {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                opacity: 1;
+                background-color: transparent;
+               
+    
+                li {
+                    padding: 0;
+                    width: auto;
+                    font-size: initial;
+                    display: inline-block;
+                    margin-left: 10px;
+                                
+                    .navigation-item {                    
+                        transition: all 2s;
+
+                        &.visible {
+                            background-color: rgba(0, 0, 0, .5);
+                            padding: 2px 10px;
+                        }
+
+                        &:hover {
+                            background-color: rgba(0, 0, 0, .5);
+                            padding: 2px 10px;
+                        }
+                    }
+                }
+            } 
+
+            @keyframes logo-animation {
+                0% {
+                    left: 0;
+                }
+        
+                50%, 100% {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+
+       
+    
+        &.reverse {
+            .container {
+                .navigation-menu {
+                    background-color: transparent;
+                   
+        
+                    li {                                    
+                        .navigation-item {  
+                            color: $primary-color;                  
+    
+                            &.visible {
+                                background-color: rgba(0, 0, 0, .6);
+                                padding: 2px 10px;
+                                color: white;
+                            }
+    
+                            &:hover {
+                                background-color: rgba(0, 0, 0, .6);
+                                padding: 2px 10px;
+                                color: white;
+                            }
+                        }
+                    }
+                } 
+            }
+        }
+    }
+}
+
