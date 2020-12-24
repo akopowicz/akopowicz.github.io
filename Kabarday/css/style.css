@@ -102,6 +102,10 @@ li {
     animation-name: logo-animation;
     animation-duration: 10s;
   }
+  .main-navigation .container .logo.logo-back {
+    animation-name: logo-animation-back;
+    animation-duration: 10s;
+  }
   .main-navigation .container .hamburger {
     display: none;
   }
@@ -137,6 +141,15 @@ li {
     50%, 100% {
       left: 50%;
       transform: translateX(-50%);
+    }
+  }
+  @keyframes logo-animation-back {
+    0% {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    50%, 100% {
+      left: 0;
     }
   }
   .main-navigation.reverse .container .navigation-menu {
@@ -224,6 +237,7 @@ li {
 .session-header {
   background-image: url("../img/galeria-2/liadine_DSC7792.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   height: 70vh;
   box-shadow: 0 0 10px #acacac, 0 0 5px #d8d8d8;
   position: relative;
@@ -365,6 +379,258 @@ li {
   .session-header {
     background-position-y: -80px;
   }
+}
+
+.header-1 {
+  background-image: url(../img/galeria-1/galeria-3.jpg);
+  background-size: cover;
+  background-position: -150px 0px;
+}
+
+.header-2 {
+  background-image: url(../img/galeria-2/liadine_DSC7772.jpg);
+  background-position: -150px 0px;
+}
+
+.header-3 {
+  background-image: url(../img/galeria-3/DSC_0901.jpg);
+}
+
+.header-4 {
+  background-image: url(../img/galeria-4/_DSC8872.jpg);
+  background-position: center;
+}
+
+.header-5 {
+  background-image: url(../img/galeria-5/IMG_2298.jpg);
+}
+
+.autors {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.autors span {
+  font-weight: 300;
+}
+
+.autors span a {
+  color: black;
+  transition: all .3s;
+}
+
+.autors span a:hover {
+  color: #5f5f5f;
+}
+
+.gallery-section {
+  padding-bottom: 60px;
+}
+
+.gallery-section .container {
+  padding: 0;
+}
+
+.gallery-section .container .img-gallery {
+  height: 500px;
+  margin: auto;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.gallery-section .container .img-gallery.photo-1 {
+  object-position: 10% 0;
+}
+
+.gallery-section .container .img-gallery.photo-4 {
+  object-position: 10% 0;
+}
+
+.gallery-section .container .img-gallery.gallery-2-photo-2 {
+  object-position: 10% 0;
+}
+
+.gallery-section .container .img-gallery.gallery-2-photo-5 {
+  object-position: -300px 0;
+}
+
+.gallery-section .container .arrow {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 60px;
+}
+
+.gallery-section .container .arrow .arrow-link {
+  display: flex;
+  align-content: center;
+  color: #5f5f5f;
+}
+
+.gallery-section .container .arrow .arrow-link i {
+  font-size: 20px;
+  padding: 0 5px;
+}
+
+.gallery-section .container .arrow .arrow-link.invisible {
+  opacity: 0;
+  cursor: none;
+}
+
+@media all and (min-width: 425px) {
+  .header-2 {
+    background-position: -50px 0px;
+  }
+  .gallery-section .container .img-gallery.gallery-2-photo-5 {
+    object-position: -200px 0;
+  }
+}
+
+@media all and (min-width: 458px) {
+  .header-2 {
+    background-position: -10px 0px;
+  }
+}
+
+@media all and (min-width: 520px) {
+  .gallery-section .container .img-gallery.gallery-2-photo-3 {
+    object-position: 0 -100px;
+  }
+  .gallery-section .container .img-gallery.gallery-2-photo-4 {
+    object-position: 0 1px;
+  }
+}
+
+@media all and (min-width: 550px) {
+  .header-2 {
+    background-position: 0px 0px;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .header-1 {
+    background-position: 0px 0px;
+  }
+}
+
+@media all and (min-width: 724px) {
+  .header-2 {
+    background-position: 0px -30px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .header-1 {
+    background-position: 0 -100px;
+  }
+  .header-5 {
+    background-position: 0 -100px;
+  }
+  .gallery-section .container .flex {
+    justify-content: center;
+    text-align: center;
+  }
+  .gallery-section .container .flex .img-gallery {
+    height: 500px;
+    margin: auto;
+    width: 32%;
+    object-fit: cover;
+    margin-top: 5px;
+    transition: all .8s;
+  }
+  .gallery-section .container .flex .img-gallery:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px #414141, 0 0 5px #313131;
+  }
+  .gallery-section .container .flex .img-gallery.gallery-2-photo-2 {
+    object-position: -100px 0;
+  }
+  .gallery-section .container .flex .img-gallery.gallery-2-photo-3 {
+    object-position: 0 0;
+  }
+  .gallery-section .container .flex .img-gallery.gallery-2-photo-4 {
+    object-position: -100px 0px;
+  }
+  .gallery-section .container .flex .img-gallery.gallery-2-photo-5 {
+    object-position: -400px 0;
+  }
+}
+
+@media all and (min-width: 820px) {
+  .header-2 {
+    background-position: 0px -50px;
+  }
+}
+
+@media all and (min-width: 1120px) {
+  .header-2 {
+    background-position: 0px -100px;
+  }
+  .header-5 {
+    background-position: 0px -200px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .gallery-section .container .flex .img-gallery.gallery-2-photo-4 {
+    object-position: 0px 0px;
+  }
+  .gallery-section .container .flex .img-gallery.gallery-2-photo-5 {
+    object-position: -250px 0;
+  }
+}
+
+/* Contact page */
+.social-media {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.social-media .container .social-media-title {
+  text-align: center;
+}
+
+.social-media .container .row {
+  width: 80%;
+  margin: auto;
+}
+
+.social-media .container .row a {
+  margin-top: 20px;
+  color: #5f5f5f;
+  transition: all 1s;
+}
+
+.social-media .container .row a:hover {
+  color: pink;
+}
+
+.social-media .container .row a i {
+  font-size: 50px;
+}
+
+.contact-form .container h3 {
+  text-align: center;
+}
+
+.contact-form .container form {
+  width: 80%;
+  margin: auto;
+  padding: 30px 0;
+}
+
+.contact-form .container form label {
+  display: block;
+}
+
+.contact-form .container form input {
+  width: 100%;
+}
+
+.contact-form .container form textarea {
+  width: 100%;
+  height: 200px;
 }
 
 footer {

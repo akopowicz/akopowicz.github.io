@@ -37,7 +37,7 @@ console.log(sessionPhotoOverlay)
 
 for (let i = 0; i < sessionPhotoOverlay.length; i++) {
 
-    let photo = document.querySelectorAll('.a');
+    let photo = document.querySelectorAll('.photo');
     
     const bigger = () => {
         photo[i].classList.add('photo-bigger');
@@ -51,4 +51,23 @@ for (let i = 0; i < sessionPhotoOverlay.length; i++) {
     sessionPhotoOverlay[i].addEventListener('mouseout', smaller);
    
 }
+
+
+
+let logo = document.querySelector('.logo');
+
+const logoLeft = () => {
+    logo.classList.add('logo-back');
+    console.log('działam!');
+}
+
+const logoLeftRemove = () => {
+    logo.classList.remove('logo-back');
+}
+
+logo.addEventListener('mouseout', logoLeft);
+logo.addEventListener('mouseover', logoLeftRemove);
+
+
+
 

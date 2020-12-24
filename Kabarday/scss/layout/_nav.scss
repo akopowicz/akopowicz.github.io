@@ -98,6 +98,11 @@
                     animation-name: logo-animation;
                     animation-duration: 10s;
                 }
+
+                &.logo-back {
+                    animation-name: logo-animation-back;
+                    animation-duration: 10s;
+                }
             } 
     
             .hamburger {
@@ -143,6 +148,18 @@
                 50%, 100% {
                     left: 50%;
                     transform: translateX(-50%);
+                    
+                }
+            }
+
+            @keyframes logo-animation-back {
+                0% {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+        
+                50%, 100% {
+                    left: 0;
                 }
             }
         }
