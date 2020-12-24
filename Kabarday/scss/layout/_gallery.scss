@@ -33,7 +33,7 @@
             transition: all .3s;
 
             &:hover {
-                color: $primary-color;
+                color: $secondary-color;
             }
         }
     }
@@ -78,6 +78,8 @@
           justify-content: space-around;
   
            padding-top: 60px;
+
+          
            
 
            .arrow-link {
@@ -85,7 +87,9 @@
                align-content: center;
                color: $primary-color;
            
-              
+               &:hover {
+                color: $secondary-color;
+            }
        
                
                i {

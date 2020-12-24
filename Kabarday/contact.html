@@ -35,6 +35,10 @@
         </div>
     </nav>
 
+    <div class="contact-photo">
+        <img src="img/2018/07.jpg" alt="">
+    </div>
+
     <section class="social-media">
         <div class="container">
             <h3 class="social-media-title">Znajdziesz mnie na:</h3>
@@ -49,13 +53,13 @@
     <section class="contact-form">
         <div class="container">
             <h3>Albo napisz wiadomość tutaj:</h3>
-            <form action="">
+            <form action="https://formspree.io/f/xqkggbol" method="POST">
                 <label for="name">Imię:</label>
-                <input type="text" id="name" name="name">
+                <input type="text" id="name" name="name" required>
                 <label for="mail">E-mail:</label>
-                <input type="email" id="mail" name="email">
+                <input type="email" id="mail" name="email" required>
                 <label for="text">Wiadomość</label>
-                <textarea id="text"></textarea>
+                <textarea id="text" name="message" required></textarea>
                 <input type="submit" name="submit" id="submit" value="wyślij">
             </form>
         </div>
