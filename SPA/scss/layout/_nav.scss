@@ -1,0 +1,109 @@
+/* Navigation */
+
+.main-nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 12px 0;
+    background-color: #fff;
+
+    .main-nav-holder {
+        @include flexbox;
+        justify-content: space-between;
+    }
+
+    .logo {
+        height: 50px;
+        display: inline-block;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .hamburger {
+        font-size: 28px;
+        line-height: 50px;
+        color: $primary-color;
+    }
+
+    .close {
+        font-size: 28px;
+        line-height: 50px;
+        color: white;
+    }
+
+    .main-menu {
+        position: absolute;
+        max-width: 480px;
+        box-shadow: 0 0px 10px #888;
+        text-align: right;
+        top: 0;
+        right: -490px;
+        padding: 12px 23px;
+        background-color: $primary-color;
+        transition: 1s;
+
+        &.open {
+            right: 0;
+        }
+
+    
+        .menu {
+            list-style-type: none;
+            
+            li {
+                padding: 20px 0;
+                font-size: 50px;
+                text-transform: uppercase;
+
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    @media all and (min-width: $large) {
+
+        .main-nav-holder {
+            justify-content: flex-start;
+        }
+
+        .logo {
+            height: 80px;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        .close {
+            display: none;
+        }
+
+        .main-menu {
+            position: static;
+            width: auto;
+            max-width: 100%;
+            box-shadow: none;
+            padding: 0;
+            background-color: transparent;
+            
+            .menu {
+                li {
+                    display: inline-block;
+                    font-size: initial;
+                    margin: 0 20px;
+
+                    a {
+                        color: $secondary-color;
+                        font-weight: 700;
+                    }
+                }
+            }  
+        }
+    }
+}

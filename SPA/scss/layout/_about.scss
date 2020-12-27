@@ -1,0 +1,17 @@
+/* Section About */
+
+.about {
+    text-align: center;
+
+    .about-header {
+        img {
+        max-width: 100px;
+        }
+
+        p {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: $secondary-color;
+        }
+    }
+}
