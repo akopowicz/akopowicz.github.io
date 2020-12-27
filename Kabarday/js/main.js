@@ -69,5 +69,62 @@ logo.addEventListener('mouseout', logoLeft);
 logo.addEventListener('mouseover', logoLeftRemove);
 
 
+let photosOfPortfolio = document.querySelectorAll('.img-portfolio');
+console.log(photosOfPortfolio)
 
+let photoGaleryOverlay = document.querySelector('.photo-gallery-overlay');
+let bigGalleryPhoto = document.querySelector('.big-gallery-photo');
+
+
+
+
+let galleryClose = document.querySelector('.gallery-close');
+console.log(galleryClose)
+
+const hidePhotoGallery = () => {
+    console.log('klik na zdjęcia działa!')
+    photoGaleryOverlay.classList.remove('gallery-visible')
+}
+
+galleryClose.addEventListener('click', hidePhotoGallery);
+
+
+for (let i = 0; i< photosOfPortfolio.length; i++) {
+
+    let leftGalleryArrow = document.querySelector('.left-gallery-arrow');
+
+let rightGalleryArrow = document.querySelector('.right-gallery-arrow');
+
+console.log(rightGalleryArrow);
+
+    const showPhotoGallery = () => {
+        console.log('klik na zdjęcia działa!')
+        photoGaleryOverlay.classList.add('gallery-visible')
+        bigGalleryPhoto.src = photosOfPortfolio[i].src;
+
+        
+        const previousPhoto = () => {
+            bigGalleryPhoto.src = photosOfPortfolio[i--].src;
+        }
+    
+        console.log(leftGalleryArrow)
+    
+        leftGalleryArrow.addEventListener('click', previousPhoto);
+
+        const nextPhoto = () => {
+            bigGalleryPhoto.src = photosOfPortfolio[i++].src;
+        }
+    
+        console.log(leftGalleryArrow)
+    
+        rightGalleryArrow.addEventListener('click', nextPhoto);
+    
+       
+        
+    }
+
+    photosOfPortfolio[i].addEventListener('click', showPhotoGallery);
+
+ 
+}
 

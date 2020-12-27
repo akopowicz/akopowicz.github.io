@@ -1,82 +1,80 @@
-.collection-h {
+.collection-title {
     text-align: center;
-    margin-top: 80px;
+    margin: 100px 0 50px 0;
 }
 
-.portfolio-section {
-    .container {
-        .flex {
-            display: flex;
-            flex-wrap: wrap;
+// .portfolio-section {
+//     .container {
+//         .flex {
+//             display: flex;
+//             flex-wrap: wrap;
        
-            .img-portfolio {
-                height: 100vh;
-                width: 100%;
-                object-fit: cover;
-                object-position: center center;
-                margin-bottom: 10px;
-            }
-        }
-    }
-}
+//             .img-portfolio {
+//                 height: 300px;
+//                 width: 100%;
+//                 object-fit: cover;
+//                 object-position: center center;
+//                 margin-bottom: 10px;
+//             }
+//         }
+//     }
+// }
 
-.arrow {
-    font-size: 14px;
+// .arrow {
+//     font-size: 14px;
    
-  display: flex;
-  justify-content: space-around;
+//   display: flex;
+//   justify-content: space-around;
 
-   padding-top: 60px;
+//    padding-top: 60px;
 
   
    
 
-   .arrow-link {
-       display: flex;
-       align-content: center;
-       color: $primary-color;
+//    .arrow-link {
+//        display: flex;
+//        align-content: center;
+//        color: $primary-color;
    
-       &:hover {
-        color: $secondary-color;
-    }
+//        &:hover {
+//         color: $secondary-color;
+//     }
 
        
-       i {
+//        i {
            
-           font-size: 20px;
-           padding: 0 5px;
-       }
+//            font-size: 20px;
+//            padding: 0 5px;
+//        }
 
-       &.invisible {
-           opacity: 0;
-           cursor: none;
-       }
-   }
+//        &.invisible {
+//            opacity: 0;
+//            cursor: none;
+//        }
+//    }
    
 
 
-}
+// }
 
-@media all and (min-width: $medium) {
-    .portfolio-section {
-        .container {
-            .flex {
-              justify-content: space-between;
+// @media all and (min-width: $medium) {
+//     .portfolio-section {
+//         .container {
+//             .flex {
+//               justify-content: space-between;
            
-                .img-portfolio {
-                    height: 100vh;
-                    width: 33%;
-                    object-fit: cover;
-                    object-position: center center;
-                    margin-bottom: 10px;
-                    transition: all .5s;
+//                 .img-portfolio {
+//                     height: 500px;
+//                     width: 33%;
+//                     object-fit: cover;
+//                     object-position: center center;
+//                     margin-bottom: 10px;
+//                     transition: all .5s;
 
-                    &:hover {
-                        transform: rotate(-5deg);
-                    }
-                }
-            }
-        }
-    }
+                  
+//                 }
+//             }
+//         }
+//     }
 
-}
+// }

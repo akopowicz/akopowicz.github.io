@@ -1,4 +1,5 @@
 @import 'utils/variables';
+@import 'utils/mixins';
 
 @import 'global/basic';
 
@@ -7,10 +8,12 @@
 @import 'layout/about';
 
 @import 'layout/session';
-@import 'layout/gallery';
+@import 'layout/photo-gallery';
 @import 'layout/portfolio';
 @import 'layout/contact';
 @import 'layout/collection';
+
+@import 'components/gallery';
 
 
 @import 'layout/footer';

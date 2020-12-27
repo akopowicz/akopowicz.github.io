@@ -1,0 +1,40 @@
+.header-1 {
+    background-image: url(../img/galeria-1/galeria-3.jpg);
+    background-position: right top;
+}
+
+.header-2 {
+    background-image: url(../img/galeria-2/liadine_DSC7772.jpg);
+    background-position: center top;
+}
+
+.header-3 {
+    background-image: url(../img/galeria-3/DSC_0901.jpg);
+}
+
+.header-4 {
+    background-image: url(../img/galeria-4/_DSC8872.jpg);
+    background-position: center top;
+}
+
+.header-5 {
+    background-image: url(../img/galeria-5/IMG_2298.jpg);
+}
+
+.autors {
+    text-align: center;
+    margin: 40px 0;
+
+    span {
+        font-weight: 300;
+
+        a {
+            color: black;
+            transition: all .3s;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+} 
