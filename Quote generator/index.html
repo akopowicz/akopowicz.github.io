@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote generator</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="background-photo">
+        <div class="overlay"></div>
+        <img src="" alt="Background photo">
+    </div>
+    <div class="main-container">
+        <h1>Your today's quote</h1>
+        <div class="quote-container" id="quote-container">
+            <hr>
+            <div class="quote-div" id="quote-div"><i class="fas fa-quote-left"></i><span class="quote"
+                    id="quote"></span></div>
+            <div class="author" id="author"></div>
+            <div class="buttons">
+                <a href="https://twitter.com/intent/tweet" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+                <button class="next" id="next">Next quote</button>
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
