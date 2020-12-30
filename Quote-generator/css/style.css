@@ -86,11 +86,13 @@ hr {
 
 .quote {
     padding: 10px 0;
+    font-size: 25px;
 }
 
 .author {
     text-align: right;
     padding: 20px 10px 10px 0;
+    font-size: 18px;
 }
 
 h1 {
@@ -99,10 +101,13 @@ h1 {
 
 .buttons {
     padding: 20px 10px;
-    width: 250px;
+    width: 200px;
     margin: auto;
     position: relative;
     vertical-align: baseline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .twitter {
@@ -111,9 +116,8 @@ h1 {
     font-size: 20px;
     left: 0;
     color: #1da1f2;
-    top: 50%;
-    transform: translateY(-50%);
     transition: all .5s;
+    margin-right: 20px;
 }
 
 .twitter:hover {
@@ -126,7 +130,6 @@ h1 {
     background-color: rgba(255, 255, 255, 1);
     font-size: 18px;
     transition: all .5s;
-    margin-left: 40px;
 }
 
 .next:hover {
