@@ -11,57 +11,74 @@
         position: absolute;
         top: 20px;
         right: 20px;
-        font-size: 30px;
-        color:rgb(224, 224, 224);
     }
 
-    .flex {
-        @include flexbox;
-        justify-content: space-around;
-        align-items: center;
-        width: auto;
-        height: auto; 
-        
-        i {
-            color: rgb(224, 224, 224);
-            font-size: 30px;
-        }  
+    i {
+        color: rgb(224, 224, 224);
+        font-size: 24px;
+        background-color: rgba(0, 0, 0, .6);
+        padding: 10px;
+        cursor: pointer;
+        z-index: 100;
 
-        .arrow-invisible {
-            opacity: 0;
-            cursor: none;
-        }
+        &.left-gallery-arrow {
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
 
-        .big-gallery-photo {
-            width: 85%;
-            height: 100vh;
-            object-fit: cover;
-        }
+            &.invisible {
+                display: none;
+            }
 
-        @media all and (min-width: 850px) {
-            .big-gallery-photo {
-                width: 70%;
-                height: 100vh;
-                object-fit: cover;
+            &.previous-visible {
+                display: block;
             }
         }
 
-        @media all and (min-width: 1000px) {
-            .big-gallery-photo {
-                width: 50%;
-                height: 100vh;
-                object-fit: cover;
+        &.right-gallery-arrow {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+          
+            &.invisible {
+                display: none;
             }
         }
+    }    
 
-        @media all and (min-width: $extra-large) {
-            .big-gallery-photo {
-                width: 33%;
-                height: 100vh;
-                object-fit: cover;
-            }
+    .arrow-invisible {
+        opacity: 0;
+        cursor: none;
+    }
+
+    .big-gallery-photo-1,
+    .big-gallery-photo-2 {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 0;
+        transition: all .7s;
+
+        &.big-gallery-photo-visible {
+            opacity: 1;
         }
     }
+
+    @media all and (min-width: $medium) {
+        .big-gallery-photo-1,
+        .big-gallery-photo-2 {
+            width: auto;
+            height: 90vh;
+        }
+    }  
 
     &.gallery-visible {
         display: block;
@@ -118,10 +135,9 @@
                color: $primary-color;
            
                &:hover {
-                color: $secondary-color;
+                    color: $secondary-color;
                 }
        
-               
                 i {
                     font-size: 20px;
                     padding: 0 5px;

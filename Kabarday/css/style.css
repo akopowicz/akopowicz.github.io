@@ -43,10 +43,11 @@ li {
 
 .main-navigation .container .logo img {
   height: 100%;
+  opacity: .9;
 }
 
 .main-navigation .container .hamburger {
-  color: white;
+  color: #fff;
   font-size: 1.8em;
   position: absolute;
   z-index: 2000;
@@ -80,7 +81,7 @@ li {
 }
 
 .main-navigation .container .navigation-menu li .navigation-item {
-  color: white;
+  color: #fff;
   text-transform: uppercase;
 }
 
@@ -97,14 +98,19 @@ li {
 }
 
 @media all and (min-width: 768px) {
-  .main-navigation .container .logo:hover {
+  .main-navigation .container .logo {
+    transition: all 5s;
+  }
+  .main-navigation .container .logo.logo-animation {
     height: 100vh;
-    animation-name: logo-animation;
-    animation-duration: 10s;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 15px #202020, 0 0 5px #202020;
   }
   .main-navigation .container .logo.logo-back {
-    animation-name: logo-animation-back;
-    animation-duration: 10s;
+    height: 80px;
+    left: 0;
+    transform: translateX(0);
   }
   .main-navigation .container .hamburger {
     display: none;
@@ -124,7 +130,7 @@ li {
     margin-left: 10px;
   }
   .main-navigation .container .navigation-menu li .navigation-item {
-    transition: all 2s;
+    transition: all 1.2s;
   }
   .main-navigation .container .navigation-menu li .navigation-item.visible {
     background-color: rgba(0, 0, 0, 0.5);
@@ -133,24 +139,6 @@ li {
   .main-navigation .container .navigation-menu li .navigation-item:hover {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 2px 10px;
-  }
-  @keyframes logo-animation {
-    0% {
-      left: 0;
-    }
-    50%, 100% {
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-  @keyframes logo-animation-back {
-    0% {
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    50%, 100% {
-      left: 0;
-    }
   }
   .main-navigation.reverse .container .navigation-menu {
     background-color: transparent;
@@ -161,12 +149,12 @@ li {
   .main-navigation.reverse .container .navigation-menu li .navigation-item.visible {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 2px 10px;
-    color: white;
+    color: #fff;
   }
   .main-navigation.reverse .container .navigation-menu li .navigation-item:hover {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 2px 10px;
-    color: white;
+    color: #fff;
   }
 }
 
@@ -223,6 +211,15 @@ li {
 }
 
 @media all and (min-width: 768px) {
+  .photo-holder .photographer {
+    opacity: 0;
+    transition: all .8s;
+    color: #5f5f5f;
+  }
+  .photo-holder .photographer.photographer-visible {
+    opacity: 1;
+    margin-top: 25px;
+  }
   .photo-holder img {
     cursor: pointer;
     transition: all .8s;
@@ -254,10 +251,6 @@ li {
   transform: translateY(-50%);
   color: white;
   width: 100%;
-}
-
-.session-header .session-header-text .header-container {
-  background-color: rgba(255, 192, 203, 0.7);
 }
 
 .session-section {
@@ -335,18 +328,18 @@ li {
     flex-wrap: wrap;
     width: 100%;
   }
-  .session-section .container .flex a {
+  .session-section .container .flex .photo {
     height: 610px;
     margin-bottom: 0px;
     transition: all 1s;
   }
-  .session-section .container .flex a .photo-2 {
+  .session-section .container .flex .photo .photo-2 {
     object-position: 70% 0;
   }
-  .session-section .container .flex a .photo-3 {
+  .session-section .container .flex .photo .photo-3 {
     object-position: 0 20%;
   }
-  .session-section .container .flex a.photo-bigger {
+  .session-section .container .flex .photo.photo-bigger {
     transform: scale(1.1, 1.1);
     z-index: 100;
     box-shadow: 0 0 10px #414141, 0 0 5px #313131;
@@ -431,7 +424,7 @@ li {
   height: 100vh;
   width: 100%;
   position: relative;
-  color: white;
+  color: #fff;
 }
 
 .portfolio-header a img {
@@ -450,7 +443,8 @@ li {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: all .3s;
+  transition: all .8s;
+  text-align: center;
 }
 
 .portfolio-header a .portfolio-overlay h5 {
@@ -467,128 +461,123 @@ li {
   }
 }
 
-/*  */
 /* Contact page */
 .contact-photo {
-  display: none;
+  position: absolute;
+  z-index: -100;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/o-mnie/CA85D74B-7ADF-4D91-A097-C38C32B1FCC9.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
-.social-media {
-  padding: 60px 0;
-  text-align: center;
+.contact-photo .overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 100%;
+  width: 100%;
+  top: 0;
 }
 
-.social-media .container .social-media-title {
-  text-align: center;
+.contact-form {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: white;
+  padding: 10px 0;
+  box-shadow: 0 0 15px #202020, 0 0 5px #202020;
 }
 
-.social-media .container .row {
-  width: 80%;
+.contact-form .row {
+  width: 70%;
   margin: auto;
 }
 
-.social-media .container .row a {
-  margin-top: 20px;
+.contact-form .row a {
+  margin: 10px 0 15px;
   color: #8f5878;
   transition: all 1s;
+  text-align: center;
 }
 
-.social-media .container .row a:hover {
+.contact-form .row a:hover {
   color: #a87795;
 }
 
-.social-media .container .row a i {
-  font-size: 50px;
+.contact-form .row a i {
+  font-size: 30px;
 }
 
-.contact-form .container h3 {
+.contact-form h5 {
   text-align: center;
+  margin-bottom: 5px;
 }
 
-.contact-form .container form {
-  width: 80%;
-  margin: auto;
-  padding: 10px 0 50px 0;
-}
-
-.contact-form .container form label {
+.contact-form form label {
   display: block;
-  margin-top: 10px;
+  padding: 10px 0 2px;
 }
 
-.contact-form .container form input {
+.contact-form form input:not([type=submit]),
+.contact-form form textarea {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.contact-form form input,
+.contact-form form textarea {
   width: 100%;
-  color: #5f5f5f;
-  height: 40px;
-  border-radius: 5px;
-  border: 1px solid black;
+  height: 35px;
 }
 
-.contact-form .container form input:focus {
+.contact-form form input:focus,
+.contact-form form textarea:focus {
   outline-color: #8f5878;
 }
 
-.contact-form .container form textarea {
-  width: 100%;
-  height: 200px;
-  color: #5f5f5f;
-  border-radius: 5px;
+.contact-form form textarea {
+  height: 150px;
 }
 
-.contact-form .container form textarea:focus {
-  outline-color: #8f5878;
-}
-
-.contact-form .container form input[type=submit] {
+.contact-form form input[type=submit] {
   background-color: #8f5878;
-  border-color: #8f5878;
-  color: white;
   text-transform: uppercase;
-  margin-top: 10px;
+  color: white;
+  margin-top: 5px;
+  border-color: #8f5878;
   transition: all .3s;
 }
 
-.contact-form .container form input[type=submit]:hover {
+.contact-form form input[type=submit]:hover {
   background-color: #a87795;
+  border-color: #a87795;
 }
 
 @media all and (min-width: 768px) {
-  .contact-photo {
-    position: absolute;
-    width: 25%;
-    height: 100vh;
-    display: block;
-    top: 200px;
+  .contact-form {
+    width: 50%;
+    top: 100px;
+    padding: 20px 0;
   }
-  .contact-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-  }
-  .social-media .container .row {
+  .contact-form .row {
     width: 50%;
   }
-  .contact-form .container form {
+  .contact-form form {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .contact-form {
     width: 40%;
-  }
-}
-
-@media all and (min-width: 900px) {
-  .contact-photo {
-    width: 30%;
-  }
-  .social-media .container .row {
-    width: 33%;
-  }
-}
-
-@media all and (min-width: 1200px) {
-  .contact-photo {
-    top: 80px;
-  }
-  .contact-form .container form {
-    width: 33%;
   }
 }
 
@@ -611,56 +600,73 @@ li {
   position: absolute;
   top: 20px;
   right: 20px;
-  font-size: 30px;
+}
+
+.photo-gallery-overlay i {
   color: #e0e0e0;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  cursor: pointer;
+  z-index: 100;
 }
 
-.photo-gallery-overlay .flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  width: auto;
-  height: auto;
+.photo-gallery-overlay i.left-gallery-arrow {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.photo-gallery-overlay .flex i {
-  color: #e0e0e0;
-  font-size: 30px;
+.photo-gallery-overlay i.left-gallery-arrow.invisible {
+  display: none;
 }
 
-.photo-gallery-overlay .flex .arrow-invisible {
+.photo-gallery-overlay i.left-gallery-arrow.previous-visible {
+  display: block;
+}
+
+.photo-gallery-overlay i.right-gallery-arrow {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.photo-gallery-overlay i.right-gallery-arrow.invisible {
+  display: none;
+}
+
+.photo-gallery-overlay .arrow-invisible {
   opacity: 0;
   cursor: none;
 }
 
-.photo-gallery-overlay .flex .big-gallery-photo {
-  width: 85%;
-  height: 100vh;
+.photo-gallery-overlay .big-gallery-photo-1,
+.photo-gallery-overlay .big-gallery-photo-2 {
+  width: 100%;
+  height: auto;
   object-fit: cover;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: auto;
+  opacity: 0;
+  transition: all .7s;
 }
 
-@media all and (min-width: 850px) {
-  .photo-gallery-overlay .flex .big-gallery-photo {
-    width: 70%;
-    height: 100vh;
-    object-fit: cover;
-  }
+.photo-gallery-overlay .big-gallery-photo-1.big-gallery-photo-visible,
+.photo-gallery-overlay .big-gallery-photo-2.big-gallery-photo-visible {
+  opacity: 1;
 }
 
-@media all and (min-width: 1000px) {
-  .photo-gallery-overlay .flex .big-gallery-photo {
-    width: 50%;
-    height: 100vh;
-    object-fit: cover;
-  }
-}
-
-@media all and (min-width: 1200px) {
-  .photo-gallery-overlay .flex .big-gallery-photo {
-    width: 33%;
-    height: 100vh;
-    object-fit: cover;
+@media all and (min-width: 768px) {
+  .photo-gallery-overlay .big-gallery-photo-1,
+  .photo-gallery-overlay .big-gallery-photo-2 {
+    width: auto;
+    height: 90vh;
   }
 }
 

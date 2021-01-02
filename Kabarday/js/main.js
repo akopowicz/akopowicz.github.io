@@ -1,14 +1,10 @@
 let navItem = document.getElementsByClassName('navigation-item');
-
 let navActive = document.querySelector('.visible');
-
 let hamburger = document.querySelector('.hamburger');
-
 let navbarMenu = document.querySelector('.navigation-menu');
 
 const menuItem = () => {
     navbarMenu.classList.toggle('show-menu');
-    console.log('działa');
 }
 
 hamburger.addEventListener('click', menuItem);
@@ -24,107 +20,133 @@ for (let i = 0; i < navItem.length; i++) {
     }
 
     navItem[i].addEventListener('mouseover', notActive);
-
     navItem[i].addEventListener('mouseout', active);
 }
 
-// let photo = document.querySelectorAll('.a');
-// console.log(photo);
-
-let sessionPhotoOverlay = document.querySelectorAll('.session-photo-overlay');
-console.log(sessionPhotoOverlay)
-
-
-for (let i = 0; i < sessionPhotoOverlay.length; i++) {
-
-    let photo = document.querySelectorAll('.photo');
-    
-    const bigger = () => {
-        photo[i].classList.add('photo-bigger');
-    }
-
-    const smaller = () => {
-        photo[i].classList.remove('photo-bigger');
-    }
-
-    sessionPhotoOverlay[i].addEventListener('mouseover', bigger);
-    sessionPhotoOverlay[i].addEventListener('mouseout', smaller);
-   
-}
-
-
-
 let logo = document.querySelector('.logo');
 
-const logoLeft = () => {
-    logo.classList.add('logo-back');
-    console.log('działam!');
-}
-
-const logoLeftRemove = () => {
+const logoAnimation = () => {
+    logo.classList.add('logo-animation');
     logo.classList.remove('logo-back');
 }
 
-logo.addEventListener('mouseout', logoLeft);
-logo.addEventListener('mouseover', logoLeftRemove);
-
-
-let photosOfPortfolio = document.querySelectorAll('.img-portfolio');
-console.log(photosOfPortfolio)
-
-let photoGaleryOverlay = document.querySelector('.photo-gallery-overlay');
-let bigGalleryPhoto = document.querySelector('.big-gallery-photo');
-
-
-
-
-let galleryClose = document.querySelector('.gallery-close');
-console.log(galleryClose)
-
-const hidePhotoGallery = () => {
-    console.log('klik na zdjęcia działa!')
-    photoGaleryOverlay.classList.remove('gallery-visible')
+const logoBack = () => {
+    logo.classList.replace('logo-animation', 'logo-back');
 }
 
-galleryClose.addEventListener('click', hidePhotoGallery);
+logo.addEventListener('mouseover', logoAnimation);
+logo.addEventListener('mouseleave', logoBack);
 
+let aboutPhotos = document.querySelectorAll('.about-photo');
 
-for (let i = 0; i< photosOfPortfolio.length; i++) {
+for (let i = 0; i < aboutPhotos.length; i++) {
+    let photographer = document.querySelectorAll('.photographer');
 
-    let leftGalleryArrow = document.querySelector('.left-gallery-arrow');
-
-let rightGalleryArrow = document.querySelector('.right-gallery-arrow');
-
-console.log(rightGalleryArrow);
-
-    const showPhotoGallery = () => {
-        console.log('klik na zdjęcia działa!')
-        photoGaleryOverlay.classList.add('gallery-visible')
-        bigGalleryPhoto.src = photosOfPortfolio[i].src;
-
-        
-        const previousPhoto = () => {
-            bigGalleryPhoto.src = photosOfPortfolio[i--].src;
-        }
-    
-        console.log(leftGalleryArrow)
-    
-        leftGalleryArrow.addEventListener('click', previousPhoto);
-
-        const nextPhoto = () => {
-            bigGalleryPhoto.src = photosOfPortfolio[i++].src;
-        }
-    
-        console.log(leftGalleryArrow)
-    
-        rightGalleryArrow.addEventListener('click', nextPhoto);
-    
-       
-        
+    const showName = () => {
+        photographer[i].classList.add('photographer-visible');
     }
 
-    photosOfPortfolio[i].addEventListener('click', showPhotoGallery);
+    const hideName = () => {
+        photographer[i].classList.remove('photographer-visible');
+    }
 
- 
+    aboutPhotos[i].addEventListener('mouseover', showName);
+    aboutPhotos[i].addEventListener('mouseleave', hideName);
 }
 
+let sessionPhoto = document.querySelectorAll('.photo');
+
+for (let i = 0; i < sessionPhoto.length; i++) {
+    const photoBigger = () => {
+        sessionPhoto[i].classList.add('photo-bigger');
+    }
+
+    const photoSmaller = () => {
+        sessionPhoto[i].classList.remove('photo-bigger');
+    }
+
+    sessionPhoto[i].addEventListener('mouseover', photoBigger);
+    sessionPhoto[i].addEventListener('mouseout', photoSmaller);
+}
+
+
+/* Kod odpowiadający za galerię */
+
+let photo = document.querySelectorAll('.img-portfolio');
+
+let photoGallery = document.querySelector('.photo-gallery-overlay');
+let photoGallery1 = document.querySelector('.big-gallery-photo-1 ');
+
+let photoGallery2 = document.querySelector('.big-gallery-photo-2 ');
+let photoGalleryBoth = document.querySelector('.big-gallery-photo');
+
+
+for (let i = 0; i < photo.length; i++) {
+
+    const showGallery = () => {
+
+        let photoGalleryVisible = document.querySelector('.big-gallery-photo-visible');
+
+        photoGallery.classList.add('gallery-visible');
+        photoGalleryVisible.src = photo[i].src;
+
+        let nextPhoto = document.querySelector('.right-gallery-arrow');
+
+        const showNextPhoto = () => {
+
+            let invisiblePhoto = document.querySelector('.big-gallery-photo:not(.big-gallery-photo-visible)');
+
+            invisiblePhoto.src = photo[i + 1].src;
+
+            photoGallery1.classList.toggle('big-gallery-photo-visible');
+            photoGallery2.classList.toggle('big-gallery-photo-visible');
+
+            i++
+
+            if (invisiblePhoto.src === photo[photo.length - 1].src) {
+                nextPhoto.classList.add('invisible');
+            }
+        }
+
+        nextPhoto.addEventListener('click', showNextPhoto);
+        let previousPhoto = document.querySelector('.left-gallery-arrow');
+
+        const showPreviousPhoto = () => {
+            let invisiblePhoto = document.querySelector('.big-gallery-photo:not(.big-gallery-photo-visible)');
+
+            invisiblePhoto.src = photo[i - 1].src;
+
+            photoGallery1.classList.toggle('big-gallery-photo-visible');
+
+            photoGallery2.classList.toggle('big-gallery-photo-visible');
+
+            i--
+
+            if (invisiblePhoto.src === photo[0].src) {
+                previousPhoto.classList.add('invisible');
+            }
+        }
+
+        let closeGallery = document.querySelector('.gallery-close');
+
+        const galleryClose = () => {
+            photoGallery.classList.remove('gallery-visible');
+        }
+
+        closeGallery.addEventListener('click', galleryClose);
+
+        if (photo[i].src === photo[0].src) {
+            previousPhoto.classList.add('invisible');
+        } else {
+            previousPhoto.classList.remove('invisible');
+        }
+
+        if (photo[i].src === photo[photo.length - 1].src) {
+            nextPhoto.classList.add('invisible');
+        }
+
+        previousPhoto.addEventListener('click', showPreviousPhoto);
+    }
+
+    photo[i].addEventListener('click', showGallery);
+}
