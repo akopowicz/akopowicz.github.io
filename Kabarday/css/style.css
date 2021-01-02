@@ -204,6 +204,10 @@ li {
   margin-bottom: 10px;
 }
 
+.about-photos .photo-holder .photographer {
+  opacity: 0;
+}
+
 .about-photos .photo-holder img {
   height: 100%;
   width: 100%;

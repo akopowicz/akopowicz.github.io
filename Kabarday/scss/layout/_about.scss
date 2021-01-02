@@ -12,6 +12,10 @@
     .photo-holder {
         height: 500px;
         margin-bottom: 10px;
+
+        .photographer {
+            opacity: 0;
+        }
         
         img {
             height: 100%;
