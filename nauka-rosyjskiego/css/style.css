@@ -490,46 +490,99 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  position: relative;
+  padding: 60px 0 0;
 }
 
-.info .text {
-  padding: 10px;
+.info .slider-container {
   width: 100%;
-  margin: auto;
+  display: flex;
+  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  transition: all .3s;
+  position: relative;
+  scrollbar-color: #01628C #F5B75B;
+}
+
+.info .slider-container::-webkit-scrollbar {
+  width: 50px;
+}
+
+.info .slider-container::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #a76400;
+  background-color: #F5B75B;
+}
+
+.info .slider-container::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to left, #FF9800, #01628C);
+  border-radius: 20px;
+}
+
+.info .slider-container .slider {
+  width: 100%;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+  transition: all 3s;
+}
+
+.info .slider-container .slider h3 {
   text-align: center;
 }
 
-.info .text p {
-  color: #626870;
-  padding: 5px 0;
+.info .slider-container .slider .part-1,
+.info .slider-container .slider .part-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.info .text p a {
+.info .slider-container .slider .part-1 .text,
+.info .slider-container .slider .part-2 .text {
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.info .slider-container .slider .part-1 .text .button,
+.info .slider-container .slider .part-2 .text .button {
+  margin-bottom: 10px;
+}
+
+.info .slider-container .slider .part-1 .text p,
+.info .slider-container .slider .part-2 .text p {
+  line-height: 25px;
+  margin-top: 20px;
+  color: #626870;
+}
+
+.info .slider-container .slider .part-1 .text p:last-of-type,
+.info .slider-container .slider .part-2 .text p:last-of-type {
+  color: #FF9800;
+  font-weight: 700;
+}
+
+.info .slider-container .slider .part-1 .text p a,
+.info .slider-container .slider .part-2 .text p a {
   color: #0C9AD8;
   transition: all .3s;
 }
 
-.info .text p a:hover {
+.info .slider-container .slider .part-1 .text p a:hover,
+.info .slider-container .slider .part-2 .text p a:hover {
   color: #F5B75B;
 }
 
-.info .text p:last-of-type {
-  color: #FF9800;
-  font-weight: 700;
-  font-size: 18px;
-}
-
-.info .text p span {
-  font-weight: 700;
-}
-
 .info img {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   object-position: bottom;
-  margin-bottom: 15px;
+  border-radius: 50%;
+  margin: auto;
   box-shadow: 0 0 6px #747F84;
 }
 
@@ -537,72 +590,37 @@ section {
   object-position: top;
 }
 
-.info .about-me {
-  margin-top: 30px;
-}
-
 @media (min-width: 760px) {
-  .info .text {
-    width: 70%;
+  .info .slider-container {
+    width: 60%;
   }
 }
 
 @media (min-width: 992px) {
-  .info h3 {
-    width: 100%;
+  .info {
+    padding: 60px 0;
   }
-  .info .part-1,
-  .info .part-2 {
-    width: 100%;
+  .info .slider-container {
+    width: 950px;
+  }
+  .info .slider-container .slider .part-1,
+  .info .slider-container .slider .part-2 {
     display: flex;
-    flex-wrap: wrap;
-    width: 70%;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .info .part-1 img,
-  .info .part-2 img {
-    width: 300px;
-    height: 300px;
-    border-radius: 0;
-    margin-bottom: 0;
-  }
-  .info .part-1 img.photo-of-me,
-  .info .part-2 img.photo-of-me {
-    order: 1;
-  }
-  .info .part-1 .text,
-  .info .part-2 .text {
-    width: 50%;
-    margin: 0;
-  }
-}
-
-@media (min-width: 1200px) {
-  .info h3 {
-    width: 100%;
-  }
-  .info .part-1,
-  .info .part-2 {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    width: 70%;
     align-items: center;
     justify-content: space-between;
   }
-  .info .part-1 img,
-  .info .part-2 img {
+  .info .slider-container .slider .part-1 img,
+  .info .slider-container .slider .part-2 img {
     width: 400px;
     height: 400px;
     border-radius: 0;
   }
-  .info .part-1 img.photo-of-me,
-  .info .part-2 img.photo-of-me {
+  .info .slider-container .slider .part-1 img.photo-of-me,
+  .info .slider-container .slider .part-2 img.photo-of-me {
     order: 1;
   }
-  .info .part-1 .text,
-  .info .part-2 .text {
+  .info .slider-container .slider .part-1 .text,
+  .info .slider-container .slider .part-2 .text {
     width: 50%;
   }
 }
