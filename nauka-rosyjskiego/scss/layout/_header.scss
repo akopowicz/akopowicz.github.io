@@ -1,0 +1,165 @@
+.header-holder {
+    background-color: #fff;
+    padding-top: 100px;
+    height: 260px;
+
+    .background-animation {
+        position: absolute;
+        opacity: 0;
+    }
+
+    #quotes {
+        position: relative;
+        cursor: pointer;
+        
+        #quotes-pl {
+            background-color: #fff;
+            position: absolute;
+            width: 85%;
+            right: 10px;
+            top: 0;
+            text-align: right;
+            opacity: 1;
+            transition: all .5s;
+
+            &.hidden {
+                opacity: 0;
+            }
+
+            #quote {
+                margin-bottom: 10px;
+                font-size: 24px;
+                color: rgb(1, 98, 140);
+                font-weight: 600;
+            }
+
+            #autor {
+                color: rgb(116, 127, 132);
+                font-size: 18px;
+                text-align: right;
+                margin-top: 15px;
+            }
+        }
+
+        #quotes-rus {
+            background-color: #fff;
+            position: absolute;
+            width: 85%;
+            right: 10px;
+            top: 0;
+            text-align: right;
+            opacity: 0;
+            transition: all .5s;
+
+            &.visible {
+                opacity: 1;
+            }
+
+            #quote-rus {
+                margin-bottom: 10px;
+                font-size: 24px;
+                color: rgb(1, 98, 140);
+                font-weight: 600;
+            }
+
+            #autor-rus {
+                color: rgb(116, 127, 132);
+                font-size: 18px;
+                text-align: right;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+@media (min-width: $large) {
+    .header-holder {
+        background-color: rgb(12, 154, 216);
+        padding-top: 150px;
+        height: 70vh;
+        position: relative;
+        
+        .background-animation {
+            opacity: 1;
+            overflow: hidden;
+            height: 70vh;
+            top: 0;
+            width: 100%;
+
+            .word-1,
+            .word-2 {
+                position: absolute;
+                color: #FFF3E0;
+                font-size: 86px;
+            }
+
+            .word-1 {
+                top: 80px;
+                animation: animation1 20s linear infinite;
+            }
+
+            .word-2 {
+                bottom: 30px;
+                white-space: nowrap;
+                animation: animation2 20s linear infinite;
+            }
+        }
+
+        #quotes {
+            margin-top: 50px;
+            #quotes-pl {
+                background-color: rgba(12, 154, 216, .7);
+                width: 600px;
+                left: 100px;
+                text-align: left;
+
+                #quote {
+                    color: #EEFAFF;
+                }
+
+                #autor {
+                    color: $links-secondary-color;
+                }
+            }
+
+            #quotes-rus {
+                background-color: rgba(12, 154, 216, .7);
+                width: 600px;
+                left: 100px;
+                text-align: left;
+        
+                #quote-rus {
+                    color: #EEFAFF;
+                }
+        
+                #autor-rus {
+                    color: $links-secondary-color;
+                }
+            }
+        } 
+    }
+}
+
+@keyframes animation1 {
+    0% {
+        transform: translateX(-100%); 
+        padding-left: 110%;
+    }
+
+    100% {
+        transform: translateX(0); 
+        padding-left: 110%;
+    }
+}   
+
+@keyframes animation2 {
+    0% {
+        transform: translateX(0); 
+        padding-left: 110%;
+    }
+
+    100% {
+        transform: translateX(-100%); 
+        padding-left: 110%;
+    }
+}
