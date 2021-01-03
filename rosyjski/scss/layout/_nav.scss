@@ -1,0 +1,109 @@
+.navigation {
+
+    #hamburger {
+        width: 30px;
+        height: 25px;
+        position: fixed;
+        left: 10px;
+        top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 40;
+        cursor: pointer;
+
+        .hamburger-line {
+            width: 100%;
+            height: 3px;
+            background-color: rgb(255, 152, 0)
+        }
+    }
+
+    .navigation-menu {
+        list-style: none;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background-color: #fff;
+        height: 100vh;
+        text-align: center;
+        transition: all .9s;
+        z-index: 30;
+        position: fixed;
+        
+        &.navigation-menu-visible {
+            left: 0;
+            box-shadow: 1px 3px 6px $shadow-color; 
+        }
+     
+        .menu-list {
+            padding-top: 30px;
+
+            &:first-of-type {
+                padding-top: 100px;
+            }
+
+            a {
+                text-decoration: none;
+                color: $font-secondary-color;
+                font-weight: 600;
+                font-size: 24px;
+                text-transform: uppercase;
+                transition: all .3s;
+                
+                &:hover {
+                    color: $primary-color;
+                }
+
+                &.current {
+                    border-bottom: $secondary-color 3px solid;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $small) {
+        .navigation-menu {
+            width: 300px;
+            left: -300px;
+        }
+    }
+
+    @media (min-width: $medium) {
+        #hamburger  {
+            display: none;
+        }
+
+        .navigation-menu {
+            width: 100%;
+            height: 60px;
+            left: 0;
+            box-shadow: 3px 0 6px $shadow-color;
+            text-align: right;
+            padding-right: 50px;
+            
+            .menu-list {
+                height: 100%;
+                display: inline-block;
+                position: relative; 
+                line-height: 60px;
+                padding: 0 0 0 20px;
+               
+                &:first-of-type {
+                    padding-top: 0;
+                }
+
+                a {
+                    font-size: 18px;
+                    font-weight: 400; 
+                }
+            }
+        }
+    }
+
+    @media (min-width: $large) {
+        .navigation-menu {         
+            padding-right: 100px;
+        }
+    }
+}

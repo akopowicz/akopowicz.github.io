@@ -1,8 +1,39 @@
-$(document).ready(function(){
-    $('#hamburger').click(function() {
-        $('.side-menu').toggleClass('visible');
-    });
+let mainContent = document.getElementById('main-content');
+let preloader = document.getElementById('preloader');
+
+const endAnimation = () => {
+    preloader.classList.add('hidden');
+    mainContent.classList.remove('hidden-content');
+}
+
+window.addEventListener('load', function() {
+
+    let elapse = false;   
+
+    setTimeout(function() {
+        elapse = true
+
+        if (document.readyState === 'complete') {
+            endAnimation();
+        }    
+    }, 2000);
+
+    if (elapse) {
+        if (document.readyState === 'complete') {
+            endAnimation();
+        } 
+    }
 });
+
+
+let hamburger = document.getElementById('hamburger');
+let menu = document.querySelector('.navigation-menu');
+
+const showMenu = () => {
+    menu.classList.toggle('navigation-menu-visible');
+}
+
+hamburger.addEventListener('click', showMenu);
 
 let arrayQuotes = ['„Bez znajomości języków obcych człowiek czuje się jak bez paszportu.”', '„Ja mogę żyć tylko sercem, wy zaś żyjecie według zasad.”', '„Może dlatego wydaję ci się szczęśliwy, ponieważ cieszę się tym, co mam, a nie tęsknię za tym, czego nie mam.”', '„Nie wiadomo, dlaczego wszyscy mówią do kotów „ty”, choć jako żywo żaden kot nigdy z nikim nie pił bruderszaftu.”', '„Ludzie śmieją się tylko z tego, co śmieszne, albo z tego, czego nie rozumieją.”'];
 let arrayAutor = ['Anton Czechow', 'Lew Tołstoj', 'Lew Tołstoj', 'Michaił Bułchakow', 'Anton Czechow'];
@@ -14,7 +45,6 @@ let arrayAutorRus = ['Антон Павлович Чехов', 'Лев Нико�
 let quote = document.getElementById('quote');
 let autor = document.getElementById('autor');
 let quotes = document.getElementById('quotes-pl')
-
 
 let randomNumber = Math.floor(Math.random()*5);
 
@@ -28,11 +58,13 @@ let autorRus = document.getElementById('autor-rus');
 quoteRus.innerText = arrayQuotesRus[randomNumber];
 autorRus.innerText = '- ' + arrayAutorRus[randomNumber];
 
-
 quotesRus.addEventListener("mouseover", function() {
     quotesRus.classList.add('visible');
+    quotes.classList.add('hidden');
+
 });
 
 quotesRus.addEventListener("mouseout", function() {
     quotesRus.classList.remove('visible');
+    quotes.classList.remove('hidden');
 });
