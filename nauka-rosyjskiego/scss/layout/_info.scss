@@ -78,6 +78,26 @@
                             }
                         }
                     }
+
+                    .scroll {
+                        
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: baseline;                    
+                        padding-right: 20px;
+
+                        p {
+                            color: $font-primary-color;
+                        }
+
+                        .fa-angle-double-right {
+                            color: $primary-color;
+                            font-size: 20px;
+                            margin-left: 5px;
+                            animation: swipe 1s infinite;
+                            position: relative;
+                        }
+                    }
                 }
             }
         }
@@ -95,6 +115,18 @@
         &.photo-of-me {
             object-position: top;
         }
+    }
+}
+
+@keyframes swipe {
+    0%, 100% {
+        left: 0;
+        color: $primary-color;
+    }
+
+    50% {
+        left: 10px;
+        color: $secondary-color;
     }
 }
 
@@ -127,10 +159,6 @@
                         width: 400px;
                         height: 400px;
                         border-radius: 0;
-
-                        &.photo-of-me {
-                            order: 1;
-                        }
                     }
                     
                     .text {

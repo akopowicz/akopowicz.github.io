@@ -13,7 +13,6 @@
         cursor: pointer;
         
         #quotes-pl {
-            background-color: #fff;
             position: absolute;
             width: 85%;
             right: 10px;
@@ -42,7 +41,6 @@
         }
 
         #quotes-rus {
-            background-color: #fff;
             position: absolute;
             width: 85%;
             right: 10px;
@@ -90,11 +88,11 @@
             .word-2 {
                 position: absolute;
                 color: #FFF3E0;
-                font-size: 86px;
+                font-size: 200px;
             }
 
             .word-1 {
-                top: 80px;
+                top: 40px;
                 animation: animation1 20s linear infinite;
             }
 
@@ -106,34 +104,41 @@
         }
 
         #quotes {
-            margin-top: 50px;
+            margin-top: 60px;
             #quotes-pl {
-                background-color: rgba(12, 154, 216, .7);
+               
                 width: 600px;
                 left: 100px;
                 text-align: left;
 
                 #quote {
                     color: #EEFAFF;
+                    font-size: 36px;
+                    text-shadow: 0px 0px 6px $secondary-color;
                 }
 
                 #autor {
                     color: $links-secondary-color;
+                    font-size: 20px;
+                    text-shadow: 0px 0px 1px #794800;
                 }
             }
 
             #quotes-rus {
-                background-color: rgba(12, 154, 216, .7);
                 width: 600px;
                 left: 100px;
                 text-align: left;
         
                 #quote-rus {
                     color: #EEFAFF;
+                    font-size: 36px;
+                    text-shadow: 0px 0px 6px $secondary-color;
                 }
         
                 #autor-rus {
                     color: $links-secondary-color;
+                    font-size: 20px;
+                    text-shadow: 0px 0px 1px #794800;
                 }
             }
         } 

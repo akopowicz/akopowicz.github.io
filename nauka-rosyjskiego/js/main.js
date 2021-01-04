@@ -6,7 +6,7 @@ const endAnimation = () => {
     mainContent.classList.remove('hidden-content');
 }
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function loadingPage() {
 
     let elapse = false;   
 
@@ -21,7 +21,9 @@ window.addEventListener('load', function() {
     if (elapse) {
         if (document.readyState === 'complete') {
             endAnimation();
-        } 
+        } else {
+            loadingPage()
+        }
     }
 });
 
