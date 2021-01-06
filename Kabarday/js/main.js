@@ -70,8 +70,6 @@ for (let i = 0; i < sessionPhoto.length; i++) {
 }
 
 
-/* Kod odpowiadający za galerię */
-
 let photo = document.querySelectorAll('.img-portfolio');
 
 let photoGallery = document.querySelector('.photo-gallery-overlay');
@@ -80,73 +78,93 @@ let photoGallery1 = document.querySelector('.big-gallery-photo-1 ');
 let photoGallery2 = document.querySelector('.big-gallery-photo-2 ');
 let photoGalleryBoth = document.querySelector('.big-gallery-photo');
 
+let previousPhoto = document.querySelector('.left-gallery-arrow');
+let nextPhoto = document.querySelector('.right-gallery-arrow');
 
-for (let i = 0; i < photo.length; i++) {
+let closeGallery = document.querySelector('.gallery-close');
 
-    const showGallery = () => {
 
-        let photoGalleryVisible = document.querySelector('.big-gallery-photo-visible');
+let curentPhotoIndex;
 
-        photoGallery.classList.add('gallery-visible');
-        photoGalleryVisible.src = photo[i].src;
+const showGallery = (e) => {
 
-        let nextPhoto = document.querySelector('.right-gallery-arrow');
+    let photoGalleryVisible = document.querySelector('.big-gallery-photo-visible');
 
-        const showNextPhoto = () => {
+    photoGallery.classList.add('gallery-visible');
+    photoGalleryVisible.src = e.target.src;
+    curentPhotoIndex = parseInt(e.target.dataset.index);
 
-            let invisiblePhoto = document.querySelector('.big-gallery-photo:not(.big-gallery-photo-visible)');
-
-            invisiblePhoto.src = photo[i + 1].src;
-
-            photoGallery1.classList.toggle('big-gallery-photo-visible');
-            photoGallery2.classList.toggle('big-gallery-photo-visible');
-
-            i++
-
-            if (invisiblePhoto.src === photo[photo.length - 1].src) {
-                nextPhoto.classList.add('invisible');
-            }
-        }
-
-        nextPhoto.addEventListener('click', showNextPhoto);
-        let previousPhoto = document.querySelector('.left-gallery-arrow');
-
-        const showPreviousPhoto = () => {
-            let invisiblePhoto = document.querySelector('.big-gallery-photo:not(.big-gallery-photo-visible)');
-
-            invisiblePhoto.src = photo[i - 1].src;
-
-            photoGallery1.classList.toggle('big-gallery-photo-visible');
-
-            photoGallery2.classList.toggle('big-gallery-photo-visible');
-
-            i--
-
-            if (invisiblePhoto.src === photo[0].src) {
-                previousPhoto.classList.add('invisible');
-            }
-        }
-
-        let closeGallery = document.querySelector('.gallery-close');
-
-        const galleryClose = () => {
-            photoGallery.classList.remove('gallery-visible');
-        }
-
-        closeGallery.addEventListener('click', galleryClose);
-
-        if (photo[i].src === photo[0].src) {
-            previousPhoto.classList.add('invisible');
-        } else {
-            previousPhoto.classList.remove('invisible');
-        }
-
-        if (photo[i].src === photo[photo.length - 1].src) {
-            nextPhoto.classList.add('invisible');
-        }
-
-        previousPhoto.addEventListener('click', showPreviousPhoto);
+    if (photo[curentPhotoIndex].src === photo[0].src) {
+        previousPhoto.classList.add('invisible');
     }
 
+    if (photo[curentPhotoIndex].src === photo[photo.length - 1].src) {
+        nextPhoto.classList.add('invisible');
+    }
+}
+
+
+const galleryClose = () => {
+    photoGallery.classList.remove('gallery-visible');
+}
+
+closeGallery.addEventListener('click', galleryClose);
+
+
+const showNextPhoto = (e) => {
+   
+    let invisiblePhoto = document.querySelector('.big-gallery-photo:not(.big-gallery-photo-visible)');
+
+    invisiblePhoto.src = photo[curentPhotoIndex + 1].src;
+    curentPhotoIndex = curentPhotoIndex + 1;
+    
+    photoGallery1.classList.toggle('big-gallery-photo-visible');
+    photoGallery2.classList.toggle('big-gallery-photo-visible');
+
+    if (curentPhotoIndex === photo.length - 1) {
+        nextPhoto.classList.add('invisible')
+    } else {
+        previousPhoto.classList.remove('invisible');
+    }
+
+    if (curentPhotoIndex === 0) {
+        previousPhoto.classList.add('invisible');
+    } else {
+        previousPhoto.classList.remove('invisible');
+    }
+}
+
+nextPhoto.addEventListener('click', showNextPhoto);
+
+
+const showPreviousPhoto = () => {
+    let invisiblePhoto = document.querySelector('.big-gallery-photo:not(.big-gallery-photo-visible)');
+
+    invisiblePhoto.src = photo[curentPhotoIndex - 1].src;
+    curentPhotoIndex = curentPhotoIndex - 1;
+
+    console.log(curentPhotoIndex);
+    photoGallery1.classList.toggle('big-gallery-photo-visible');
+
+    photoGallery2.classList.toggle('big-gallery-photo-visible');
+
+    if (curentPhotoIndex === 0) {
+        previousPhoto.classList.add('invisible');
+    } else {
+        previousPhoto.classList.remove('invisible');
+    }
+
+    if (curentPhotoIndex === photo.length - 1) {
+        nextPhoto.classList.add('invisible');
+    } else {
+        nextPhoto.classList.remove('invisible');
+    }
+}
+
+previousPhoto.addEventListener('click', showPreviousPhoto);
+
+
+for (let i = 0; i < photo.length; i++) {
+    photo[i].dataset.index = i;
     photo[i].addEventListener('click', showGallery);
 }
