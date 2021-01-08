@@ -7,10 +7,16 @@ window.addEventListener('load', function () {
 });
 
 let menuButton = document.querySelector('.menu-button');
+console.log(menuButton)
+
+let circle = document.querySelectorAll('.circle');
 let navMenu = document.querySelector('.nav-menu');
 
 const showMenuItems = () => {
-    navMenu.classList.toggle('menu-visible')
+    for (let i=0; i<circle.length; i++) {
+        circle[i].classList.toggle('visible-menu-item')
+        navMenu.classList.toggle('nav-visible')
+    }
 }
 
 menuButton.addEventListener('click', showMenuItems)

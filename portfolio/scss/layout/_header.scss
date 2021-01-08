@@ -1,0 +1,129 @@
+.main-content {
+    .main-header {
+        width: 100%;
+        height: 100vh;
+        background-color: $main-color;
+        color: white;
+
+        .header-content {
+            padding: 100px 30px;
+
+            .tag-name {
+                color: rgb(122, 91, 116);
+            }
+
+            h1, h2 {
+                padding-left: 20px;
+            }
+
+            .fa-smile-beam {
+                animation: happy 1s infinite;
+                position: relative;
+            }
+        }
+
+        .menu-items {
+            display: none;
+        }
+
+        .header-menu {
+            display: none;
+        }
+    }
+}
+
+@keyframes happy {
+    0%, 100% {
+        bottom: -1px;
+    }
+
+    50% {
+        bottom: 15px;
+    }
+}
+
+@media (min-width: 960px) {
+
+    .main-content {
+        .main-header {
+            width: 100%;
+            height: 100vh;
+            background-color: $main-color;
+            color: white;
+            
+            .header-content {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 50px;
+    
+               h1 {
+                   font-size: 72px;
+               }
+
+               h2 {
+                   font-size: 42px;
+               }
+            }
+    
+            .header-menu {
+                display: inline-block;
+                position: absolute;
+                right: 40px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 280px;
+                height: 250px;
+                animation: spin 10s infinite linear;
+                
+                .header-nav-menu {
+                    list-style-type: none;
+                }
+                
+                .header-circle {
+                    display: inline-block;
+                    background-color: #be9eb8;
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    line-height: 100px;
+                    text-align: center;
+                    font-weight: 700;
+                    transition: all 1s;
+
+                    &:hover {
+                        color: $main-color;
+                        transform: scale(1.2);
+                    }
+                    
+                    &.header-circle2 {
+                        width: 150px;
+                        height: 150px;
+                        position: relative;
+                        right: -10px;
+                        top: 25px;
+                        line-height: 150px;
+                    }
+
+                    &.header-circle3 {
+                        width: 120px;
+                        height: 120px;
+                        line-height: 120px;
+                        position: relative;
+                        left: 10px;
+                    }
+
+                    a {
+                        color: #007dc5;
+                    }
+                }
+            }
+        }
+    }
+
+    @keyframes spin {
+       100% {
+           transform: translateY(-50%) rotate(360deg);
+       }
+    }
+}
