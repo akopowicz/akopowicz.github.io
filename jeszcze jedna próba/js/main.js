@@ -141,9 +141,14 @@ const endMove = (e) => {
     console.log(y)
 }
 
+const touchStart = (e) => {
+    e.preventDefault()
+}
+
 for (let i = 0; i < chair.length; i++) {
    
     chair[i].dataset.index = i;
+    chair[i].addEventListener('touchstart', touchStart)
     chair[i].addEventListener('touchmove', moveChair)
     chair[i].addEventListener('touchend', endMove)
 }
