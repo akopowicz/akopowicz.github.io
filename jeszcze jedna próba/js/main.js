@@ -1,13 +1,13 @@
-let mainContainer = document.querySelector('.content-container');
-const appHeight = () => {
-    const doc = document.documentElement
+// let mainContainer = document.querySelector('.content-container');
+// const appHeight = () => {
+//     const doc = document.documentElement
    
-    mainContainer.style.height = window.innerHeight + 'px'
+//     mainContainer.style.height = window.innerHeight + 'px'
     
-}
-console.log(mainContainer)
-window.addEventListener('resize', appHeight)
-appHeight()
+// }
+// console.log(mainContainer)
+// window.addEventListener('resize', appHeight)
+// appHeight()
 
 
 let chair = document.querySelectorAll('.chair');
