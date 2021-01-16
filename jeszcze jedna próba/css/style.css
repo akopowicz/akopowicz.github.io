@@ -16,7 +16,7 @@
 
 .main-header {
     width: 100%;
-    height: 135px;
+    height: 105px;
     padding-top: 10px;
     display: flex;
     flex-direction: column;
@@ -25,11 +25,11 @@
 }
 
 .main-header #logo {
-    height: 55px;
+    height: 40px;
 }
 
 .main-header #copy {
-    height: 65px;
+    height: 50px;
 }
 
 .main-header #close {
@@ -52,10 +52,10 @@
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
-    /* position: relative; */
+    position: relative;
 }
 
 .main-content .slide-1.slide-move,
@@ -64,7 +64,7 @@
 }
 
 .main-content .slide-1 .main-image {
-    height: 300px;
+    max-height: 250px;
     /* max-height: 370px; */
     /* margin-top: -50px; */
   
@@ -81,7 +81,7 @@
 }
 
 .main-content .slide-1 .slide-1-text .copy-2 {
-    height: 70px;
+    height: 50px;
 }
 
 .main-content .slide-1 .slide-1-text .copy-2.invisible {
@@ -94,13 +94,13 @@
 }
 
 .main-content .slide-1 .slide-1-text .copy-3.visible {
-    width: 270px;
+    width: 200px;
 }
 
-.main-content .slide-1 .slide-1-text .text-2 {
+/* .main-content .slide-1 .slide-1-text .text-2 {
     padding-top: 20px;
     
-}
+} */
 
 .main-content .slide-1 .slide-1-text .text-2 .chairs {
     display: flex;
@@ -108,12 +108,12 @@
 }
 
 .main-content .slide-1 .slide-1-text .text-2 .chairs .chair-container {
-    width: 50px;
+    width: 40px;
     
 }
 
 .main-content .slide-1 .slide-1-text .text-2 .chairs .chair-container .chair {
-    width: 45px;
+    width: 35px;
     transition: all 1s;
 }
 
@@ -127,7 +127,7 @@
 
 .main-content .slide-1 .slide-1-text .text-2 .copy-4 {
     display: none;
-    width: 230px;
+    width: 150px;
     opacity: 0;
 }
 
@@ -167,7 +167,7 @@
 }
 
 .main-content .slide-2 .box {
-    height: 300px;
+    height: 200px;
 }
 
 .main-content .slide-2 .slider-2-bottom-content {
@@ -184,16 +184,16 @@
 }
 
 .main-content .slide-2 .slide-2-text .slide-2-text-1 {
-    width: 275px;
+    width: 200px;
 }
 
 .main-content .slide-2 .slide-2-text .slide-2-text-2 {
-    width: 260px;
+    width: 200px;
 }
 
 
 .main-content .slide-2 .button {
-    width: 260px;
+    width: 200px;
 }
 
 .main-content .slide-2 .button.animation {
