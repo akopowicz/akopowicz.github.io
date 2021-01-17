@@ -50,7 +50,6 @@
     display: flex;
 }
 
-
 .main-content .slide-1,
 .main-content .slide-2 {
     width: 100%;
@@ -60,15 +59,9 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    /* position: relative; */
     z-index: 10;
     transition: all 2s;
 }
-
-/* .main-content .slide-1.slide-move,
-.main-content .slide-2.slide-move {
-    animation: slide-transform 1s forwards 3s linear;
-} */
 
 .main-content .slide-1.slide-move,
 .main-content .slide-2.slide-move {
@@ -142,7 +135,6 @@
 
 .ellipse {
     position: absolute;
-   
     animation: elipse-scale 10s linear infinite;
 }
 
@@ -175,16 +167,16 @@
     margin: 50px 0 5px 0;
 }
 
-.main-content .slide-2 .slider-2-bottom-content {
+.main-content .slide-2 .slide-2-bottom-content {
     text-align: center;
 }
+
 .main-content .slide-2 .slide-2-text {
-    text-align: center;
     transform: translateX(100%);
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
-
 
 .main-content .slide-2 .slide-2-text.animation-begin {
     animation: text-animation 1s .5s forwards linear;
@@ -222,12 +214,6 @@
     }
 }
 
-@keyframes slide-transform {
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
 @keyframes text-animation {
     100% {
         transform: translateX(0);
@@ -238,7 +224,6 @@
     0%, 100% {
         transform: scale(1);
     }
-
     50% {
         transform: scale(1.1);
     }
@@ -246,7 +231,6 @@
 
 @media (min-width: 600px) and (min-height: 1024px) {
 
-    
     .main-header #logo {
         width: 180px;
     }
@@ -277,7 +261,6 @@
         width: 350px;
     }
 
-
     .main-content .slide-1 .slide-1-text .text-2 .chairs {
         width: 450px;
     }
@@ -291,35 +274,23 @@
     }
 
     .main-content .slide-1 .slide-1-text .text-2 .copy-4 {
-
         width: 300px;
- 
     }
-
-
 
     .ellipse.ellipse-1 {
         width: 250px;
-        top: 50px;
-        left: -90px;
     }
 
     .ellipse.ellipse-2 {
         width: 125px;
-        bottom: 120px;
-        left: -40px;
     }
 
     .ellipse.ellipse-3 {
         width: 160px;
-        top: 60px;
-        right: -40px;
     }
 
     .ellipse.ellipse-4 {
         width: 125px;
-        bottom: 230px;
-        right: -15px;
     }
 
     .main-content .slide-2 .box {
@@ -333,7 +304,6 @@
     .main-content .slide-2 .slide-2-text .slide-2-text-2 {
         width: 350px;
     }
-
 
     .main-content .slide-2 .button {
         width: 350px;
