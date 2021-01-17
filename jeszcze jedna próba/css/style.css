@@ -187,7 +187,7 @@
 
 
 .main-content .slide-2 .slide-2-text.animation-begin {
-    animation: text-animation 1s  forwards linear;
+    animation: text-animation 1s .5s forwards linear;
 }
 
 .main-content .slide-2 .slide-2-text .slide-2-text-1 {
@@ -204,7 +204,7 @@
 }
 
 .main-content .slide-2 .button.animation {
-    animation: button-animation 2s infinite 3s linear;
+    animation: button-animation 2s infinite 2s linear;
 }
 
 @keyframes copy-2-appears {
