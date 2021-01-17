@@ -314,12 +314,12 @@
 }
 
 .main-header #logo {
-    width: 140px;
+    width: 120px;
     margin-bottom: 5px;
 }
 
 .main-header #copy {
-    width: 160px;
+    width: 140px;
 }
 
 .main-header #close {
@@ -500,7 +500,7 @@
 }
 
 .main-content .slide-2 .box {
-    width: 120px;
+    width: 140px;
     margin: 50px 0;
 }
 
@@ -642,6 +642,43 @@
   
 
 
+    .main-header {
+        width: 100%;
+        /* height: 105px; */
+        padding-top: 10px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+    
+    .main-header #logo {
+        width: 180px;
+        margin-bottom: 5px;
+    }
+    
+    .main-header #copy {
+        width: 200px;
+    }
+    
+    .main-header #close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 25px;
+    }
+
+
+
 
 .main-content .slide-1 .main-image {
     width: 400px;
@@ -735,50 +772,26 @@
 
 .main-content .slide-2 .box {
     width: 250px;
-    margin: 50px 0;
-}
-
-.main-content .slide-2 .slider-2-bottom-content {
-    text-align: center;
-}
-.main-content .slide-2 .slide-2-text {
-    text-align: center;
-    -webkit-transform: translateX(100%);
-        -ms-transform: translateX(100%);
-            transform: translateX(100%);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
 }
 
 
-.main-content .slide-2 .slide-2-text.animation-begin {
-   -webkit-animation: text-animation 1s 2s forwards linear;
-           animation: text-animation 1s 2s forwards linear;
-}
+
+
+
 
 .main-content .slide-2 .slide-2-text .slide-2-text-1 {
-    width: 200px;
+    width: 350px;
 }
 
 .main-content .slide-2 .slide-2-text .slide-2-text-2 {
-    width: 200px;
+    width: 350px;
 }
 
 
 .main-content .slide-2 .button {
-    width: 220px;
-    margin-top: 5px;
+    width: 350px;
 }
 
-.main-content .slide-2 .button.animation {
-    -webkit-animation: button-animation 2s infinite 3s linear;
-            animation: button-animation 2s infinite 3s linear;
-}
 
 
 
