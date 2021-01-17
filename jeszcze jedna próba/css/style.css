@@ -50,6 +50,7 @@
     display: flex;
 }
 
+
 .main-content .slide-1,
 .main-content .slide-2 {
     width: 100%;
@@ -59,7 +60,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    /* position: relative; */
+    position: relative;
     z-index: 10;
 }
 
