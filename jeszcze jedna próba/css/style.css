@@ -11,6 +11,11 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    background-color: #fff;
+}
+
+.content-container.hide {
+    display: none;
 }
 
 .main-header {
@@ -20,6 +25,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 10;
 }
 
 .main-header #logo {
@@ -53,6 +60,7 @@
     justify-content: space-around;
     align-items: center;
     position: relative;
+    z-index: 10;
 }
 
 .main-content .slide-1.slide-move,
@@ -127,7 +135,7 @@
 
 .ellipse {
     position: absolute;
-    z-index: -10;
+   
     animation: elipse-scale 10s linear infinite;
 }
 
@@ -157,7 +165,7 @@
 
 .main-content .slide-2 .box {
     width: 140px;
-    margin: 50px 0 20px 0;
+    margin: 50px 0 5px 0;
 }
 
 .main-content .slide-2 .slider-2-bottom-content {
@@ -284,25 +292,25 @@
 
 
     .ellipse.ellipse-1 {
-        width: 150px;
+        width: 250px;
         top: 50px;
         left: -90px;
     }
 
     .ellipse.ellipse-2 {
-        width: 65px;
+        width: 125px;
         bottom: 120px;
         left: -40px;
     }
 
     .ellipse.ellipse-3 {
-        width: 80px;
+        width: 160px;
         top: 60px;
         right: -40px;
     }
 
     .ellipse.ellipse-4 {
-        width: 65px;
+        width: 125px;
         bottom: 230px;
         right: -15px;
     }

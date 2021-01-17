@@ -1,18 +1,15 @@
-// let mainContainer = document.querySelector('.content-container');
-// const appHeight = () => {
-//     const doc = document.documentElement
-   
-//     mainContainer.style.height = window.innerHeight + 'px'
-    
-// }
-// console.log(mainContainer)
-// window.addEventListener('resize', appHeight)
-// appHeight()
-
-
 let chair = document.querySelectorAll('.chair');
 let mainImage = document.querySelector('.main-image')
 
+
+let close = document.getElementById('close');
+
+const closeAdd = () => {
+    let addverstsement = document.querySelector('.content-container');
+    addverstsement.classList.add('hide')
+}
+
+close.addEventListener('click', closeAdd)
 
 let i = 0;
 
@@ -52,13 +49,8 @@ const moveChair = (e) => {
    
 
     for (let i = 0; i<invisibleChairs.length; i++) {
-        // invisibleChairs[i].classList.add('hide')
         invisibleChairs[i].classList.remove('big')
-       
-
     }
-
-    console.log(e.target.offsetTop)
 }
 
 const endMove = (e) => {
@@ -69,14 +61,7 @@ const endMove = (e) => {
 
     let mainImageRight = mainImageX + parseInt(mainImage.offsetWidth)
     let mainImageBottom = mainImageY + parseInt(mainImage.offsetHeight)
-  
-   
-    
-    
-
-
-
-
+ 
     if (x >= mainImageX && x <= mainImageRight && y >= mainImageY && y <= mainImageBottom) {
         console.log('działa')
         let copy2 = document.querySelector('.copy-2')
@@ -104,41 +89,8 @@ const endMove = (e) => {
 
         for (let i = 0; i<invisibleChairs.length; i++) {
             invisibleChairs[i].classList.add('invisible')
-           
-
         }
-        
-
-        // let part1 = document.querySelector('.instruction');
-        // part1.classList.add('hide')
-        // e.target.classList.add('chair-visible')
-        // console.log(e.target.style)
-        // let greatWork = document.querySelector('.great-work');
-        // greatWork.classList.add('visible')
-        // console.log(greatWork)
-        // let beggining = document.querySelector('.beggining');
-        // beggining.classList.add('visible')
-        
-
-        // let firstSlide = document.querySelector('.first-slide');
-        // firstSlide.classList.add('move')
-
-        // let secondSlide = document.querySelector('.second-slide')
-        // secondSlide.classList.add('move')
-
-        // e.target.classList.add('visible-one')
-        // let invisibleChairs = document.querySelectorAll('.chair:not(.visible-one)')
-        // console.log(invisibleChairs)
-
-        // for (let i = 0; i<invisibleChairs.length; i++) {
-        //     invisibleChairs[i].classList.add('hide')
-           
-
-        // }
     }
-
-    
-    console.log(y)
 }
 
 
@@ -150,5 +102,5 @@ for (let i = 0; i < chair.length; i++) {
     chair[i].addEventListener('touchmove', moveChair)
     chair[i].addEventListener('touchend', endMove)
 }
-console.log(chair)
+
 
