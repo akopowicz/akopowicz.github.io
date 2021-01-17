@@ -59,13 +59,13 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    position: relative;
+    /* position: relative; */
     z-index: 10;
 }
 
 .main-content .slide-1.slide-move,
 .main-content .slide-2.slide-move {
-    animation: slide-transform 1s forwards 2s linear;
+    animation: slide-transform 1s forwards 3s linear;
 }
 
 .main-content .slide-1 .main-image {
@@ -180,7 +180,7 @@
 
 
 .main-content .slide-2 .slide-2-text.animation-begin {
-    animation: text-animation 1s 2s forwards linear;
+    animation: text-animation 1s 3.5s forwards linear;
 }
 
 .main-content .slide-2 .slide-2-text .slide-2-text-1 {
