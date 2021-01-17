@@ -4,8 +4,8 @@ let mainImage = document.querySelector('.main-image');
 let close = document.getElementById('close');
 
 const closeAdd = () => {
-    let addverstsement = document.querySelector('.content-container');
-    addverstsement.classList.add('hide');
+    let advertisement = document.querySelector('.content-container');
+    advertisement.classList.add('hide');
 }
 
 close.addEventListener('click', closeAdd);
@@ -25,9 +25,13 @@ let startInterval = setInterval(resizeChairs, 1000);
 
 const moveChair = (e) => {
     let touchLocation = e.targetTouches[0];
+    
     e.target.style = 'position: absolute';
     e.target.style.left = touchLocation.pageX + 'px';
     e.target.style.top = touchLocation.pageY + 'px';
+    console.log(e.target.style.top)
+
+  
     
     if (e.target.dataset.index == 0) {
         e.target.src = 'img/krzeslo_blue_shine.png';
@@ -57,35 +61,62 @@ const endMove = (e) => {
     let mainImageX = parseInt(mainImage.offsetLeft);
     let mainImageY = parseInt(mainImage.offsetTop);
 
+ 
+//        /*  */
+//        let header = document.querySelector('.main-header')
+//        console.log(header.offsetHeight)
+//        e.target.style.top = y - header.offsetHeight + 'px';
+   
+//        //    e.target.style.top = touchLocation.pageY - header.offsetHeight + 'px';
+//    /*  */
+    
+
     let mainImageRight = mainImageX + parseInt(mainImage.offsetWidth);
     let mainImageBottom = mainImageY + parseInt(mainImage.offsetHeight);
  
     if (x >= mainImageX && x <= mainImageRight && y >= mainImageY && y <= mainImageBottom) {
+        console.log("działam")
 
         let copy2 = document.querySelector('.copy-2');
         copy2.classList.add('invisible');
         let copy3 = document.querySelector('.copy-3');
         copy3.classList.add('visible');
 
+        e.target.classList.add('visible-one');
+                let invisibleChairs = document.querySelectorAll('.chair:not(.visible-one)');
+              
+                for (let i = 0; i<invisibleChairs.length; i++) {
+                    invisibleChairs[i].classList.add('invisible');
+                }
         let copy4 = document.querySelector('.copy-4');
         copy4.classList.add('visible');
-        let slide1 = document.querySelector('.slide-1');
+//         let slide1 = document.querySelector('.slide-1');
+//         let slide2 = document.querySelector('.slide-2');
+
+const showSecondSlide = () => {
+    let slide1 = document.querySelector('.slide-1');
         let slide2 = document.querySelector('.slide-2');
         slide1.classList.add('slide-move');
         slide2.classList.add('slide-move');
-
+        e.target.classList.add('invisible')
         let slide2Text = document.querySelector('.slide-2-text');
-        slide2Text.classList.add('animation-begin');
+                slide2Text.classList.add('animation-begin');
+        
+                let button = document.querySelector('.button');
+                button.classList.add('animation');
+}
 
-        let button = document.querySelector('.button');
-        button.classList.add('animation');
+setTimeout(showSecondSlide, 3000);
+//         slide1.classList.add('slide-move');
+//         slide2.classList.add('slide-move');
 
-        e.target.classList.add('visible-one');
-        let invisibleChairs = document.querySelectorAll('.chair:not(.visible-one)');
-      
-        for (let i = 0; i<invisibleChairs.length; i++) {
-            invisibleChairs[i].classList.add('invisible');
-        }
+//         let slide2Text = document.querySelector('.slide-2-text');
+//         slide2Text.classList.add('animation-begin');
+
+//         let button = document.querySelector('.button');
+//         button.classList.add('animation');
+
+//        
     }
 }
 
