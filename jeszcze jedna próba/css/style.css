@@ -373,6 +373,7 @@
             align-items: center;
 
     position: relative;
+    /* bottom: 0; */
 }
 
 .main-content .slide-1.slide-move,
@@ -382,7 +383,8 @@
 }
 
 .main-content .slide-1 .main-image {
-    width: 250px;
+    width: 230px;
+   
     /* max-height: 370px; */
     /* margin-top: -50px; */
   
@@ -498,7 +500,8 @@
 }
 
 .main-content .slide-2 .box {
-    width: 180px;
+    width: 120px;
+    margin-top: 50px;
 }
 
 .main-content .slide-2 .slider-2-bottom-content {
