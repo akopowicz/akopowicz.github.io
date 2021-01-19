@@ -73,6 +73,11 @@ footer {
 
 @media (min-width: 960px) {
     footer {
+
+        p {
+            bottom: 20px;
+        }
+        
         .social-media {
             width: 50%;
             display: flex;

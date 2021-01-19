@@ -588,6 +588,9 @@ footer .social-media a:first-of-type {
 }
 
 @media (min-width: 960px) {
+  footer p {
+    bottom: 20px;
+  }
   footer .social-media {
     width: 50%;
     display: flex;
