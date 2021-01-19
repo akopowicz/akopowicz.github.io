@@ -29,31 +29,44 @@
 
     <div class="main-content hidden-content" id="main-content">
         <header class="main-header" id="home">
+            <div class="custom-shape-divider-bottom-1610643299">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+
+            <div class="get-to-know">
+                <h3>Poznajmy się!</h3>
+                <input type="text" class="your-name" id="guest-name" placeholder="Wpisz swoje imię">
+                <button class="ready">Gotowe</button>
+            </div>
+
             <div class="header-content">
-                <p class="h1-tag tag-name"></p>
-                <h1>Hello World!</h1>
-                <p class="h1-close-tag tag-name"></p>
-                <p class="h2-tag tag-name"></p>
-                <h2>Super, że tu jesteś <i class="fas fa-smile-beam"></i></h2>
-                <p class="h2-close-tag tag-name"></p>
+                <div class="header-content-container">
+                    <p class="h1-tag tag-name"></p>
+                    <h1>Hello <span class="guest-name">World</span>!</h1>
+                    <p class="h1-close-tag tag-name"></p>
+                    <div class="nice-to-see-you">
+                        <p class="h2-tag tag-name"></p>
+                        <h2>Super, że tu jesteś <i class="fas fa-smile-beam"></i></h2>
+                        <p class="h2-close-tag tag-name"></p>
+                    </div>
+                </div>
             </div>
             <p class="h2-tag-close"></p>
-            <div class="header-menu">
-                <ul class="header-nav-menu">
-                    <li class="header-circle header-circle1"> <a href="#home">Home</a></li>
-                    <li class="header-circle header-circle2"><a href="#about">O mnie</a></li>
-                    <li class="header-circle header-circle3"> <a href="#projects">Projekty</a></li>
-                </ul>
-            </div>
         </header>
         <nav class="main-navigation">
             <div class="menu-button">
                 <p>menu</p>
             </div>
             <ul class="nav-menu">
-                <li class="circle circle1"><a href="#home"> Home</a></li>
-                <li class="circle circle2"> <a href="#about">O mnie</a></li>
-                <li class="circle circle3"><a href="#projects">Projekty</a></li>
+                <li class="circle"><a href="#home" class="a"> Home</a></li>
+                <li class="circle"> <a href="#about" class="a">O mnie</a></li>
+                <li class="circle"><a href="#projects" class="a">Projekty</a></li>
+                <li class="circle"><a href="#contact" class="a">Kontakt</a></li>
             </ul>
         </nav>
         <section class="about" id="about">
@@ -82,77 +95,134 @@
                             <i class="fab fa-git"></i>
                             <i class="fab fa-wordpress"></i>
                         </div>
+                        <div class="learning">
+                            <h2>Obecnie uczę się</h2>
+                            <div class="skills">
+                                <i class="fab fa-react"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </article>
         </section>
         <section class="projects" id="projects">
+            <div class="custom-shape-divider-top-1610702145">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
             <h2 class="projects-header">Projekty</h2>
             <div class="projects-container">
-                <a href="https://akopowicz.github.io/Kabarday/" target="_blank" class="portfolio-item">
-                    <div class="kabarday">
-                        <h3>Strona marki Kabarday</h3>
-                        <div class="icons">
-                            <i class="fab fa-bootstrap"></i>
-                            <i class="fab fa-js-square"></i>
-                            <i class="fab fa-html5"></i>
-                            <i class="fab fa-css3-alt"></i>
-                            <i class="fab fa-sass"></i>
-                        </div>
-                        <img src="img/kabarday.JPG" alt="kabarday">
+                <div class="portfolio-item">
+                    <h3>Strona marki Kabarday</h3>
+                    <img src="img/kabarday.png" alt="">
+                    <div class="icons">
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                        <i class="fab fa-js-square"></i>
+                        <i class="fab fa-bootstrap"></i>
+                        <i class="fab fa-sass"></i>
                     </div>
-                </a>
-                <a href="https://akopowicz.github.io/nauka-rosyjskiego/" target="_blank" class="portfolio-item">
-                    <div class="kabarday">
-                        <h3>Strona do nauki rosyjskiego</h3>
-                        <div class="icons">
-                            <i class="fab fa-bootstrap"></i>
-                            <i class="fab fa-js-square"></i>
-                            <i class="fab fa-html5"></i>
-                            <i class="fab fa-css3-alt"></i>
-                            <i class="fab fa-sass"></i>
-                        </div>
-                        <img src="img/nauka-rosyjskiego.JPG" alt="nauka-rosyjskiego">
+                    <div class="overlay">
+                        <a href="https://akopowicz.github.io/Kabarday/" target="_blank" class="see-website">
+                            Odwiedź stronę
+                        </a>
                     </div>
-                </a>
-                <a href="https://akopowicz.github.io/zadania-domowe/3-landing-page/" target="_blank"
-                    class="portfolio-item">
-                    <div class="kabarday">
-                        <h3>Landing page</h3>
-                        <div class="icons">
-                            <i class="fab fa-bootstrap"></i>
-                            <i class="fab fa-html5"></i>
-                            <i class="fab fa-css3-alt"></i>
-                        </div>
-                        <img src="img/landing-page.JPG" alt="landing-page">
+                </div>
+                <div class="portfolio-item">
+                    <h3>Strona do nauki rosyjskiego</h3>
+                    <img src="img/nauka-rosyjskiego.png" alt="">
+                    <div class="icons">
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                        <i class="fab fa-js-square"></i>
+                        <i class="fab fa-sass"></i>
                     </div>
-                </a>
-                <a href="https://akopowicz.github.io/Quote-generator/" target="_blank" class="portfolio-item">
-                    <div class="kabarday">
-                        <h3>Motywacyjne cytaty na poprawę dnia</h3>
-                        <div class="icons">
-                            <i class="fab fa-js-square"></i>
-                            <i class="fab fa-html5"></i>
-                            <i class="fab fa-css3-alt"></i>
-                        </div>
-                        <img src="img/quotes-generator.JPG" alt="quotes-generator">
+                    <div class="overlay">
+                        <a href="https://akopowicz.github.io/nauka-rosyjskiego" target="_blank" class="see-website">
+                            Odwiedź stronę
+                        </a>
                     </div>
-                </a>
-                <a href="https://akopowicz.github.io/SPA/" target="_blank" class="portfolio-item">
-                    <div class="kabarday">
-                        <h3>SPA</h3>
-                        <div class="icons">
-                            <i class="fab fa-js-square"></i>
-                            <i class="fab fa-html5"></i>
-                            <i class="fab fa-css3-alt"></i>
-                            <i class="fab fa-sass"></i>
-                        </div>
-                        <img src="img/spa.JPG" alt="spa">
+                </div>
+                <div class="portfolio-item">
+                    <h3>Motywujące cytaty na porawę dnia</h3>
+                    <img src="img/quotes.png" alt="">
+                    <div class="icons">
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                        <i class="fab fa-js-square"></i>
                     </div>
-                </a>
+                    <div class="overlay">
+                        <a href="https://akopowicz.github.io/Quote-generator/" target="_blank" class="see-website">
+                            Odwiedź stronę
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <h3>SPA</h3>
+                    <img src="img/spa.png" alt="">
+                    <div class="icons">
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                        <i class="fab fa-js-square"></i>
+                        <i class="fab fa-sass"></i>
+                    </div>
+                    <div class="overlay">
+                        <a href="https://akopowicz.github.io/SPA/" target="_blank" class="see-website">
+                            Odwiedź stronę
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <h3>Landing Page</h3>
+                    <img src="img/landing-page.png" alt="">
+                    <div class="icons">
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                        <i class="fab fa-bootstrap"></i>
+                    </div>
+                    <div class="overlay">
+                        <a href="https://akopowicz.github.io/zadania-domowe/3-landing-page/" target="_blank"
+                            class="see-website">
+                            Odwiedź stronę
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
-        <footer>Z pasją wykonała Anna Kopowicz</footer>
+        <footer>
+            <div class="custom-shape-divider-top-1610644080">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+            <p>Z pasją wykonała Anna Kopowicz</p>
+            <div class="footer-items-holder">
+                <form action="https://formspree.io/f/xjvpjdez" id="contact" method="POST">
+                    <h4><span class="guest-bye-bye">D</span>ziękuję za poświęcony mi czas, w razie pytań, lub chęci
+                        współpracy pisz śmiało</h4>
+                    <label for="name">Imię:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Wiadomość:</label>
+                    <textarea name="message" id="message" placeholder="Napisz coś miłego"></textarea>
+                    <button class="send">Wyślij</button>
+                </form>
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/in/anna-kopowicz/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/akopowicz"><i class="fab fa-github-alt"></i></a>
+                    <a href="https://pl-pl.facebook.com/anna.kopowicz"><i class="fab fa-facebook-f"></i></a>
+                </div>
+
+            </div>
+        </footer>
     </div>
 
     <script src="js/main.js"></script>

@@ -1,0 +1,45 @@
+form {
+    position: absolute;
+    top: 150px;
+    padding: 30px 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #0396B7;
+ 
+    label {
+        margin: 20px 0 0 50px;
+    }
+
+    h4 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    textarea {
+        height: 100px;
+    }
+}
+
+@media (min-width: 760px) {
+    form {
+      
+        label {
+            margin-left: 80px;
+        }
+    }
+}
+
+@media (min-width: 960px) {
+    form {
+        width: 50%;
+        left: auto;
+
+        textarea {
+            height: 200px;
+        }
+    }
+}

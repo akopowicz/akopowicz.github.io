@@ -2,16 +2,17 @@
     position: fixed;
     top: 10px;
     right: 10px;
+    z-index: 100;
 
     .menu-button {
         width: 80px;
         height: 80px;
-        background-color: rgb(190, 158, 184);
+        background-color: $main-color;
         border-radius: 50%;
         line-height: 80px;
         text-align: center;
         font-weight: 700;
-        color: rgb(0, 125, 197);
+        color: #fff;
         cursor: pointer;
     }
 
@@ -19,7 +20,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        opacity: 0;
+        opacity: 1;
         cursor: none;
         transition: all .3s;
 
@@ -30,7 +31,7 @@
 
         .circle {
             display: inline-block;
-            background-color: rgb(190, 158, 184);
+            background-color: $main-color;
             width: 0px;
             height: 0px;
             margin-top: 10px;
@@ -38,9 +39,8 @@
             line-height: 60px;
             font-size: 12px;
             text-align: center;
-            color: rgb(0, 125, 197);
             transition: all 1s;
-            opacity: 0;
+            opacity: 1;
             list-style-type: none;
 
             &.visible-menu-item {
@@ -50,8 +50,16 @@
             }
 
             a {
-                color: rgb(0, 125, 197);
+                color: #fff;
                 font-weight: 700;
+                font-size: 0px;
+                opacity: 0;
+                transition: font-size 2s;
+
+                &.visible-a {
+                    font-size: 12px;
+                    opacity: 1;
+                }
             }
         } 
     }
@@ -62,8 +70,8 @@
     .main-navigation {
         position: sticky;
         top: 0px;
-        background-color: rgb(158, 98, 145);
-        box-shadow: 0 2px 6px rgb(121, 121, 121);
+        background-color: #C59B62;
+        box-shadow: 0 2px 4px -2px rgb(121, 121, 121);
         width: 100%;
     
         .menu-button {
@@ -72,36 +80,26 @@
     
         .nav-menu {
             display: inline;
-            align-items: center;
-            opacity: 1;
-            cursor: pointer;
-            transition: all .3s;
-    
-            &.nav-visible {
-                opacity: 1;
-                cursor: pointer;
-            }
     
             .circle {
                 display: inline;
                 background-color: transparent;
                 border-radius: 0;
                 font-size: 18px;
-                color: #fff;
-                transition: all 1s;
-                opacity: 1;
                 margin-left: 20px;
-                font-weight: 700px;
-                display: inline;
 
                 a {
-                    color: $main-color;
-                }
-                    
-                &:hover {
-                    font-size: 20px;
-                }
+                    font-size: 14px;
+                    transition: all .5s;
+                    padding: 10px;
+                    opacity: 1;
+
+                    &:hover {
+                        color: #1E1F20;
+                    }
+                } 
             } 
         }
     }
 }
+

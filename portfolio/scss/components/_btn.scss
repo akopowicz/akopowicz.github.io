@@ -1,0 +1,40 @@
+%btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: all .3s;
+
+    &:hover {
+        background-color: $main-color;
+        border-color: $main-color;
+        color: #fff;
+    }
+}
+
+.ready {
+    @extend %btn;
+    background-color: #D0E6EB;
+    border: 1px solid #D0E6EB;
+    color: #00586B;
+}
+
+.send {
+    @extend %btn;
+    background-color: #D0E6EB;
+    border: 1px solid #D0E6EB;
+    color: #00586B;
+    width: 150px;
+    margin: auto;
+    margin-bottom: 20px;    
+}
+
+.see-website {
+    @extend %btn;
+    background-color: #D0E6EB;
+    border: 1px solid #D0E6EB;
+    color: #00586B;
+    padding: 15px 20px;
+    margin: auto;
+}

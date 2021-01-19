@@ -1,6 +1,96 @@
 footer {
-    text-align: center;
-    color: $main-color;
-    padding: 30px 0;
-    font-weight: 700;
+    background-color: #1E1F20;
+    height: 800px;
+    position: relative;
+
+    p {
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        color: #DBE0E1;
+        font-weight: 300;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .custom-shape-divider-top-1610644080 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);  
+
+        svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 150px;
+            transform: rotateY(180deg);
+        }  
+
+        .shape-fill {
+            fill: #0396B7;
+        }
+    }
+
+    .social-media {
+        position: absolute;
+        bottom: 0;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        font-size: 20px;
+        padding: 10px 0;
+
+        .fab {
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            background-color: #DBE0E1;
+            color: #1E1F20;
+            transition: all .3s;
+
+            &:hover {
+                background-color: $main-color;
+            }
+        }
+
+        a {
+            margin-left: 20px;
+
+            &:first-of-type {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 960px) {
+    footer {
+        .social-media {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            top: 0;
+            align-content: center;
+            justify-content: center;
+    
+            .fab {
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+            }
+    
+            a {
+                margin-left: 0px;
+                margin-bottom: 20px;
+            }
+        }
+    }
 }
