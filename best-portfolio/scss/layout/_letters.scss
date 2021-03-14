@@ -1,0 +1,29 @@
+.letter {
+    margin: -2px;
+    transition: all .3s;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    font-size: 36px;
+
+    &:hover {
+        color: $main-color;
+        transform: translateY(-10px);
+    }
+
+    &.break {
+        margin: 5px;
+    }
+}
+
+@media (min-width: 760px) {
+    .letter {
+        font-size: 42px;
+    }
+}
+
+@media (min-width: 960px) {
+    .letter {
+        font-size: 62px;
+    }
+}

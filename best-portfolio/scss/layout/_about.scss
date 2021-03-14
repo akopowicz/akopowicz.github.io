@@ -1,0 +1,307 @@
+.about {
+    height: 100vh;
+    z-index: 10;
+    position: relative;
+    // background-color: rgba(255, 255, 255, 0.733);
+    background-color: #fff;
+    background-color: $background-main-color;
+    padding-top: 30px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    text-align: center;
+    background-image: url('../img/about-me-background-1.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    overflow: hidden;
+
+    .about-me-header {
+        transform: translateX(100%);
+        transition: all 1s;
+        font-size: 24px;
+
+        &.show-animation {
+            transform: translateX(0);
+        }
+    }
+
+    .about-me {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+
+
+        .photo-and-author {
+            transform: translateX(-900px);
+            transition: all 2s;
+            margin: 10px auto;
+
+            &.photo-and-author-animation {
+                transform: translateX(0);
+            }
+
+            .me {
+                width: 200px;
+                cursor: url('../img/pointer.svg'), auto;
+                
+            }
+
+            // .photographer {
+            //     opacity: 0;
+            //     transition: all .5s;
+
+            //     &.visible {
+            //         opacity: 1;
+            //     }
+            // }
+        }
+
+        .about-me-text {
+            width: 90%;
+            opacity: 0;
+            transition: all 4s;
+            background-color: #fff;
+            padding: 20px 5px;
+            border: 2px solid $main-color;
+            box-shadow: 0 2px 6px $secondary-color;
+
+            &.show-text {
+                opacity: 1;
+            }
+
+
+            .skills {
+                cursor: pointer;
+                text-decoration: underline;
+                text-transform: uppercase;
+                margin-top: 10px;
+                transition: all .3s;
+                font-weight: 500;
+                color: $main-color;
+                
+        
+                &:hover {
+                    color: $main-text-color;
+                }
+            }
+        }
+    }
+
+    .skills-container {
+        position: absolute;
+        top: -50px;
+        display: flex;
+        justify-content: space-around;
+        transition: all .3s;
+        width: 100%;
+
+        &.show-container {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        i {
+            background-color: $main-color;
+            font-size: 24px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            color: #fff;
+            position: relative;
+            transition: all 2s;
+
+            &.skills-animation {
+                animation: skills 2s linear .3s;
+            }
+
+            &.hide-skill {
+                
+                top: -800px;
+            
+            }
+        }
+    }
+    .about-me-animation {
+        opacity: 0;
+    }
+}
+
+
+@keyframes skills {
+    0% {
+        bottom: 0;
+    }
+
+   20% {
+       bottom: 40px;
+   }
+
+  
+
+   40% {
+       bottom: 0;
+   }
+
+   60% {
+       bottom: 20px;
+   }
+
+   80% {
+       bottom: 0;
+   }
+
+   90% {
+        bottom: 10px;
+    }
+
+   
+
+    100% {
+        bottom: 0;
+    }
+}
+
+
+
+@media (min-width: 760px) {
+    .about {
+        display: flex;
+        align-items: center;
+    
+    
+        h3 {
+            position: absolute;
+            width: 100%;
+            top: 50px;
+            font-size: 52px;
+        }
+
+        .about-me {
+            justify-content: space-evenly;
+            margin: 0;
+            align-items: center;
+            
+    
+            .photo-and-author {
+            margin: 0;
+    
+            .me {
+                width: 250px;
+               
+    
+               
+              
+            }
+    
+        
+           
+            
+            
+        }
+    
+        .about-me-text {
+            width: 50%;
+            padding: 40px 10px;
+
+            .skills {
+                margin-top: 30px;
+            }
+        
+        }
+    
+    
+       
+        }
+    
+        .skills-container {
+           
+            width: 80%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: -80px;
+           
+            // background-color: rosybrown;
+           
+    
+           
+    
+            i {
+                
+                width: 80px;
+                height: 80px;
+                line-height: 80px;
+               
+    
+              
+    
+                // &:hover {
+                //     transform: scale(1.1);
+                //     box-shadow: 0 2px 6px $secondary-color;
+                //     font-size: 30px;
+                // }
+               
+                
+            }
+        }
+
+        .about-me-animation {
+            position: absolute;
+            opacity: 1;
+            bottom: 20px;
+            right: 20px;
+
+            &.about-me-animation-animation {
+                animation: spin-circle 10s linear infinite;
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    }
+
+@keyframes spin-circle {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+@media (min-width: 960px) {
+    .about {
+      
+    
+    
+     
+
+    
+   
+    
+      
+        .about-me-animation {
+            position: absolute;
+            width: 150px;
+            opacity: 1;
+            bottom: 0px;
+            right: 40px;
+
+            &.about-me-animation-animation {
+                animation: spin-circle 10s linear infinite;
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    }

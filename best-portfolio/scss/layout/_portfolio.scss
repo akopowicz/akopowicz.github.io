@@ -1,0 +1,162 @@
+.projects {
+    background-color: $background-secondary-color;
+    text-align: center;
+    position: relative;
+    padding-top: 60px;
+    height: 100vh;
+
+    .projects-container {
+        .portfolio-item {
+            margin-top: 20px;
+            
+            &:first-of-type {
+                margin-top: 60px;
+            }
+
+            a {
+                color: #fff;
+                font-size: 18px;
+                transition: all .3s;
+                display: inline-block;
+                transform: translateX(-50%);
+                transition: transform 3s;
+                position: relative;
+
+
+                &.move{
+                    transform: translateX(0);
+                }
+               
+                &:hover {
+                    color: $main-text-color;
+                    z-index: 2;
+                }
+               
+                &:hover +.portfolio-item-photo {
+                    opacity: 1;
+                    z-index: 1;
+                }
+            }
+
+            .portfolio-item-photo {
+                width: 300px;
+                border: 1px solid $main-color;
+                margin: auto;
+                position: absolute;
+                opacity: 0;
+                transition: all .5s;
+                top: 20%;
+                right: 0;
+                z-index: -1;
+
+                img {
+                    width: 100%;
+                }
+
+                .used-languages {
+                    i {
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                        border-radius: 50%;
+                        background-color: $main-color;
+                        background-color: rgba(255, 255, 255, 0.8);
+                        color: $main-color;
+                    }
+                }
+            
+            }
+        }
+    }
+}
+
+
+
+
+@media (min-width: 960px) {
+    .projects {
+    
+        .projects-container {
+           
+            .portfolio-item {
+                
+                // background-color: blue;
+                margin-top: 50px;
+                // position: static;
+                
+             
+    
+    
+    
+                a {
+                    // color: $main-color;
+                    font-size: 24px;
+                   
+
+                    &:last-of-type {
+                        transform: translateX(-1400%);
+                    }
+
+                    &.move {
+                        transform: translateX(0);
+                    }
+                   
+                    &:hover {
+                        color: $main-text-color;
+                        z-index: 2;
+                    }
+                   
+    
+                    &:hover +.portfolio-item-photo{
+                        opacity: 1;
+                        z-index: 1;
+                       
+                    }
+                }
+    
+                .portfolio-item-photo {
+                    width: 500px;
+                    border: 1px solid $main-color;
+                    // background-color: blanchedalmond;
+                    margin: auto;
+                    position: absolute;
+                    z-index: 10;
+                    opacity: 0;
+                    transition: all .5s;
+                   top: 0;
+                //    transform: translateY(-50%);
+                    right: 0;
+                    z-index: -1;
+
+                    // &.one {
+                    //     left: -100px;
+                    //     top: 0;
+                    // }
+
+                    // &.last {
+                    //     top: -150px;
+                    // }
+    
+                    img {
+                        width: 100%;
+                    }
+    
+                    .used-languages {
+                        i {
+                            width: 40px;
+                            height: 40px;
+                            line-height: 40px;
+                            border-radius: 50%;
+                            background-color: $main-color;
+                            background-color: rgba(255, 255, 255, 0.8);
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+   
+}
+

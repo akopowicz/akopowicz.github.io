@@ -1,0 +1,50 @@
+.main-navigation {
+    #menu-button {
+        color: $main-color;
+        font-weight: 600;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all .3s;
+        top: 10px;
+        left: 10px;
+        position: fixed;
+        z-index: 100;
+
+        &:hover {
+            color: $main-text-color;
+        }
+    }
+
+    #nav-menu {
+        width: 100vw;
+        height: 100vh;
+        display: inline-block;
+        transform: translateX(-100%);
+        position: fixed;
+        top: 0;
+        transition: all .3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        list-style-type: none;
+        z-index: 20;
+       
+        li {
+            padding: 10px;
+
+            a {
+                color: $main-color;
+                font-size: 32px;
+            }
+        }
+    
+
+
+        &.show-menu {
+            transform: translateX(0);
+            background-color: $background-main-color;
+        }
+        
+    }
+}
