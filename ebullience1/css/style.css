@@ -36,7 +36,6 @@ nav {
     height: 3px;
 } 
 
-
 .logo {
     position: absolute;
     font-family: 'Bungee', cursive;
@@ -44,6 +43,7 @@ nav {
     left: 50%;
     transform: translate(-50%, -50%);
     top: 50%;
+    cursor: context-menu;
 }
 
 .nav-list {
@@ -73,8 +73,13 @@ a {
     padding: 10px;
 }
 
-.home-header {
+.header {
     position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.home-header {
     opacity: 0;
 }
 
@@ -89,7 +94,6 @@ a {
 
 h1 {   
     font-size: 23px;
-    width: 100%;
     text-align: center;
     margin-top: 15%;
     -webkit-animation: h1-color 5s linear infinite;
@@ -97,12 +101,12 @@ h1 {
     text-shadow: #689BC3 0px 0px 10px;
 }
 
-.inscription {
+.informations {
     position: absolute;
     top: 0;
-    text-align: center;
-    height: 100%;
     width: 100%;
+    height: 100%;
+    text-align: center;
 }
 
 .description {
@@ -111,10 +115,12 @@ h1 {
     margin: auto;
 }
 
-.offer-holder {
+.specializations {
     position: absolute;
-    bottom: 0;
     width: 100%;
+    bottom: 0;
+   left: 50%;
+   transform: translate(-50%);
 }
 
 .offer-list {
@@ -158,6 +164,7 @@ footer ul {
     font-size: 25px;
     font-family: 'Bungee', cursive;
     line-height: 20px;
+    cursor: context-menu;
 }
 
 .copy-rights {
@@ -249,7 +256,6 @@ form input::placeholder, textarea::placeholder {
 input[type="checkbox"] {
     width: unset;
     margin-right: 10px;
-
 }
 
 button {
@@ -267,10 +273,26 @@ button {
 button:hover {
     background-color: #436687;
     color: #fff;
+    box-shadow: 0px 0px 4px #689BC3;
 }
 
-.help-header {
-    position: relative;
+.about-header h2 {
+    margin: 10% 0 15%;
+}
+
+.about-header p {
+    width: 95%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 700;
+    margin-top: 10%;
+}
+
+.inscription-visible {
+    display: none;
 }
 
 @-webkit-keyframes h1-color {
@@ -314,29 +336,14 @@ button:hover {
         opacity: 0;
     }
 
-    30% {
-        opacity: 1;
-    }
-
-    50%, 70% {
-        opacity: 0;
-    }
-
     100% {
         opacity: 1;
     }
+
 }
 
 @keyframes header-animation {
     0% {
-        opacity: 0;
-    }
-
-    30% {
-        opacity: 1;
-    }
-
-    50%, 70% {
         opacity: 0;
     }
 
@@ -361,6 +368,7 @@ button:hover {
         line-height: 30px;
         margin-left: 10px;
     }
+
     .hamburger {
         display: none;
     }
@@ -394,15 +402,20 @@ button:hover {
         color: #689BC3;
     }
 
-    .inscription {
-        position: absolute;
-        text-align: left;
+    .home-information {
         width: 50%;
-        background-color: rgba(0, 0, 0, 0.548);
+        text-align: left;
+        background-color: rgba(0,0,0,0.5);
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
+
+    .specializations {
+        position: static;
+        transform: unset;
+    }
+  
 
     h1 {
         margin-top: 0;
@@ -510,7 +523,6 @@ button:hover {
         color: #fff;
     }
 
-
     textarea, .checkbox-holder {
         width: 100%;
     }
@@ -522,5 +534,42 @@ button:hover {
 
     button {
         align-self: flex-end;
+    }
+
+    .about-information {
+        width: 60%;
+        text-align: left;
+        margin: auto;
+        left: 0;
+        right: 0;
+        background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.5));
+        padding: 0 1%;
+        box-sizing: border-box;
+    }
+
+    .about-header p {
+        width: 95%;
+        right: 0;
+        left: 0;
+        margin: auto;
+        font-size: 14px;
+        line-height: 25px;
+        margin-top: 10%;
+        margin-bottom: 3%;
+    }
+
+    .about-header .inscription-visible {
+        display: block;
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .about-header .bottom-inscription {
+        margin-top: 0%;
+        width: 100%;
+    }
+
+    .about-header h2 {
+      margin-bottom: 7%;
     }
 }
