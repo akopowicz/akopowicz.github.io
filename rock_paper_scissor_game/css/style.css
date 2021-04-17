@@ -36,6 +36,12 @@ body {
     padding: 20px;
     fill: rgb(213, 213, 245);
     flex-shrink: 0;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.scissors:hover, .paper:hover, .rock:hover {
+    box-shadow: 0 0 6px 3px rgb(105, 105, 158);
 }
 
 .play-button {
