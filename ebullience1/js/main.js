@@ -40,12 +40,23 @@ if (document.body.id == "about") {
 }
 
 if (document.body.id == "help") {
+    let button = document.querySelector('.button');
+    let agreement = document.getElementById('agreement');
+    let pleaseInscription = document.querySelector('.please-accept')
     window.onload = () => {
         footer.style.opacity = 1
     }
     if (window.innerWidth > 1000) {
         form.style.left = navList.offsetLeft + 20 + "px";
     }
+    button.addEventListener('click', (e) => {
+        if (!agreement.checked) {
+            e.preventDefault();
+            pleaseInscription.style.opacity = 1
+        } else {
+            pleaseInscription.innerText = "Successfully sent"
+        }
+    })
 }
 
 if (window.innerWidth > 1000) {
