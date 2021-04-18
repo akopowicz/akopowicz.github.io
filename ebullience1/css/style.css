@@ -314,7 +314,7 @@ button:hover {
 }
 
 .please-accept {
-    color: rgb(255, 0, 128);
+    color: #689BC3;
     font-size: 15px;
     margin-bottom: 5px;
     opacity: 0;
@@ -604,7 +604,6 @@ button:hover {
     }
 
     .please-accept {
-        color: #689BC3;
         font-size: 12px;
         align-self: flex-start;
         margin-bottom: 0;

@@ -35,15 +35,14 @@
         <form action="https://formspree.io/f/xknkgbjw"
         method="POST">
             <h2>Help</h2>
-            <input type="email" placeholder="E-mail" name="mail">
-            <textarea name="message" id="problem" placeholder="Describe your problem"></textarea>
+            <input type="email" placeholder="E-mail" name="mail" required>
+            <textarea name="message" id="problem" placeholder="Describe your problem" required></textarea>
             <div class="checkbox-holder">
                 <input type="checkbox" id="agreement" name="agreement">
                 <label for="agreement">accept terms</label>
             </div>
-            <div class="please-accept">Please, accept our terms</div>
-            <button type="submit">Send</button>
-            
+            <p class="please-accept">Please, accept our terms</p>
+            <button type="submit">Send</button>          
         </form>
     </header>
 
