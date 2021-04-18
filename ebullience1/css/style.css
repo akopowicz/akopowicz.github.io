@@ -439,6 +439,7 @@ button:hover {
         height: 200px;
         display: flex;
         justify-content: center;
+        opacity: 0;
     }
 
     .footer-inscriptions {

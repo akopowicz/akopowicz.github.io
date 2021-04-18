@@ -14,6 +14,7 @@ if (document.body.id == "home") {
         if (window.innerWidth > 1000) {
             mainImage.src = "img/pexels-harsch-shivam-20076474.png";
             homeInformation.style.left = navList.offsetLeft + 20 + "px";
+            footer.style.opacity = 1
         }
     }
 
@@ -29,11 +30,11 @@ if (document.body.id == "about") {
     window.onload = () => {
         if (window.innerWidth > 700) {
             mainImage.src = "img/pexels-wangming_photo-3549414.png";
+            footer.style.opacity = 1
         }
 
         if (inscriptionAbout.clientHeight > mainImage.clientHeight) {
             inscriptionAbout.style.overflow = "auto"
-            console.log(inscriptionAbout.offsetHeight)
         }
     }
 }
