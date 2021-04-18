@@ -40,7 +40,7 @@ if (document.body.id == "about") {
 }
 
 if (document.body.id == "help") {
-    let button = document.querySelector('button');
+    let button = document.querySelector('.button');
     let agreement = document.getElementById('agreement');
     let pleaseInscription = document.querySelector('.please-accept')
     window.onload = () => {
