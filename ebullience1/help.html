@@ -22,7 +22,7 @@
         <p class="logo">Ebullience</p>
 
         <ul class="nav-list">
-            <li class="nav-item"><a href="index.html" class="active">Home</a></li>
+            <li class="nav-item"><a href="index.html">Home</a></li>
             <li class="nav-item"><a href="about.html">About us</a></li>
             <li class="nav-item"><a href="contact.html">Contact</a></li>
             <li class="nav-item help"><a href="">Help</a></li>
@@ -32,19 +32,22 @@
     <header class="help-header header">
 
         <img src="img/pexels-thisisengineering-39130251.png" alt="" class="main-img help-img">
-        <form action="">
+        <form action="https://formspree.io/f/xknkgbjw"
+        method="POST">
             <h2>Help</h2>
-            <input type="email" placeholder="E-mail" name="e-mail">
-            <textarea name="problem" id="problem" placeholder="Describe your problem"></textarea>
+            <input type="email" placeholder="E-mail" name="mail">
+            <textarea name="message" id="problem" placeholder="Describe your problem"></textarea>
             <div class="checkbox-holder">
-                <input type="checkbox" id="agreement">
+                <input type="checkbox" id="agreement" name="agreement">
                 <label for="agreement">accept terms</label>
             </div>
+            <div class="please-accept">Please, accept our terms</div>
             <button type="submit">Send</button>
+            
         </form>
     </header>
 
-    <footer>
+    <footer class="footer-help">
         <ul>
             <li><a href="index.html">Home page</a></li>
             <li><a href="">About us</a></li>

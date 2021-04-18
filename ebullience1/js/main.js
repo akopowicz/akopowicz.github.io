@@ -38,10 +38,26 @@ if (document.body.id == "about") {
         }
     }
 }
-if (window.innerWidth > 1000) {
-    if (document.body.id == "help") {
+
+if (document.body.id == "help") {
+    let button = document.querySelector('button');
+    let agreement = document.getElementById('agreement');
+    let pleaseInscription = document.querySelector('.please-accept')
+    window.onload = () => {
+        footer.style.opacity = 1
+    }
+    if (window.innerWidth > 1000) {
         form.style.left = navList.offsetLeft + 20 + "px";
     }
+    button.addEventListener('click', (e) => {
+        if (!agreement.checked) {
+            e.preventDefault();
+            pleaseInscription.style.opacity = 1
+        }
+    })
+}
+
+if (window.innerWidth > 1000) {
 
     if (document.body.id == "contact") {
         contactInformations.style.left = navList.offsetLeft + 20 + "px";
