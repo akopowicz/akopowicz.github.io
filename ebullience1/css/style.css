@@ -215,7 +215,7 @@ form h2 {
     margin: 20px 0;
 }
 
-form input {
+form input[type="email"] {
     padding: 5px 10px;
 }
 
@@ -225,7 +225,7 @@ textarea {
   margin: 10px 0;
 }
 
-form input, textarea {
+form input[type="email"], textarea {
     box-sizing: border-box;
     width: 90%;
     color: black;
@@ -242,7 +242,7 @@ form input, textarea {
     align-items: baseline;
 }
 
-form input:focus, textarea:focus {
+form input[type="email"]:focus, textarea:focus {
     outline: rgb(8, 8, 167) 2px solid;
 }
 
@@ -266,7 +266,7 @@ input[type="checkbox"] {
     height: 30px;
     font-size: 18px;
     border-radius: 8px;
-    margin: 0px 0 50px 0;
+    margin: 10px 0 50px 0;
     transition: .5s;
 }
 
@@ -312,14 +312,6 @@ input[type="checkbox"] {
 ::-webkit-scrollbar-thumb:hover {
     background: #689BC3; 
 }
-
-.please-accept {
-    color: #689BC3;
-    font-size: 15px;
-    margin-bottom: 5px;
-    opacity: 0;
-}
-
 
 @-webkit-keyframes h1-color {
     0%, 70%, 100% {
@@ -543,7 +535,7 @@ input[type="checkbox"] {
         align-self: flex-start;
     }
 
-    form input, textarea {
+    form input[type="email"], textarea {
         background-color: black;
         color: #fff;
         border: none;
@@ -601,11 +593,5 @@ input[type="checkbox"] {
 
     .about-header h2 {
       margin-bottom: 7%;
-    }
-
-    .please-accept {
-        font-size: 12px;
-        align-self: flex-start;
-        margin-bottom: 0;
     }
 }
