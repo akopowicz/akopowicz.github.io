@@ -1,0 +1,513 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  height: auto;
+  max-height: 120vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+}
+
+header .main-image {
+  width: 100%;
+  height: auto;
+  position: relative;
+  transform: translateY(-5%);
+}
+
+header .lights {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+}
+
+header .octopus1 {
+  position: absolute;
+  width: 40%;
+  top: 7%;
+  left: -40%;
+  transform-origin: center;
+}
+
+header .octopus1-animation {
+  animation: octopus-animation linear infinite 50s, octopus1-spin linear infinite 5s;
+}
+
+header .octopus2 {
+  position: absolute;
+  width: 30%;
+  top: 5%;
+  right: 10%;
+  transform-origin: center;
+  animation: octopus2-animation linear infinite 5s, octopus2-spin linear infinite 5s;
+}
+
+header .octopus2-animation {
+  animation: octopus2-animation linear infinite 5s, octopus2-spin linear infinite 5s;
+}
+
+@keyframes octopus1-spin {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(0.5deg);
+  }
+  66% {
+    transform: rotate(-0.5deg);
+  }
+}
+
+@keyframes octopus2-spin {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(3deg);
+  }
+  66% {
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes octopus-animation {
+  0% {
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes octopus2-animation {
+  0% {
+    top: 5%;
+    right: 10%;
+  }
+  25% {
+    top: 4%;
+    right: 10%;
+  }
+  50% {
+    top: 4%;
+    right: 9%;
+  }
+  75% {
+    top: 5%;
+    right: 9%;
+  }
+  100% {
+    top: 5%;
+    right: 10%;
+  }
+}
+
+header .arrow {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  border: solid #fff;
+  border-width: 0 4px 4px 0;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 10px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+header .arrow-animation {
+  animation: arrow-animation 3s linear infinite;
+}
+
+@keyframes arrow-animation {
+  0%, 100% {
+    bottom: 5%;
+  }
+  50% {
+    bottom: 2%;
+  }
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  height: 12vh;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.nav .logo-icon {
+  margin-left: 1%;
+}
+
+.nav .logo-icon .author-name {
+  font-size: 1.8rem;
+  font-family: 'Metamorphous', cursive;
+}
+
+.nav .nav-details {
+  margin: 0 10% 0 1%;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.nav .nav-details .left-side ul {
+  display: flex;
+}
+
+.nav .nav-details .left-side-element {
+  white-space: nowrap;
+}
+
+.nav .nav-details .left-side-element-center {
+  margin: 0 10%;
+}
+
+.nav .nav-details .right-side ul {
+  display: flex;
+  margin-right: 5%;
+}
+
+.nav .nav-details .right-side ul .resume {
+  margin: 0 20%;
+}
+
+#fashion-section {
+  padding: 5% 0;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  height: 100vh;
+  position: relative;
+}
+
+#fashion-section .fashion-see-more {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%);
+  background: #EBEBEB;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  width: 75px;
+  height: 37px;
+  outline: none;
+  border: none;
+  display: block;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 35px;
+}
+
+#fashion-section .options-holder {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  width: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 1.2rem;
+  margin-top: 2%;
+  font-weight: 300;
+}
+
+#fashion-section .options-holder .macrame-button {
+  cursor: pointer;
+}
+
+#fashion-section .options-holder .ethnic-button {
+  cursor: pointer;
+}
+
+#fashion-section .options-holder .chosen {
+  font-weight: 400;
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+#fashion-section .macrame {
+  position: absolute;
+  display: flex;
+  text-align: left;
+  font-weight: 300;
+  left: 50%;
+  transform: translate(-50%);
+  width: 65%;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+
+#fashion-section .macrame .inspiration-holder {
+  height: 55vh;
+}
+
+#fashion-section .macrame .inspiration-holder .inspiration-img {
+  height: 100%;
+}
+
+#fashion-section .macrame .sketches-holder {
+  height: 55vh;
+}
+
+#fashion-section .macrame .sketches-holder .sketch-img {
+  height: 100%;
+}
+
+#fashion-section .macrame .final-holder {
+  height: 55vh;
+}
+
+#fashion-section .macrame .final-holder .final-img {
+  height: 100%;
+}
+
+#fashion-section .ethnic {
+  display: none;
+  position: absolute;
+  text-align: left;
+  font-weight: 300;
+  left: 50%;
+  transform: translate(-50%);
+  width: 65%;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+
+#fashion-section .ethnic .inspiration-holder {
+  height: 55vh;
+}
+
+#fashion-section .ethnic .inspiration-holder .inspiration-img {
+  height: 100%;
+}
+
+#fashion-section .ethnic .sketches-holder {
+  height: 55vh;
+}
+
+#fashion-section .ethnic .sketches-holder .sketch-img {
+  height: 100%;
+}
+
+#fashion-section .ethnic .final-holder {
+  height: 55vh;
+}
+
+#fashion-section .ethnic .final-holder .final-img {
+  height: 100%;
+}
+
+#ui-section {
+  padding: 3% 0;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: 2%;
+}
+
+#ui-section .projects-holder {
+  display: flex;
+  width: 70%;
+  left: 50%;
+  transform: translate(-50%);
+  position: relative;
+  margin-top: 2%;
+  justify-content: space-around;
+}
+
+#ui-section .projects-holder p {
+  font-weight: 300;
+  font-size: 24px;
+}
+
+#ui-section .projects-holder p span {
+  font-size: 16px;
+}
+
+#ui-section .projects-holder .the-conclusion {
+  width: 40%;
+  text-align: left;
+  position: relative;
+}
+
+#ui-section .projects-holder .the-conclusion .the_conclusion_img {
+  width: 100%;
+}
+
+#ui-section .projects-holder .ebullience {
+  width: 40%;
+  text-align: left;
+  position: relative;
+}
+
+#ui-section .projects-holder .ebullience .ebullience-img {
+  width: 100%;
+}
+
+#drwings {
+  padding: 5% 0 50% 0;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  box-shadow: 0 4px 6px -2px #8E8E8E;
+}
+
+#drwings .fashion-see-more {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%);
+  background: #EBEBEB;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  width: 75px;
+  height: 37px;
+  outline: none;
+  border: none;
+  display: block;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 35px;
+  margin: 2% 0 5% 0;
+}
+
+#drwings p {
+  font-weight: 300;
+  margin-top: 1%;
+}
+
+#drwings .projects-holder {
+  position: relative;
+  width: 90%;
+  left: 50%;
+  height: 65vh;
+  transform: translate(-50%);
+  margin-top: 1%;
+}
+
+#drwings .projects-holder img {
+  height: 100%;
+  position: absolute;
+}
+
+#drwings .projects-holder img.drawing3 {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: .5s;
+  z-index: 4;
+}
+
+#drwings .projects-holder img.drawing4 {
+  left: 65%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: .5s;
+  z-index: 3;
+  height: 80%;
+}
+
+#drwings .projects-holder img.drawing5 {
+  left: 82%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: .5s;
+  z-index: 2;
+  height: 60%;
+}
+
+#drwings .projects-holder img.drawing2 {
+  left: 35%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: .5s;
+  z-index: 3;
+  height: 80%;
+}
+
+#drwings .projects-holder img.drawing1 {
+  left: 18%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: .5s;
+  z-index: 2;
+  height: 60%;
+}
+
+footer {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  padding: 1% 0;
+}
+
+footer .icons-footer-holder {
+  display: flex;
+  left: 50%;
+  transform: translate(-50%);
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5% 0;
+}
+
+footer .icons-footer-holder a {
+  display: block;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+footer .icons-footer-holder img {
+  height: 100%;
+}
+
+footer .email {
+  font-weight: 300;
+  font-size: 16px;
+}
+/*# sourceMappingURL=style.css.map */

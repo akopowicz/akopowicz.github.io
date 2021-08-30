@@ -1,0 +1,126 @@
+#fashion-section {
+    padding: 5% 0;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    height: 100vh;
+    position: relative;
+
+    .fashion-see-more {
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%);
+        background: #EBEBEB;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        width: 75px;
+        height: 37px;
+        outline: none;
+        border: none;
+        // display: flex;
+        display: block;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 35px;
+
+    }
+
+    .options-holder {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        width: 20%;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 1.2rem;
+        margin-top: 2%;
+        font-weight: 300;
+
+        .macrame-button {
+            cursor: pointer;
+        }
+
+        .ethnic-button {
+            cursor: pointer;
+        }
+
+        .chosen {
+           font-weight: 400;
+            text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+        }
+
+     
+    }
+
+    .macrame {
+        position: absolute;
+        display: flex;
+        text-align: left;
+        font-weight: 300;
+        left: 50%;
+        transform: translate(-50%);
+        width: 65%;
+        justify-content: space-between;
+        margin-top: 2%;
+
+        .inspiration-holder {
+            height: 55vh;
+            .inspiration-img {
+                height: 100%;
+            }
+        }
+
+        .sketches-holder {
+            height: 55vh;
+
+
+            .sketch-img {
+                height: 100%;
+            }
+        }
+
+        .final-holder {
+            height: 55vh;
+
+            .final-img {
+                height: 100%;
+            }
+        }
+    }
+
+    .ethnic {
+        display: none;
+        position: absolute;
+        text-align: left;
+        font-weight: 300;
+        left: 50%;
+        transform: translate(-50%);
+        width: 65%;
+        justify-content: space-between;
+        margin-top: 2%;
+
+        .inspiration-holder {
+            height: 55vh;
+            .inspiration-img {
+                height: 100%;
+            }
+        }
+
+        .sketches-holder {
+            height: 55vh;
+
+
+            .sketch-img {
+                height: 100%;
+            }
+        }
+
+        .final-holder {
+            height: 55vh;
+
+            .final-img {
+                height: 100%;
+            }
+        }
+    }
+}

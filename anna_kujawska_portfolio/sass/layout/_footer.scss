@@ -1,0 +1,32 @@
+footer {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    padding: 1% 0;
+    .icons-footer-holder {
+        display: flex;
+        left: 50%;
+        transform: translate(-50%);
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5% 0;
+a{
+    display: block;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+        img {
+            height: 100%;
+        }
+    }
+
+    .email {
+        font-weight: 300;
+        font-size: 16px;
+    }
+    // .behance {
+    //     position: absolute;
+    //     width: 3%;
+    // }
+}

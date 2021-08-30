@@ -1,0 +1,51 @@
+#ui-section {
+    padding: 3% 0;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    // height: 100vh;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-top: 2%;
+    
+
+    .projects-holder {
+        display: flex;
+        // background-color: rgba(0, 0, 0, 0.1)
+        width: 70%;
+        left: 50%;
+        transform: translate(-50%);
+        position: relative;
+        margin-top: 2%;
+        justify-content: space-around;
+
+        p {
+            font-weight: 300;
+            font-size: 24px;
+            span {
+                font-size: 16px;
+            }
+        }
+
+        .the-conclusion {
+            width: 40%;
+            text-align: left;
+            position: relative;
+            .the_conclusion_img {
+                width: 100%;
+            }
+
+        }
+
+
+        .ebullience {
+            width: 40%;
+            text-align: left;
+            position: relative;
+            .ebullience-img {
+                width: 100%;
+            }
+
+        }
+    }
+}
