@@ -142,3 +142,59 @@ header {
         }
     }
 }
+
+@media (max-width: 800px) {
+    header {
+        height: 50vh;
+        max-height: unset;
+        // background-color: violet;
+         
+        .main-image {
+            width: 100vw;
+            height: auto;
+            position: relative;
+            top: 15vh;
+            // transform: translateY(30%);
+        }
+    
+        .lights {
+            top: 15vh;
+        }
+    
+        .octopus1 {
+            top: 15vh;
+        }
+    
+        .octopus2 {
+            top: 13vh;
+        }       
+    
+        @keyframes octopus2-animation {
+            0% {
+                top: 14vh;
+                right: 10%;
+            }
+    
+            25% {
+                top: 13.5vh;
+                right: 10%;
+            }
+    
+            50% {
+                top: 13.5vh;
+                right: 9%;
+            }
+    
+            75% {
+                top: 14vh;
+                right: 9%;
+            }
+    
+    
+            100% {
+                top: 14vh;
+                right: 10%;
+            }
+        }
+    }
+}

@@ -22,6 +22,7 @@ weapons.forEach((element) => {
             if (clickedElement[0] == weapon.id) {
                 instruction.innerText = "It's Tie!";
                 button.style.backgroundColor = "cadetblue";
+                scoreHolder.innerText = `Score: ${score}`;
             } else if (clickedElement[0] == "rock" && weapon.id == "scissors" || clickedElement[0] == "paper" && weapon.id == "rock" || clickedElement[0] == "scissors" && weapon.id == "paper") {
                 instruction.innerText = "You win! Congratulations!";
                 button.style.backgroundColor = "rgb(72, 141, 98)";

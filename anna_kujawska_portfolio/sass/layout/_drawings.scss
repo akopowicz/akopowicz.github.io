@@ -25,6 +25,11 @@
         font-weight: 300;
         line-height: 35px;
         margin: 2% 0 5% 0;
+transition: .5s;
+        &:hover {
+            background-color: #fff;
+            border: 1px solid black;
+        }
     }
 
     p {
@@ -92,5 +97,20 @@
         }
 
     
+    }
+}
+
+@media (max-width: 800px) {
+    #drwings {
+        height: 80vh;
+    
+        .fashion-see-more {
+            bottom: 5%;
+        }
+    
+        .projects-holder {
+            height: 40vh;
+            margin-top: 10%;        
+        }
     }
 }

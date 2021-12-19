@@ -38,10 +38,12 @@ body {
     flex-shrink: 0;
     transition: 1s;
     cursor: pointer;
+    box-shadow: 0 0 6px 1px rgb(122, 122, 168);
 }
 
 .scissors:hover, .paper:hover, .rock:hover {
-    box-shadow: 0 0 6px 3px rgb(105, 105, 158);
+    box-shadow: 0 0 6px 3px rgb(122, 122, 168);
+    transform: scale(1.05);
 }
 
 .play-button {
@@ -57,6 +59,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+    box-shadow: 0 0 6px 1px rgb(83, 131, 131);
 }
 
 .js-weapon {
@@ -67,6 +70,7 @@ body {
     position: relative;
     opacity: 0;
     flex-shrink: 0;
+    box-shadow: 0 0 6px 1px rgb(89, 101, 138);
 }
 
 .js-weapon-image {

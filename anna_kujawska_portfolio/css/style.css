@@ -163,17 +163,73 @@ header .arrow-animation {
   }
 }
 
+@media (max-width: 800px) {
+  header {
+    height: 50vh;
+    max-height: unset;
+  }
+  header .main-image {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    top: 15vh;
+  }
+  header .lights {
+    top: 15vh;
+  }
+  header .octopus1 {
+    top: 15vh;
+  }
+  header .octopus2 {
+    top: 13vh;
+  }
+  @keyframes octopus2-animation {
+    0% {
+      top: 14vh;
+      right: 10%;
+    }
+    25% {
+      top: 13.5vh;
+      right: 10%;
+    }
+    50% {
+      top: 13.5vh;
+      right: 9%;
+    }
+    75% {
+      top: 14vh;
+      right: 9%;
+    }
+    100% {
+      top: 14vh;
+      right: 10%;
+    }
+  }
+}
+
 .nav {
   position: fixed;
   top: 0;
   height: 12vh;
   width: 100%;
+  width: 100vw;
   z-index: 10;
   background-color: #fff;
   color: #000;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+.nav .chosen {
+  font-weight: 400;
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+.nav .hamburger {
+  position: absolute;
+  height: 45%;
+  display: none;
 }
 
 .nav .logo-icon {
@@ -202,6 +258,15 @@ header .arrow-animation {
   white-space: nowrap;
 }
 
+.nav .nav-details .left-side-element a {
+  transition: .5s;
+}
+
+.nav .nav-details .left-side-element a:hover {
+  color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
 .nav .nav-details .left-side-element-center {
   margin: 0 10%;
 }
@@ -211,8 +276,77 @@ header .arrow-animation {
   margin-right: 5%;
 }
 
+.nav .nav-details .right-side ul a {
+  transition: .5s;
+}
+
+.nav .nav-details .right-side ul a:hover {
+  color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
 .nav .nav-details .right-side ul .resume {
   margin: 0 20%;
+}
+
+@media (max-width: 800px) {
+  .nav {
+    height: 15vh;
+    width: 100vw;
+  }
+  .nav .hamburger {
+    display: block;
+  }
+  .nav .logo-icon {
+    margin-left: 0;
+    text-align: center;
+  }
+  .nav .nav-details {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  .nav .nav-details .left-side ul {
+    display: flex;
+  }
+  .nav .nav-details .left-side-element {
+    white-space: nowrap;
+  }
+  .nav .nav-details .left-side-element-center {
+    margin: 0 10%;
+  }
+  .nav .nav-details .right-side {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 0vh;
+    top: 14.5vh;
+    left: 0;
+    transition: .2s;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 10px -8px grey;
+  }
+  .nav .nav-details .right-side.show {
+    height: 50vh;
+  }
+  .nav .nav-details .right-side ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    margin-right: unset;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav .nav-details .right-side ul li {
+    font-size: 2rem;
+  }
 }
 
 #fashion-section {
@@ -221,6 +355,18 @@ header .arrow-animation {
   font-family: 'Oswald', sans-serif;
   height: 100vh;
   position: relative;
+}
+
+#fashion-section .options-macrame {
+  display: flex;
+  position: relative;
+  width: 80%;
+  font-size: 1.2rem;
+  left: 50%;
+  transform: translate(-50%);
+  display: none;
+  justify-content: space-around;
+  font-weight: 300;
 }
 
 #fashion-section .fashion-see-more {
@@ -239,6 +385,12 @@ header .arrow-animation {
   font-size: 16px;
   font-weight: 300;
   line-height: 35px;
+  transition: .5s;
+}
+
+#fashion-section .fashion-see-more:hover {
+  background-color: #fff;
+  border: 1px solid black;
 }
 
 #fashion-section .options-holder {
@@ -284,6 +436,13 @@ header .arrow-animation {
 
 #fashion-section .macrame .inspiration-holder .inspiration-img {
   height: 100%;
+  filter: grayscale(100%);
+  transition: .5s;
+}
+
+#fashion-section .macrame .inspiration-holder .inspiration-img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.2);
 }
 
 #fashion-section .macrame .sketches-holder {
@@ -292,6 +451,13 @@ header .arrow-animation {
 
 #fashion-section .macrame .sketches-holder .sketch-img {
   height: 100%;
+  filter: grayscale(100%);
+  transition: .5s;
+}
+
+#fashion-section .macrame .sketches-holder .sketch-img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.2);
 }
 
 #fashion-section .macrame .final-holder {
@@ -300,6 +466,13 @@ header .arrow-animation {
 
 #fashion-section .macrame .final-holder .final-img {
   height: 100%;
+  filter: grayscale(100%);
+  transition: .5s;
+}
+
+#fashion-section .macrame .final-holder .final-img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.2);
 }
 
 #fashion-section .ethnic {
@@ -320,6 +493,13 @@ header .arrow-animation {
 
 #fashion-section .ethnic .inspiration-holder .inspiration-img {
   height: 100%;
+  filter: grayscale(100%);
+  transition: .5s;
+}
+
+#fashion-section .ethnic .inspiration-holder .inspiration-img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.2);
 }
 
 #fashion-section .ethnic .sketches-holder {
@@ -328,6 +508,13 @@ header .arrow-animation {
 
 #fashion-section .ethnic .sketches-holder .sketch-img {
   height: 100%;
+  filter: grayscale(100%);
+  transition: .5s;
+}
+
+#fashion-section .ethnic .sketches-holder .sketch-img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.2);
 }
 
 #fashion-section .ethnic .final-holder {
@@ -336,6 +523,114 @@ header .arrow-animation {
 
 #fashion-section .ethnic .final-holder .final-img {
   height: 100%;
+  filter: grayscale(100%);
+  transition: .5s;
+}
+
+#fashion-section .ethnic .final-holder .final-img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.2);
+}
+
+@media (max-width: 800px) {
+  #fashion-section {
+    height: 90vh;
+  }
+  #fashion-section .fashion-see-more {
+    bottom: 4%;
+  }
+  #fashion-section .options-macrame {
+    display: flex;
+    margin-top: 5px;
+  }
+  #fashion-section .options-macrame .shown2 {
+    font-weight: 400;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+  }
+  #fashion-section .options-holder {
+    width: 60%;
+  }
+  #fashion-section .macrame {
+    position: absolute;
+    display: flex;
+    text-align: left;
+    font-weight: 300;
+    left: 50%;
+    transform: translate(-50%);
+    width: 65%;
+    justify-content: space-between;
+    margin-top: 2%;
+  }
+  #fashion-section .macrame .inspiration-holder {
+    height: 55vh;
+  }
+  #fashion-section .macrame .inspiration-holder .inspiration-img {
+    height: 100%;
+  }
+  #fashion-section .macrame .inspiration-holder p {
+    display: none;
+  }
+  #fashion-section .macrame .sketches-holder {
+    height: 55vh;
+    display: none;
+  }
+  #fashion-section .macrame .sketches-holder .sketch-img {
+    height: 100%;
+  }
+  #fashion-section .macrame .sketches-holder p {
+    display: none;
+  }
+  #fashion-section .macrame .final-holder {
+    height: 55vh;
+    display: none;
+  }
+  #fashion-section .macrame .final-holder .final-img {
+    height: 100%;
+  }
+  #fashion-section .macrame .final-holder p {
+    display: none;
+  }
+  #fashion-section .ethnic {
+    display: none;
+    position: absolute;
+    text-align: left;
+    font-weight: 300;
+    left: 50%;
+    transform: translate(-50%);
+    width: 65%;
+    justify-content: space-between;
+    margin-top: 2%;
+  }
+  #fashion-section .ethnic .inspiration-holder {
+    height: 55vh;
+    display: none;
+  }
+  #fashion-section .ethnic .inspiration-holder .inspiration-img {
+    height: 100%;
+  }
+  #fashion-section .ethnic .inspiration-holder p {
+    display: none;
+  }
+  #fashion-section .ethnic .sketches-holder {
+    height: 55vh;
+    display: none;
+  }
+  #fashion-section .ethnic .sketches-holder .sketch-img {
+    height: 100%;
+  }
+  #fashion-section .ethnic .sketches-holder p {
+    display: none;
+  }
+  #fashion-section .ethnic .final-holder {
+    height: 55vh;
+    display: none;
+  }
+  #fashion-section .ethnic .final-holder .final-img {
+    height: 100%;
+  }
+  #fashion-section .ethnic .final-holder p {
+    display: none;
+  }
 }
 
 #ui-section {
@@ -387,6 +682,76 @@ header .arrow-animation {
   width: 100%;
 }
 
+@media (max-width: 800px) {
+  #ui-section .projects-holder {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%);
+    position: relative;
+    margin-top: 2%;
+    justify-content: space-around;
+  }
+  #ui-section .projects-holder p {
+    font-weight: 300;
+    font-size: 24px;
+  }
+  #ui-section .projects-holder p span {
+    font-size: 16px;
+  }
+  #ui-section .projects-holder .the-conclusion {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    text-align: center;
+  }
+  #ui-section .projects-holder .the-conclusion p {
+    font-size: 3rem;
+  }
+  #ui-section .projects-holder .the-conclusion p a {
+    display: block;
+    margin-top: 10%;
+  }
+  #ui-section .projects-holder .the-conclusion p a span {
+    display: block;
+    position: relative;
+    transform: translateY(-50%);
+  }
+  #ui-section .projects-holder .the-conclusion p a span::before {
+    content: "\A";
+    white-space: pre;
+  }
+  #ui-section .projects-holder .the-conclusion .the_conclusion_img {
+    width: 100%;
+  }
+  #ui-section .projects-holder .ebullience {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    text-align: center;
+  }
+  #ui-section .projects-holder .ebullience p {
+    font-size: 3rem;
+  }
+  #ui-section .projects-holder .ebullience p a {
+    display: block;
+    margin-top: 10%;
+  }
+  #ui-section .projects-holder .ebullience p a span {
+    display: block;
+    position: relative;
+    transform: translateY(-50%);
+  }
+  #ui-section .projects-holder .ebullience p a span::before {
+    content: "\A";
+    white-space: pre;
+  }
+  #ui-section .projects-holder .ebullience .ebullience-img {
+    width: 100%;
+  }
+}
+
 #drwings {
   padding: 5% 0 50% 0;
   text-align: center;
@@ -414,6 +779,12 @@ header .arrow-animation {
   font-weight: 300;
   line-height: 35px;
   margin: 2% 0 5% 0;
+  transition: .5s;
+}
+
+#drwings .fashion-see-more:hover {
+  background-color: #fff;
+  border: 1px solid black;
 }
 
 #drwings p {
@@ -477,6 +848,19 @@ header .arrow-animation {
   transition: .5s;
   z-index: 2;
   height: 60%;
+}
+
+@media (max-width: 800px) {
+  #drwings {
+    height: 80vh;
+  }
+  #drwings .fashion-see-more {
+    bottom: 5%;
+  }
+  #drwings .projects-holder {
+    height: 40vh;
+    margin-top: 10%;
+  }
 }
 
 footer {

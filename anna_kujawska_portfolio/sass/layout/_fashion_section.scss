@@ -5,6 +5,21 @@
     height: 100vh;
     position: relative;
 
+    .options-macrame {
+        display: flex;
+        position: relative;
+        width: 80%;
+        font-size: 1.2rem;
+        left: 50%;
+        transform: translate(-50%);
+        display: none;
+        justify-content: space-around;
+        // margin-top: 10x;
+        font-weight: 300;
+
+
+    }
+
     .fashion-see-more {
         position: absolute;
         bottom: 0%;
@@ -22,7 +37,12 @@
         font-size: 16px;
         font-weight: 300;
         line-height: 35px;
+        transition: .5s;
 
+        &:hover {
+            background-color: #fff;
+            border: 1px solid black;
+        }
     }
 
     .options-holder {
@@ -67,7 +87,13 @@
             height: 55vh;
             .inspiration-img {
                 height: 100%;
-            }
+                filter: grayscale(100%);
+                transition: .5s;
+                    &:hover {
+                        filter: grayscale(0%);
+                        transform: scale(1.2);
+                    }
+                }
         }
 
         .sketches-holder {
@@ -76,6 +102,14 @@
 
             .sketch-img {
                 height: 100%;
+                filter: grayscale(100%);
+                transition: .5s;
+                    &:hover {
+                        filter: grayscale(0%);
+                        transform: scale(1.2);
+                    }
+                
+                
             }
         }
 
@@ -84,7 +118,14 @@
 
             .final-img {
                 height: 100%;
-            }
+                filter: grayscale(100%);
+                transition: .5s;
+                    &:hover {
+                        filter: grayscale(0%);
+                        transform: scale(1.2);
+                    }
+                }
+            
         }
     }
 
@@ -103,7 +144,13 @@
             height: 55vh;
             .inspiration-img {
                 height: 100%;
-            }
+                filter: grayscale(100%);
+                transition: .5s;
+                    &:hover {
+                        filter: grayscale(0%);
+                        transform: scale(1.2);
+                    }
+                }
         }
 
         .sketches-holder {
@@ -112,7 +159,13 @@
 
             .sketch-img {
                 height: 100%;
-            }
+                filter: grayscale(100%);
+                transition: .5s;
+                    &:hover {
+                        filter: grayscale(0%);
+                        transform: scale(1.2);
+                    }
+                }
         }
 
         .final-holder {
@@ -120,6 +173,145 @@
 
             .final-img {
                 height: 100%;
+                filter: grayscale(100%);
+                transition: .5s;
+                    &:hover {
+                        filter: grayscale(0%);
+                        transform: scale(1.2);
+                    }
+                }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #fashion-section {
+        height: 90vh;
+
+        .fashion-see-more {
+            bottom: 4%;
+        }
+
+        .options-macrame {
+            display: flex;
+            margin-top: 5px;
+            
+            .shown2 {
+                font-weight: 400;
+                text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25) ;
+            }
+        }
+    
+       
+    
+        .options-holder {
+            width: 60%;         
+        }
+    
+        .macrame {
+            position: absolute;
+            display: flex;
+            text-align: left;
+            font-weight: 300;
+            left: 50%;
+            transform: translate(-50%);
+            width: 65%;
+            justify-content: space-between;
+            margin-top: 2%;
+    
+            .inspiration-holder {
+                height: 55vh;
+                .inspiration-img {
+                    height: 100%;
+                    // filter: grayscale(0%);
+                }
+
+                p {
+                    display: none;
+                }
+            }
+    
+            .sketches-holder {
+                height: 55vh;
+    
+                display: none;
+                .sketch-img {
+                    height: 100%;
+                    // filter: grayscale(0%);
+                }
+
+                p {
+                    display: none;
+                }
+            }
+    
+            .final-holder {
+                height: 55vh;
+                display: none;
+                .final-img {
+                    height: 100%;
+                    // filter: grayscale(0%);
+                }
+                p {
+                    display: none;
+                }
+            }
+        }
+    
+        .ethnic {
+            display: none;
+            position: absolute;
+            text-align: left;
+            font-weight: 300;
+            left: 50%;
+            transform: translate(-50%);
+            width: 65%;
+            justify-content: space-between;
+            margin-top: 2%;
+    
+            .inspiration-holder {
+                height: 55vh;
+                display: none;
+                .inspiration-img {
+                    height: 100%;
+                    // filter: grayscale(0%);
+                }
+
+                p {
+                    display: none;
+                }
+            }
+    
+            .sketches-holder {
+                height: 55vh;
+                display: none;
+    
+                .sketch-img {
+                    height: 100%;
+                    // filter: grayscale(0%);
+                }
+
+                p {
+                    display: none;
+                }
+            }
+    
+            .final-holder {
+                height: 55vh;
+                display: none;
+    
+                .final-img {
+                    height: 100%;
+                    // filter: grayscale(0%);
+
+                    // &:hover {
+                    //     transform: scale(1);
+                    // }
+                }
+
+                p {
+                    display: none;
+                }
             }
         }
     }
