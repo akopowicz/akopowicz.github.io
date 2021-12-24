@@ -2,6 +2,20 @@ footer {
     font-family: 'Oswald', sans-serif;
     text-align: center;
     padding: 1% 0;
+    width: 100%;
+    z-index: 10;
+    position: relative;
+
+
+    // &.contact-footer {
+    //     background-color: red;
+    //     // bottom: 1%;
+    //         bottom: 0%;
+    // height: 15vh;
+    // position: absolute;
+    // z-index: -2;
+    // // top: 10vh;
+    // }
     .icons-footer-holder {
         display: flex;
         left: 50%;

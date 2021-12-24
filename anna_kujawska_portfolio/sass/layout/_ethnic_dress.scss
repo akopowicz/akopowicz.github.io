@@ -1,0 +1,317 @@
+#ethnic-section {
+  font-family: 'Oswald', sans-serif;
+padding: 5% 0% 2% 0%;
+    .ethin-dress {
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        // background-color: brown;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+
+        a {
+            text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    .drawings-holder {
+        display: flex;
+        width: 70%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        margin: 5% 0%;
+        // display: flex;
+        // justify-content: space-evenly;
+        .left-side {
+            display: none;
+        }
+      img {
+          width: 100%;
+          transition: .5s;
+          
+          &:hover {
+            transform: scale(1.2);
+            box-shadow:  0 0 20px rgb(44, 44, 44);
+        }
+    }
+    }
+
+}
+
+
+#inspirations {
+    font-family: 'Oswald', sans-serif;
+    width: 100%;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 2% 0%;
+
+    p {
+        margin-left: 2.5%;
+        font-size: 1.2rem;
+        span {
+            display: none;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+    }
+
+    .ethnic-inspirations-photos-holder {
+        display: flex;
+        width: 95%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        margin: unset;
+        padding: 2% 0;
+        align-items: center;
+        // height: 40vh;
+
+        img {
+
+            width: 45%;
+            transition: .5s;
+            // position: absolute;
+            &.ethnic-big {
+                z-index: 30; 
+             }
+ 
+             &.ethnic-big2 {
+                 z-index: 20;
+                 position: absolute;
+                 transform: translate(50%);
+                 width: 43%;
+                 left: 0;
+             }
+
+             &.ethnic-big3 {
+                z-index: 10;
+                position: absolute;
+                transform: translate(150%);
+                width: 31%;
+                left: 0;
+            }
+
+            &.ethnic-big4 {
+                z-index: 5;
+                position: absolute;
+                transform: translate(320%);
+                width: 21%;
+                left: 0;
+            }
+
+         
+
+            &.hover-like {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 50%;
+                z-index: 50;
+                transform: translate(-50%, -50%);
+            }
+
+           
+        }
+    }
+}
+
+#sketches {
+    font-family: 'Oswald', sans-serif;
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    padding: 2% 0%;
+
+    p {
+        margin-left: 2.5%;
+        font-size: 1.2rem;
+  
+    }
+
+    img {
+        width: 80%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+}
+
+
+#textiles {
+    font-family: 'Oswald', sans-serif;
+    width: 100%;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 2% 0%;
+    box-shadow: 0 4px 6px -2px #8e8e8e;
+
+    p {
+        margin-left: 2.5%;
+        font-size: 1.2rem;
+    }
+
+    .ethnic-textiles-photos-holder {
+        display: flex;
+        width: 95%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        margin: unset;
+        padding: 2% 0;
+        align-items: center;
+        // height: 40vh;
+
+        img {
+
+            width: 45%;
+            transition: .5s;
+            // position: absolute;
+            &.textile-big {
+                z-index: 30; 
+             }
+ 
+             &.textile-big2 {
+                 z-index: 20;
+                 position: absolute;
+                 transform: translate(50%);
+                 width: 43%;
+                 left: 0;
+             }
+
+             &.textile-big3 {
+                z-index: 10;
+                position: absolute;
+                transform: translate(150%);
+                width: 31%;
+                left: 0;
+            }
+
+            &.textile-big4 {
+                z-index: 5;
+                position: absolute;
+                transform: translate(320%);
+                width: 21%;
+                left: 0;
+            }
+
+         
+
+            &.hover-like {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 50%;
+                z-index: 50;
+                transform: translate(-50%, -50%);
+            }
+
+           
+        }
+    }
+}
+
+@media (min-width: 800px) {
+    #ethnic-section {
+        padding: 5% 0% 2% 0%;
+            .ethin-dress {
+                width: 30%;
+                display: flex;
+                justify-content: space-around;
+                // background-color: brown;
+                position: relative;
+                left: 50%;
+                transform: translate(-50%);
+            }
+
+            .drawings-holder {
+                display: flex;
+                width: 50%;
+                position: relative;
+                left: 50%;
+                transform: translate(-50%);
+                margin: 5% 0%;
+                display: flex;
+                justify-content: space-evenly;
+
+                .left-side {
+                    display: block;
+                    width: 45%;
+                }
+
+                .right-side {
+                    width: 45%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: flex-end;
+                    img {
+                        width: 90%;
+                        // margin: 20% 0%;
+                    }
+                }
+            }
+        
+        }
+
+
+        #inspirations {
+            // width: 100%;
+            // position: relative;
+            // background-color: rgba(0, 0, 0, 0.1);
+            // padding: 2% 0%;
+            p {
+                margin-left: 25%;
+                span {
+                    display: inline;
+                }
+            }
+           
+        
+            .ethnic-inspirations-photos-holder {
+               
+                width: 50%;
+
+            }
+        }
+
+        
+#sketches {
+    
+
+    p {
+        margin-left: 25%;
+        font-size: 1.2rem;
+  
+    }
+
+    img {
+        width: 50%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+}
+
+#textiles {
+    
+    p {
+        margin-left: 25%;
+       
+    }
+   
+
+    .ethnic-textiles-photos-holder {
+       
+        width: 50%;
+
+    }
+}
+}
+
+
+

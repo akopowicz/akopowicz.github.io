@@ -40,6 +40,22 @@ header {
   overflow: hidden;
   position: relative;
   top: 0;
+  font-family: 'Oswald', sans-serif;
+}
+
+header .ethic-dress-holder {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+header .ethic-dress-holder .ethnic-dress.chosen {
+  font-weight: 400;
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
 }
 
 header .main-image {
@@ -168,6 +184,9 @@ header .arrow-animation {
     height: 50vh;
     max-height: unset;
   }
+  header .ethic-dress-holder {
+    top: 30%;
+  }
   header .main-image {
     width: 100vw;
     height: auto;
@@ -219,6 +238,7 @@ header .arrow-animation {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .nav .chosen {
@@ -867,6 +887,9 @@ footer {
   font-family: 'Oswald', sans-serif;
   text-align: center;
   padding: 1% 0;
+  width: 100%;
+  z-index: 10;
+  position: relative;
 }
 
 footer .icons-footer-holder {
@@ -893,5 +916,459 @@ footer .icons-footer-holder img {
 footer .email {
   font-weight: 300;
   font-size: 16px;
+}
+
+#contact-section {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  font-family: 'Oswald', sans-serif;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#contact-section .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50%;
+  top: 50%;
+  position: absolute;
+  width: 60%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+}
+
+#contact-section .content a {
+  display: block;
+  align-items: baseline;
+  position: relative;
+}
+
+#contact-section .content a span {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#contact-section .content p a {
+  display: inline;
+}
+
+#contact-section .content img {
+  margin-top: 10px;
+}
+
+@media (min-width: 800px) {
+  #contact-section {
+    height: 82vh;
+  }
+  #contact-section .content {
+    transform: translate(-50%, -65%);
+  }
+  #contact-section .content a {
+    display: block;
+    align-items: baseline;
+    position: relative;
+  }
+  #contact-section .content a span {
+    left: 5%;
+  }
+}
+
+#illustrations-section {
+  width: 100%;
+  position: relative;
+  padding-top: 30%;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  box-shadow: 0 4px 6px -2px #8e8e8e;
+}
+
+#illustrations-section .drawings-holder {
+  width: 70%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 5%;
+}
+
+#illustrations-section .drawings-holder img {
+  width: 100%;
+  transition: .5s;
+}
+
+#illustrations-section .drawings-holder img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px #2c2c2c;
+}
+
+@media (min-width: 800px) {
+  #illustrations-section {
+    padding-top: 10%;
+  }
+  #illustrations-section .drawings-holder {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #illustrations-section .drawings-holder img {
+    margin-bottom: 15px;
+  }
+  #illustrations-section .drawings-holder .left-side {
+    width: 45%;
+  }
+  #illustrations-section .drawings-holder .right-side {
+    width: 49%;
+  }
+}
+
+#ethnic-section {
+  font-family: 'Oswald', sans-serif;
+  padding: 5% 0% 2% 0%;
+}
+
+#ethnic-section .ethin-dress {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#ethnic-section .ethin-dress a {
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+#ethnic-section .drawings-holder {
+  display: flex;
+  width: 70%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  margin: 5% 0%;
+}
+
+#ethnic-section .drawings-holder .left-side {
+  display: none;
+}
+
+#ethnic-section .drawings-holder img {
+  width: 100%;
+  transition: .5s;
+}
+
+#ethnic-section .drawings-holder img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px #2c2c2c;
+}
+
+#inspirations {
+  font-family: 'Oswald', sans-serif;
+  width: 100%;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 2% 0%;
+}
+
+#inspirations p {
+  margin-left: 2.5%;
+  font-size: 1.2rem;
+}
+
+#inspirations p span {
+  display: none;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+#inspirations .ethnic-inspirations-photos-holder {
+  display: flex;
+  width: 95%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  margin: unset;
+  padding: 2% 0;
+  align-items: center;
+}
+
+#inspirations .ethnic-inspirations-photos-holder img {
+  width: 45%;
+  transition: .5s;
+}
+
+#inspirations .ethnic-inspirations-photos-holder img.ethnic-big {
+  z-index: 30;
+}
+
+#inspirations .ethnic-inspirations-photos-holder img.ethnic-big2 {
+  z-index: 20;
+  position: absolute;
+  transform: translate(50%);
+  width: 43%;
+  left: 0;
+}
+
+#inspirations .ethnic-inspirations-photos-holder img.ethnic-big3 {
+  z-index: 10;
+  position: absolute;
+  transform: translate(150%);
+  width: 31%;
+  left: 0;
+}
+
+#inspirations .ethnic-inspirations-photos-holder img.ethnic-big4 {
+  z-index: 5;
+  position: absolute;
+  transform: translate(320%);
+  width: 21%;
+  left: 0;
+}
+
+#inspirations .ethnic-inspirations-photos-holder img.hover-like {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  z-index: 50;
+  transform: translate(-50%, -50%);
+}
+
+#sketches {
+  font-family: 'Oswald', sans-serif;
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  padding: 2% 0%;
+}
+
+#sketches p {
+  margin-left: 2.5%;
+  font-size: 1.2rem;
+}
+
+#sketches img {
+  width: 80%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#textiles {
+  font-family: 'Oswald', sans-serif;
+  width: 100%;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 2% 0%;
+  box-shadow: 0 4px 6px -2px #8e8e8e;
+}
+
+#textiles p {
+  margin-left: 2.5%;
+  font-size: 1.2rem;
+}
+
+#textiles .ethnic-textiles-photos-holder {
+  display: flex;
+  width: 95%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  margin: unset;
+  padding: 2% 0;
+  align-items: center;
+}
+
+#textiles .ethnic-textiles-photos-holder img {
+  width: 45%;
+  transition: .5s;
+}
+
+#textiles .ethnic-textiles-photos-holder img.textile-big {
+  z-index: 30;
+}
+
+#textiles .ethnic-textiles-photos-holder img.textile-big2 {
+  z-index: 20;
+  position: absolute;
+  transform: translate(50%);
+  width: 43%;
+  left: 0;
+}
+
+#textiles .ethnic-textiles-photos-holder img.textile-big3 {
+  z-index: 10;
+  position: absolute;
+  transform: translate(150%);
+  width: 31%;
+  left: 0;
+}
+
+#textiles .ethnic-textiles-photos-holder img.textile-big4 {
+  z-index: 5;
+  position: absolute;
+  transform: translate(320%);
+  width: 21%;
+  left: 0;
+}
+
+#textiles .ethnic-textiles-photos-holder img.hover-like {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  z-index: 50;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 800px) {
+  #ethnic-section {
+    padding: 5% 0% 2% 0%;
+  }
+  #ethnic-section .ethin-dress {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  #ethnic-section .drawings-holder {
+    display: flex;
+    width: 50%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 5% 0%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #ethnic-section .drawings-holder .left-side {
+    display: block;
+    width: 45%;
+  }
+  #ethnic-section .drawings-holder .right-side {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  #ethnic-section .drawings-holder .right-side img {
+    width: 90%;
+  }
+  #inspirations p {
+    margin-left: 25%;
+  }
+  #inspirations p span {
+    display: inline;
+  }
+  #inspirations .ethnic-inspirations-photos-holder {
+    width: 50%;
+  }
+  #sketches p {
+    margin-left: 25%;
+    font-size: 1.2rem;
+  }
+  #sketches img {
+    width: 50%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  #textiles p {
+    margin-left: 25%;
+  }
+  #textiles .ethnic-textiles-photos-holder {
+    width: 50%;
+  }
+}
+
+.drawing-holder-macrame {
+  display: flex;
+  flex-direction: column;
+}
+
+.drawing-holder-macrame p {
+  align-self: flex-end;
+  font-weight: 300;
+}
+
+#macrame-sketches-holder {
+  font-family: 'Oswald', sans-serif;
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  padding: 2% 0%;
+}
+
+#macrame-sketches-holder p {
+  margin-left: 2.5%;
+  font-size: 1.2rem;
+}
+
+#macrame-sketches-holder .macrame-inspirations-photos-holder {
+  display: flex;
+  width: 95%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  margin: unset;
+  padding: 2% 0;
+  align-items: center;
+}
+
+#macrame-sketches-holder .macrame-inspirations-photos-holder img {
+  width: 45%;
+  transition: .5s;
+  box-shadow: 0px 4px 8px rgba(128, 128, 128, 0.678);
+}
+
+#macrame-sketches-holder .macrame-inspirations-photos-holder img.macrame-sketches-big {
+  z-index: 30;
+}
+
+#macrame-sketches-holder .macrame-inspirations-photos-holder img.macrame-sketches-big2 {
+  z-index: 20;
+  position: absolute;
+  transform: translate(50%);
+  width: 43%;
+  left: 0;
+}
+
+#macrame-sketches-holder .macrame-inspirations-photos-holder img.macrame-sketches-big3 {
+  z-index: 10;
+  position: absolute;
+  transform: translate(150%);
+  width: 31%;
+  left: 0;
+}
+
+#macrame-sketches-holder .macrame-inspirations-photos-holder img.macrame-sketches-big4 {
+  z-index: 5;
+  position: absolute;
+  transform: translate(320%);
+  width: 21%;
+  left: 0;
+}
+
+#macrame-sketches-holder .macrame-inspirations-photos-holder img.hover-like {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  z-index: 50;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 800px) {
+  #macrame-sketches-holder p {
+    margin-left: 25%;
+  }
+  #macrame-sketches-holder .macrame-inspirations-photos-holder {
+    width: 50%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
