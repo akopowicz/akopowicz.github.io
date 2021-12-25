@@ -269,4 +269,29 @@ if (document.body.id == "macrame-page") {
 
 window.onload = () => {
   iconsFooterHolder.style.width = email.offsetWidth + "px";
+
+  if (document.body.id == "ethnic-page" || document.body.id == "macrame-page") {
+    let ethnicBig = document.querySelector('.ethnic-big');
+  
+    let ethnicInspirationsPhotosHolder = document.querySelector('.ethnic-inspirations-photos-holder')
+
+    ethnicInspirationsPhotosHolder.style.height = ethnicBig.clientHeight + 10 + "px"
+    
+  
+    let textileBig = document.querySelector('.textile-big')
+  
+    let ethnicTextilesPhotosHolder = document.querySelector('.ethnic-textiles-photos-holder')
+    ethnicTextilesPhotosHolder.style.height = textileBig.clientHeight + 10 + "px"
+   
+   
+  } 
+
+  if (document.body.id == "macrame-page") {
+    let macrameBig = document.querySelector('.macrame-sketches-big');
+  
+  
+    let macrameInspirationsPhotosHolder = document.querySelector('.macrame-inspirations-photos-holder')
+
+    macrameInspirationsPhotosHolder.style.height = macrameBig.clientHeight + 10 + "px"
+  }
 }
