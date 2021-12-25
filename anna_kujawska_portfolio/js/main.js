@@ -207,7 +207,7 @@ if (document.body.id == "main-page") {
 
   let ethnicInspirationsPhotosHolder = document.querySelector('.ethnic-inspirations-photos-holder')
   let ethnicPhoto = document.querySelectorAll('.ethnic-photo')
-  ethnicInspirationsPhotosHolder.style.height = ethnicBig.clientHeight + 10 + "px"
+  // ethnicInspirationsPhotosHolder.style.height = ethnicBig.clientHeight + 10 + "px"
   ethnicPhoto.forEach(photoE => {
     photoE.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -227,7 +227,7 @@ if (document.body.id == "main-page") {
 
   let ethnicTextilesPhotosHolder = document.querySelector('.ethnic-textiles-photos-holder')
   let textilePhoto = document.querySelectorAll('.textile-photo')
-  ethnicTextilesPhotosHolder.style.height = textileBig.clientHeight + 10 + "px"
+  // ethnicTextilesPhotosHolder.style.height = textileBig.clientHeight + 10 + "px"
   textilePhoto.forEach(photoT => {
     photoT.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -246,7 +246,7 @@ if (document.body.id == "macrame-page") {
 
   let macrameInspirationsPhotosHolder = document.querySelector('.macrame-inspirations-photos-holder')
   let macramePhoto = document.querySelectorAll('.macrame-photo')
-  macrameInspirationsPhotosHolder.style.height = macrameBig.clientHeight + 10 + "px"
+  // macrameInspirationsPhotosHolder.style.height = macrameBig.clientHeight + 10 + "px"
   macramePhoto.forEach(photoE => {
     photoE.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -282,7 +282,6 @@ window.onload = () => {
   
     let ethnicTextilesPhotosHolder = document.querySelector('.ethnic-textiles-photos-holder')
     ethnicTextilesPhotosHolder.style.height = textileBig.clientHeight + 10 + "px"
-   
    
   } 
 
