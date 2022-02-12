@@ -1,7 +1,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* width */
@@ -47,7 +48,8 @@ header .ethic-dress-holder {
   position: absolute;
   top: 15%;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   text-align: center;
   font-size: 1.5rem;
   font-weight: 300;
@@ -62,7 +64,8 @@ header .main-image {
   width: 100%;
   height: auto;
   position: relative;
-  transform: translateY(-5%);
+  -webkit-transform: translateY(-5%);
+          transform: translateY(-5%);
 }
 
 header .lights {
@@ -78,11 +81,13 @@ header .octopus1 {
   width: 40%;
   top: 7%;
   left: -40%;
-  transform-origin: center;
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
 header .octopus1-animation {
-  animation: octopus-animation linear infinite 50s, octopus1-spin linear infinite 5s;
+  -webkit-animation: octopus-animation linear infinite 50s, octopus1-spin linear infinite 5s;
+          animation: octopus-animation linear infinite 50s, octopus1-spin linear infinite 5s;
 }
 
 header .octopus2 {
@@ -90,35 +95,82 @@ header .octopus2 {
   width: 30%;
   top: 5%;
   right: 10%;
-  transform-origin: center;
-  animation: octopus2-animation linear infinite 5s, octopus2-spin linear infinite 5s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: octopus2-animation linear infinite 5s, octopus2-spin linear infinite 5s;
+          animation: octopus2-animation linear infinite 5s, octopus2-spin linear infinite 5s;
 }
 
 header .octopus2-animation {
-  animation: octopus2-animation linear infinite 5s, octopus2-spin linear infinite 5s;
+  -webkit-animation: octopus2-animation linear infinite 5s, octopus2-spin linear infinite 5s;
+          animation: octopus2-animation linear infinite 5s, octopus2-spin linear infinite 5s;
+}
+
+@-webkit-keyframes octopus1-spin {
+  0%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  33% {
+    -webkit-transform: rotate(0.5deg);
+            transform: rotate(0.5deg);
+  }
+  66% {
+    -webkit-transform: rotate(-0.5deg);
+            transform: rotate(-0.5deg);
+  }
 }
 
 @keyframes octopus1-spin {
   0%, 100% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   33% {
-    transform: rotate(0.5deg);
+    -webkit-transform: rotate(0.5deg);
+            transform: rotate(0.5deg);
   }
   66% {
-    transform: rotate(-0.5deg);
+    -webkit-transform: rotate(-0.5deg);
+            transform: rotate(-0.5deg);
+  }
+}
+
+@-webkit-keyframes octopus2-spin {
+  0%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  33% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+  66% {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
   }
 }
 
 @keyframes octopus2-spin {
   0%, 100% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   33% {
-    transform: rotate(3deg);
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
   }
   66% {
-    transform: rotate(-3deg);
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+  }
+}
+
+@-webkit-keyframes octopus-animation {
+  0% {
+  }
+  100% {
+    left: 100%;
   }
 }
 
@@ -127,6 +179,29 @@ header .octopus2-animation {
   }
   100% {
     left: 100%;
+  }
+}
+
+@-webkit-keyframes octopus2-animation {
+  0% {
+    top: 5%;
+    right: 10%;
+  }
+  25% {
+    top: 4%;
+    right: 10%;
+  }
+  50% {
+    top: 4%;
+    right: 9%;
+  }
+  75% {
+    top: 5%;
+    right: 9%;
+  }
+  100% {
+    top: 5%;
+    right: 10%;
   }
 }
 
@@ -167,7 +242,17 @@ header .arrow {
 }
 
 header .arrow-animation {
-  animation: arrow-animation 3s linear infinite;
+  -webkit-animation: arrow-animation 3s linear infinite;
+          animation: arrow-animation 3s linear infinite;
+}
+
+@-webkit-keyframes arrow-animation {
+  0%, 100% {
+    bottom: 5%;
+  }
+  50% {
+    bottom: 2%;
+  }
 }
 
 @keyframes arrow-animation {
@@ -202,6 +287,28 @@ header .arrow-animation {
   header .octopus2 {
     top: 13vh;
   }
+  @-webkit-keyframes octopus2-animation {
+    0% {
+      top: 14vh;
+      right: 10%;
+    }
+    25% {
+      top: 13.5vh;
+      right: 10%;
+    }
+    50% {
+      top: 13.5vh;
+      right: 9%;
+    }
+    75% {
+      top: 14vh;
+      right: 9%;
+    }
+    100% {
+      top: 14vh;
+      right: 10%;
+    }
+  }
   @keyframes octopus2-animation {
     0% {
       top: 14vh;
@@ -235,10 +342,18 @@ header .arrow-animation {
   z-index: 10;
   background-color: #fff;
   color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .nav .chosen {
@@ -263,14 +378,20 @@ header .arrow-animation {
 
 .nav .nav-details {
   margin: 0 10% 0 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-family: 'Oswald', sans-serif;
   font-size: 1.2rem;
   font-weight: 300;
 }
 
 .nav .nav-details .left-side ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -279,6 +400,7 @@ header .arrow-animation {
 }
 
 .nav .nav-details .left-side-element a {
+  -webkit-transition: .5s;
   transition: .5s;
 }
 
@@ -292,11 +414,14 @@ header .arrow-animation {
 }
 
 .nav .nav-details .right-side ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-right: 5%;
 }
 
 .nav .nav-details .right-side ul a {
+  -webkit-transition: .5s;
   transition: .5s;
 }
 
@@ -305,7 +430,7 @@ header .arrow-animation {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-.nav .nav-details .right-side ul .resume {
+.nav .nav-details .right-side ul .contact {
   margin: 0 20%;
 }
 
@@ -323,13 +448,19 @@ header .arrow-animation {
   }
   .nav .nav-details {
     width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-family: 'Oswald', sans-serif;
     font-size: 1.2rem;
     font-weight: 300;
   }
   .nav .nav-details .left-side ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .nav .nav-details .left-side-element {
@@ -345,24 +476,41 @@ header .arrow-animation {
     height: 0vh;
     top: 14.5vh;
     left: 0;
+    -webkit-transition: .2s;
     transition: .2s;
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 10px -8px grey;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-shadow: 0 10px 10px -8px grey;
+            box-shadow: 0 10px 10px -8px grey;
   }
   .nav .nav-details .right-side.show {
     height: 50vh;
   }
   .nav .nav-details .right-side ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
     height: 50%;
     margin-right: unset;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .nav .nav-details .right-side ul li {
     font-size: 2rem;
@@ -378,14 +526,18 @@ header .arrow-animation {
 }
 
 #fashion-section .options-macrame {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   width: 80%;
   font-size: 1.2rem;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   display: none;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   font-weight: 300;
 }
 
@@ -393,9 +545,11 @@ header .arrow-animation {
   position: absolute;
   bottom: 0%;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   background: #EBEBEB;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   width: 75px;
   height: 37px;
@@ -405,6 +559,7 @@ header .arrow-animation {
   font-size: 16px;
   font-weight: 300;
   line-height: 35px;
+  -webkit-transition: .5s;
   transition: .5s;
 }
 
@@ -415,11 +570,15 @@ header .arrow-animation {
 
 #fashion-section .options-holder {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 20%;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   font-size: 1.2rem;
   margin-top: 2%;
   font-weight: 300;
@@ -440,13 +599,18 @@ header .arrow-animation {
 
 #fashion-section .macrame {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-align: left;
   font-weight: 300;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   width: 65%;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 2%;
 }
 
@@ -456,13 +620,17 @@ header .arrow-animation {
 
 #fashion-section .macrame .inspiration-holder .inspiration-img {
   height: 100%;
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: .5s;
   transition: .5s;
 }
 
 #fashion-section .macrame .inspiration-holder .inspiration-img:hover {
-  filter: grayscale(0%);
-  transform: scale(1.2);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 #fashion-section .macrame .sketches-holder {
@@ -471,13 +639,17 @@ header .arrow-animation {
 
 #fashion-section .macrame .sketches-holder .sketch-img {
   height: 100%;
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: .5s;
   transition: .5s;
 }
 
 #fashion-section .macrame .sketches-holder .sketch-img:hover {
-  filter: grayscale(0%);
-  transform: scale(1.2);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 #fashion-section .macrame .final-holder {
@@ -486,13 +658,17 @@ header .arrow-animation {
 
 #fashion-section .macrame .final-holder .final-img {
   height: 100%;
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: .5s;
   transition: .5s;
 }
 
 #fashion-section .macrame .final-holder .final-img:hover {
-  filter: grayscale(0%);
-  transform: scale(1.2);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 #fashion-section .ethnic {
@@ -501,9 +677,12 @@ header .arrow-animation {
   text-align: left;
   font-weight: 300;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   width: 65%;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 2%;
 }
 
@@ -513,13 +692,17 @@ header .arrow-animation {
 
 #fashion-section .ethnic .inspiration-holder .inspiration-img {
   height: 100%;
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: .5s;
   transition: .5s;
 }
 
 #fashion-section .ethnic .inspiration-holder .inspiration-img:hover {
-  filter: grayscale(0%);
-  transform: scale(1.2);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 #fashion-section .ethnic .sketches-holder {
@@ -528,13 +711,17 @@ header .arrow-animation {
 
 #fashion-section .ethnic .sketches-holder .sketch-img {
   height: 100%;
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: .5s;
   transition: .5s;
 }
 
 #fashion-section .ethnic .sketches-holder .sketch-img:hover {
-  filter: grayscale(0%);
-  transform: scale(1.2);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 #fashion-section .ethnic .final-holder {
@@ -543,13 +730,17 @@ header .arrow-animation {
 
 #fashion-section .ethnic .final-holder .final-img {
   height: 100%;
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: .5s;
   transition: .5s;
 }
 
 #fashion-section .ethnic .final-holder .final-img:hover {
-  filter: grayscale(0%);
-  transform: scale(1.2);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 @media (max-width: 800px) {
@@ -560,6 +751,8 @@ header .arrow-animation {
     bottom: 4%;
   }
   #fashion-section .options-macrame {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 5px;
   }
@@ -572,13 +765,18 @@ header .arrow-animation {
   }
   #fashion-section .macrame {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     text-align: left;
     font-weight: 300;
     left: 50%;
-    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
     width: 65%;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-top: 2%;
   }
   #fashion-section .macrame .inspiration-holder {
@@ -616,9 +814,12 @@ header .arrow-animation {
     text-align: left;
     font-weight: 300;
     left: 50%;
-    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
     width: 65%;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-top: 2%;
   }
   #fashion-section .ethnic .inspiration-holder {
@@ -664,13 +865,17 @@ header .arrow-animation {
 }
 
 #ui-section .projects-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 70%;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   position: relative;
   margin-top: 2%;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 #ui-section .projects-holder p {
@@ -704,14 +909,21 @@ header .arrow-animation {
 
 @media (max-width: 800px) {
   #ui-section .projects-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 90%;
     left: 50%;
-    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
     position: relative;
     margin-top: 2%;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   #ui-section .projects-holder p {
     font-weight: 300;
@@ -736,7 +948,8 @@ header .arrow-animation {
   #ui-section .projects-holder .the-conclusion p a span {
     display: block;
     position: relative;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   #ui-section .projects-holder .the-conclusion p a span::before {
     content: "\A";
@@ -761,7 +974,8 @@ header .arrow-animation {
   #ui-section .projects-holder .ebullience p a span {
     display: block;
     position: relative;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   #ui-section .projects-holder .ebullience p a span::before {
     content: "\A";
@@ -779,16 +993,19 @@ header .arrow-animation {
   height: 100vh;
   position: relative;
   width: 100%;
-  box-shadow: 0 4px 6px -2px #8E8E8E;
+  -webkit-box-shadow: 0 4px 6px -2px #8E8E8E;
+          box-shadow: 0 4px 6px -2px #8E8E8E;
 }
 
 #drwings .fashion-see-more {
   position: absolute;
   bottom: 0%;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   background: #EBEBEB;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   width: 75px;
   height: 37px;
@@ -799,6 +1016,7 @@ header .arrow-animation {
   font-weight: 300;
   line-height: 35px;
   margin: 2% 0 5% 0;
+  -webkit-transition: .5s;
   transition: .5s;
 }
 
@@ -817,7 +1035,8 @@ header .arrow-animation {
   width: 90%;
   left: 50%;
   height: 65vh;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   margin-top: 1%;
 }
 
@@ -829,7 +1048,9 @@ header .arrow-animation {
 #drwings .projects-holder img.drawing3 {
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: .5s;
   transition: .5s;
   z-index: 4;
 }
@@ -837,7 +1058,9 @@ header .arrow-animation {
 #drwings .projects-holder img.drawing4 {
   left: 65%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: .5s;
   transition: .5s;
   z-index: 3;
   height: 80%;
@@ -846,7 +1069,9 @@ header .arrow-animation {
 #drwings .projects-holder img.drawing5 {
   left: 82%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: .5s;
   transition: .5s;
   z-index: 2;
   height: 60%;
@@ -855,7 +1080,9 @@ header .arrow-animation {
 #drwings .projects-holder img.drawing2 {
   left: 35%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: .5s;
   transition: .5s;
   z-index: 3;
   height: 80%;
@@ -864,7 +1091,9 @@ header .arrow-animation {
 #drwings .projects-holder img.drawing1 {
   left: 18%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: .5s;
   transition: .5s;
   z-index: 2;
   height: 60%;
@@ -893,20 +1122,31 @@ footer {
 }
 
 footer .icons-footer-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   position: relative;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: .5% 0;
 }
 
 footer .icons-footer-holder a {
   display: block;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer .icons-footer-holder img {
@@ -923,24 +1163,35 @@ footer .email {
   width: 100%;
   height: 85vh;
   font-family: 'Oswald', sans-serif;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 #contact-section .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 50%;
   top: 50%;
   position: absolute;
   width: 60%;
   left: 50%;
-  transform: translate(-50%, -45%);
+  -webkit-transform: translate(-50%, -45%);
+          transform: translate(-50%, -45%);
 }
 
 #contact-section .content a {
   display: block;
-  align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   position: relative;
 }
 
@@ -948,7 +1199,8 @@ footer .email {
   position: absolute;
   left: 20%;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 #contact-section .content p a {
@@ -964,11 +1216,14 @@ footer .email {
     height: 82vh;
   }
   #contact-section .content {
-    transform: translate(-50%, -65%);
+    -webkit-transform: translate(-50%, -65%);
+            transform: translate(-50%, -65%);
   }
   #contact-section .content a {
     display: block;
-    align-items: baseline;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     position: relative;
   }
   #contact-section .content a span {
@@ -982,25 +1237,30 @@ footer .email {
   padding-top: 30%;
   font-family: 'Oswald', sans-serif;
   text-align: center;
-  box-shadow: 0 4px 6px -2px #8e8e8e;
+  -webkit-box-shadow: 0 4px 6px -2px #8e8e8e;
+          box-shadow: 0 4px 6px -2px #8e8e8e;
 }
 
 #illustrations-section .drawings-holder {
   width: 70%;
   position: relative;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   margin-top: 5%;
 }
 
 #illustrations-section .drawings-holder img {
   width: 100%;
+  -webkit-transition: .5s;
   transition: .5s;
 }
 
 #illustrations-section .drawings-holder img:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 20px #2c2c2c;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-box-shadow: 0 0 20px #2c2c2c;
+          box-shadow: 0 0 20px #2c2c2c;
 }
 
 @media (min-width: 800px) {
@@ -1009,8 +1269,12 @@ footer .email {
   }
   #illustrations-section .drawings-holder {
     width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   #illustrations-section .drawings-holder img {
     margin-bottom: 15px;
@@ -1030,11 +1294,15 @@ footer .email {
 
 #ethnic-section .ethin-dress {
   width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   position: relative;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
 }
 
 #ethnic-section .ethin-dress a {
@@ -1042,11 +1310,14 @@ footer .email {
 }
 
 #ethnic-section .drawings-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 70%;
   position: relative;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   margin: 5% 0%;
 }
 
@@ -1056,12 +1327,15 @@ footer .email {
 
 #ethnic-section .drawings-holder img {
   width: 100%;
+  -webkit-transition: .5s;
   transition: .5s;
 }
 
 #ethnic-section .drawings-holder img:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 20px #2c2c2c;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-box-shadow: 0 0 20px #2c2c2c;
+          box-shadow: 0 0 20px #2c2c2c;
 }
 
 #inspirations {
@@ -1084,18 +1358,24 @@ footer .email {
 }
 
 #inspirations .ethnic-inspirations-photos-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 95%;
   position: relative;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   margin: unset;
   padding: 2% 0;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #inspirations .ethnic-inspirations-photos-holder img {
   width: 45%;
+  -webkit-transition: .5s;
   transition: .5s;
 }
 
@@ -1106,7 +1386,8 @@ footer .email {
 #inspirations .ethnic-inspirations-photos-holder img.ethnic-big2 {
   z-index: 20;
   position: absolute;
-  transform: translate(50%);
+  -webkit-transform: translate(50%);
+          transform: translate(50%);
   width: 43%;
   left: 0;
 }
@@ -1114,7 +1395,8 @@ footer .email {
 #inspirations .ethnic-inspirations-photos-holder img.ethnic-big3 {
   z-index: 10;
   position: absolute;
-  transform: translate(150%);
+  -webkit-transform: translate(150%);
+          transform: translate(150%);
   width: 31%;
   left: 0;
 }
@@ -1122,7 +1404,8 @@ footer .email {
 #inspirations .ethnic-inspirations-photos-holder img.ethnic-big4 {
   z-index: 5;
   position: absolute;
-  transform: translate(320%);
+  -webkit-transform: translate(320%);
+          transform: translate(320%);
   width: 21%;
   left: 0;
 }
@@ -1133,7 +1416,8 @@ footer .email {
   left: 50%;
   width: 50%;
   z-index: 50;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 #sketches {
@@ -1153,7 +1437,8 @@ footer .email {
   width: 80%;
   position: relative;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
 }
 
 #textiles {
@@ -1162,7 +1447,8 @@ footer .email {
   position: relative;
   background-color: rgba(0, 0, 0, 0.1);
   padding: 2% 0%;
-  box-shadow: 0 4px 6px -2px #8e8e8e;
+  -webkit-box-shadow: 0 4px 6px -2px #8e8e8e;
+          box-shadow: 0 4px 6px -2px #8e8e8e;
 }
 
 #textiles p {
@@ -1171,18 +1457,24 @@ footer .email {
 }
 
 #textiles .ethnic-textiles-photos-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 95%;
   position: relative;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   margin: unset;
   padding: 2% 0;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #textiles .ethnic-textiles-photos-holder img {
   width: 45%;
+  -webkit-transition: .5s;
   transition: .5s;
 }
 
@@ -1193,7 +1485,8 @@ footer .email {
 #textiles .ethnic-textiles-photos-holder img.textile-big2 {
   z-index: 20;
   position: absolute;
-  transform: translate(50%);
+  -webkit-transform: translate(50%);
+          transform: translate(50%);
   width: 43%;
   left: 0;
 }
@@ -1201,7 +1494,8 @@ footer .email {
 #textiles .ethnic-textiles-photos-holder img.textile-big3 {
   z-index: 10;
   position: absolute;
-  transform: translate(150%);
+  -webkit-transform: translate(150%);
+          transform: translate(150%);
   width: 31%;
   left: 0;
 }
@@ -1209,7 +1503,8 @@ footer .email {
 #textiles .ethnic-textiles-photos-holder img.textile-big4 {
   z-index: 5;
   position: absolute;
-  transform: translate(320%);
+  -webkit-transform: translate(320%);
+          transform: translate(320%);
   width: 21%;
   left: 0;
 }
@@ -1220,7 +1515,8 @@ footer .email {
   left: 50%;
   width: 50%;
   z-index: 50;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 @media (min-width: 800px) {
@@ -1229,21 +1525,30 @@ footer .email {
   }
   #ethnic-section .ethin-dress {
     width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     position: relative;
     left: 50%;
-    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
   }
   #ethnic-section .drawings-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 50%;
     position: relative;
     left: 50%;
-    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
     margin: 5% 0%;
     display: flex;
-    justify-content: space-evenly;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   #ethnic-section .drawings-holder .left-side {
     display: block;
@@ -1251,10 +1556,18 @@ footer .email {
   }
   #ethnic-section .drawings-holder .right-side {
     width: 45%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
   #ethnic-section .drawings-holder .right-side img {
     width: 90%;
@@ -1276,7 +1589,8 @@ footer .email {
     width: 50%;
     position: relative;
     left: 50%;
-    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
   }
   #textiles p {
     margin-left: 25%;
@@ -1287,12 +1601,18 @@ footer .email {
 }
 
 .drawing-holder-macrame {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .drawing-holder-macrame p {
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   font-weight: 300;
 }
 
@@ -1310,20 +1630,27 @@ footer .email {
 }
 
 #macrame-sketches-holder .macrame-inspirations-photos-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 95%;
   position: relative;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   margin: unset;
   padding: 2% 0;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #macrame-sketches-holder .macrame-inspirations-photos-holder img {
   width: 45%;
+  -webkit-transition: .5s;
   transition: .5s;
-  box-shadow: 0px 4px 8px rgba(128, 128, 128, 0.678);
+  -webkit-box-shadow: 0px 4px 8px rgba(128, 128, 128, 0.678);
+          box-shadow: 0px 4px 8px rgba(128, 128, 128, 0.678);
 }
 
 #macrame-sketches-holder .macrame-inspirations-photos-holder img.macrame-sketches-big {
@@ -1333,7 +1660,8 @@ footer .email {
 #macrame-sketches-holder .macrame-inspirations-photos-holder img.macrame-sketches-big2 {
   z-index: 20;
   position: absolute;
-  transform: translate(50%);
+  -webkit-transform: translate(50%);
+          transform: translate(50%);
   width: 43%;
   left: 0;
 }
@@ -1341,7 +1669,8 @@ footer .email {
 #macrame-sketches-holder .macrame-inspirations-photos-holder img.macrame-sketches-big3 {
   z-index: 10;
   position: absolute;
-  transform: translate(150%);
+  -webkit-transform: translate(150%);
+          transform: translate(150%);
   width: 31%;
   left: 0;
 }
@@ -1349,7 +1678,8 @@ footer .email {
 #macrame-sketches-holder .macrame-inspirations-photos-holder img.macrame-sketches-big4 {
   z-index: 5;
   position: absolute;
-  transform: translate(320%);
+  -webkit-transform: translate(320%);
+          transform: translate(320%);
   width: 21%;
   left: 0;
 }
@@ -1360,7 +1690,8 @@ footer .email {
   left: 50%;
   width: 50%;
   z-index: 50;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 @media (min-width: 800px) {
