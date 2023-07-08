@@ -1,0 +1,379 @@
+#header {
+    width: 100%;
+    padding-top: 30%;
+    position: relative;
+
+    .plane {
+        position: absolute;
+        width: 60vw;
+        top: 15%;
+        left: 100%;
+        max-width: 520px;
+
+        &.animation {
+            -webkit-animation: plane_animation 7s ease-in infinite;
+            animation: plane_animation 7s ease-in infinite;
+        }
+    }
+
+    @keyframes plane_animation {
+
+        0%,
+        30% {
+            left: 130%;
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+
+        100% {
+            left: -150%;
+            -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+        }
+    }
+
+    .responsive_container {
+        display: flex;
+        flex-direction: column-reverse;
+
+        .text_side {
+            width: 100%;
+            height: fit-content;
+            position: relative;
+        }
+
+        .animation_side {
+            width: 100%;
+            position: relative;
+
+            .graphic_container {
+                position: relative;
+                width: 40%;
+                left: 50%;
+                -webkit-transform: translate(-35%);
+                transform: translate(-35%);
+
+                .absolute {
+                    position: absolute;
+                }
+
+                .me {
+                    position: relative;
+                    width: 100%;
+                }
+
+                .flower_blue {
+                    width: 60%;
+                    left: 71%;
+                    top: -5%;
+                }
+
+                .leaf {
+                    width: 114.7%;
+                    top: 68%;
+                    right: 21%;
+                    transform-origin: right;
+
+                    &.animation {
+                        -webkit-animation: leaf_animation 2s linear infinite alternate;
+                        animation: leaf_animation 2s linear infinite alternate;
+                    }
+                }
+
+                .leaves {
+                    width: 72%;
+                    left: 50%;
+                    top: 20%;
+                }
+
+                .flower_purple {
+                    width: 61.8%;
+                    right: 64%;
+                    top: 37%;
+                }
+
+                .roses {
+                    width: 73%;
+                    left: 30%;
+                    top: 64%;
+                }
+
+                .bird_wrapper {
+                    width: 48.7%;
+                    left: -70%;
+                    top: 42%;
+                    top: -100vh;
+                    left: -220%;
+                    -webkit-animation: bird_wrapper_show 1s 1s forwards;
+                    animation: bird_wrapper_show 1s 1s forwards;
+                }
+
+                @keyframes bird_wrapper_show {
+                    100% {
+                        left: -70%;
+                        top: 42%;
+                    }
+                }
+
+                .bird_fly_wrapper {
+                    position: relative;
+                    width: 100%;
+
+                    &.animation {
+                        -webkit-animation: bird_fly_wrapper_animation 1s linear alternate infinite;
+                        animation: bird_fly_wrapper_animation 1s linear alternate infinite;
+                    }
+                }
+
+                .bird {
+                    position: relative;
+                    width: 100%;
+                }
+
+                .wing {
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                    transform-origin: right;
+
+                    &.animation {
+                        -webkit-animation: wing_animation .2s linear infinite alternate;
+                        animation: wing_animation .2s linear infinite alternate;
+                    }
+                }
+
+                @keyframes leaf_animation {
+                    0% {
+                        -webkit-transform: rotate(0);
+                        transform: rotate(0);
+                    }
+
+                    100% {
+                        -webkit-transform: rotate(1deg);
+                        transform: rotate(1deg);
+                    }
+                }
+
+                @keyframes wing_animation {
+                    0% {
+                        -webkit-transform: rotate(-2deg);
+                        transform: rotate(-2deg);
+                    }
+
+                    100% {
+                        -webkit-transform: rotate(2deg);
+                        transform: rotate(2deg);
+                    }
+                }
+
+                @keyframes bird_fly_wrapper_animation {
+                    0% {
+                        -webkit-transform: translateY(0);
+                        transform: translateY(0);
+                    }
+
+                    100% {
+                        -webkit-transform: translateY(-20%);
+                        transform: translateY(-20%);
+                    }
+                }
+            }
+        }
+
+        .text_side {
+            padding: 10% 0;
+
+            .text_placement {
+                position: relative;
+                padding-left: 12%;
+                width: fit-content;
+
+                .welcome {
+                    font-size: $welcone-font-size;
+                    color: $git-text-color;
+                }
+
+                h1 {
+                    font-size: $large-font-size;
+                    font-weight: 700;
+                    font-family: $header-font;
+
+                    span {
+                        color: $text-contrast;
+                    }
+                }
+
+                .front-end-designer {
+                    text-transform: uppercase;
+                    font-size: $welcone-font-size;
+                    font-weight: 500;
+                    color: $text-dark-grey;
+                    margin-bottom: 15%
+                }
+
+                a {
+                    @extend %btn;
+                    font-size: $extra-small-font-size;
+                    background-color: $blue;
+                    color: #fff;
+
+                    &:hover {
+                        color: $blue;
+                        box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0);
+                    }
+                }
+            }
+        }
+
+        .scroll {
+            position: absolute;
+            width: 2.125rem;
+            height: 4.6rem;
+            border-radius: 1.25rem;
+            border: 3px solid #E1E1E1;
+            bottom: 0vh;
+            left: 50%;
+            -webkit-transform: translate(-50%, 100%);
+            transform: translate(-50%, 100%);
+            overflow: hidden;
+            display: none;
+
+            .scroll_circle {
+                position: absolute;
+                width: 1.6rem;
+                height: 1.6rem;
+                background-color: #E1E1E1;
+                border-radius: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%);
+                transform: translate(-50%);
+                top: 3%;
+
+                &.animation {
+                    -webkit-animation: scroll_animation 3s 2s infinite;
+                    animation: scroll_animation 3s 2s infinite;
+                }
+
+                @keyframes scroll_animation {
+                    0% {
+                        -webkit-transform: translate(-50%, 0%);
+                        transform: translate(-50%, 0%);
+                        opacity: 1;
+                    }
+
+                    33% {
+                        -webkit-transform: translate(-50%, 300%);
+                        transform: translate(-50%, 300%);
+                        opacity: 0;
+                    }
+
+                    40% {
+                        -webkit-transform: translate(-50%, -103%);
+                        transform: translate(-50%, -103%);
+                        opacity: 0;
+                    }
+
+                    50% {
+                        -webkit-transform: translate(-50%, 0%);
+                        transform: translate(-50%, 0%);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $medium) {
+    #header {
+
+        .responsive_container {
+            .text_side {
+                .text_placement {
+                    padding-left: 15%;
+
+                    .welcome {
+                        font-size: $mobile_h2_size;
+                    }
+
+                    h1 {
+                        font-size: $extra-large-font-size;
+
+                        span {
+                            color: $text-contrast;
+                        }
+                    }
+
+                    .front-end-designer {
+                        font-size: $mobile_h2_size;
+                        margin-bottom: 12%;
+                    }
+
+                    a {
+                        font-size: $small-font-size;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $large) {
+    #header {
+        padding-top: 20%;
+
+        .plane {
+            width: 30vw;
+        }
+
+        .responsive_container {
+            flex-direction: row;
+            align-items: center;
+
+            .animation_side {
+                width: 50%;
+
+                .graphic_container {
+                    width: 45%;
+                }
+            }
+
+            .text_side {
+                width: 50%;
+                padding: unset;
+
+                .text_placement {
+
+                    .front-end-designer {
+                        font-size: $welcone-font-size;
+                    }
+
+                    a {
+                        padding: 1.2rem 2.5rem;
+                    }
+                }
+            }
+
+            .scroll {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (min-width:$extra-large) {
+    #header {
+        padding-top: 30vh;
+
+        .responsive_container {
+            .text_side {
+
+                .text_placement {
+                    padding-left: unset;
+    
+                }
+            }
+        }
+    }
+}

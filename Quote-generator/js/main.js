@@ -11,7 +11,7 @@ let twitter = document.querySelector('.twitter');
 let quoteDiv1 = document.querySelector('.quote-div-1');
 let quoteDiv2 = document.querySelector('.quote-div-2');
 
-let imagesSrc = ['pexels-francesco-ungaro-1525040.jpg', 'pexels-pixabay-459225.jpg', 'pexels-stein-egil-liland-3374210.jpg', 'pexels-timson-foox-3127734.jpg'];
+let imagesSrc = ['1.webp', '2.webp', '3.webp', '4.webp'];
 
 imageContainer1.classList.add('visible');
 imageContainer1.src = 'img/' + imagesSrc[1];

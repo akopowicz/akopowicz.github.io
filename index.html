@@ -1,14 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio Anna Kopowicz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Roboto:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/logo.png">
 </head>
+
 <body>
-    <p>pierwszy paragraf</p>
-    <p>paragraf drugi</p>
-    <p>paragraf trzeci</p>
-    <p>paragraf czwarty</p>
+    <nav id="navigation">
+        <div class="responsive_container">
+            <a href="#" class="logo_href">
+                <img src="img/logo.png" class="logo" alt="logo">
+            </a>
+            <div class="navigation_items">
+                <ul>
+                    <li><a href="#" class="navigation_header home">HOME</a></li>
+                    <li><a href="#portfolio" class="navigation_portfolio portfolio">PORTFOLIO</a></li>
+                    <li><a href="#about" class="navigation_about about">ABOUT ME</a></li>
+                    <li><a href="#skills" class="navigation_skill skills">SKILLS</a></li>
+                    <li><a href="#contact" class="navigation_contact contact">CONTACT</a></li>
+                </ul>
+            </div>
+            <img src="img/hamburger.svg" class="hamburger" alt="">
+        </div>
+    </nav>
+    <header id="header">
+        <img src="img/plane.webp" class="plane absolute animation" alt="">
+        <div class="responsive_container">
+            <div class="text_side">
+                <div class="text_placement">
+                    <p class="welcome">Welcome to my world!</p>
+                    <h1>Hi! I'm <span>Anna</span></h1>
+                    <p class="front-end-designer">front-end developer and&nbsp;designer</p>
+                    <a href="#portfolio">SEE PORTFOLIO</a>
+                </div>
+            </div>
+            <div class="animation_side">
+                <div class="graphic_container">
+                    <img src="img/flower_blue.webp" class="flower_blue absolute" alt="">
+                    <img src="img/me.webp" class="me" alt="">
+                    <img src="img/leaf.webp" class="leaf absolute" alt="">
+                    <img src="img/leaves.webp" class="leaves absolute" alt="">
+                    <img src="img/flower_purple.webp" class="flower_purple absolute" alt="">
+                    <img src="img/rose.webp" class="roses absolute" alt="">
+                    <div class="bird_wrapper absolute">
+                        <div class="bird_fly_wrapper">
+                            <img src="img/bird.webp" class="bird" alt="">
+                            <img src="img/wing.webp" class="wing" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll">
+                <div class="scroll_circle"></div>
+            </div>
+        </div>
+    </header>
+    <section id="portfolio">
+        <div class="responsive_container">
+            <h2 id="portfolio_h2">PORTFOLIO</h2>
+            <div class="portfolio_line line"></div>
+            <div class="portfolio_wrapper">
+                <div class="portfolio_item rich_media">
+                    <div class="image_side">
+                        <img src="img/rich_media.webp" alt="">
+                    </div>
+                    <div class="text_side">
+                        <div class="top_text">
+                            <h4>Rich media</h4>
+                            <h5>HTML, CSS, JAVASCRIPT</h5>
+                        </div>
+                        <a href="">see project</a>
+                    </div>
+                </div>
+                <div class="portfolio_item travel_blog">
+                    <div class="image_side">
+                        <img src="img/kolej_rzeczy.webp" alt="">
+                    </div>
+                    <div class="text_side">
+                        <div class="top_text">
+                            <h4>Travel blog</h4>
+                            <h5>HTML, CSS, SCSS, JAVASCRIPT, PHP, WORDPRESS</h5>
+                        </div>
+                        <a href="">see project</a>
+                    </div>
+                </div>
+                <div class="portfolio_item kabarday_portfolio">
+                    <div class="image_side">
+                        <img src="img/kabarday.webp" alt="">
+                    </div>
+                    <div class="text_side">
+                        <div class="top_text">
+                            <h4>Kabarday brand portfolio</h4>
+                            <h5>HTML, CSS, SCSS JAVASCRIPT</h5>
+                        </div>
+                        <a href="https://akopowicz.github.io/Kabarday/">see project</a>
+                    </div>
+                </div>
+                <div class="portfolio_item quotes_generator">
+                    <div class="image_side">
+                        <img src="img/quotes.webp" alt="">
+                    </div>
+                    <div class="text_side">
+                        <div class="top_text">
+                            <h4>Quote Generator</h4>
+                            <h5>HTML, CSS, JAVASCRIPT</h5>
+                        </div>
+                        <a href="https://akopowicz.github.io/Quote-generator/">see project</a>
+                    </div>
+                </div>
+                <div class="portfolio_item photomontage">
+                    <div class="image_side">
+                        <img src="img/photomontage.webp" alt="">
+                    </div>
+                    <div class="text_side">
+                        <div class="top_text">
+                            <h4>PHOTOMONTAGE</h4>
+                            <h5>PHOTOSHOP</h5>
+                        </div>
+                        <a href="">see project</a>
+                    </div>
+                </div>
+                <div class="portfolio_item sign_book">
+                    <div class="image_side">
+                        <img src="img/sign_book.webp" alt="">
+                    </div>
+                    <div class="text_side">
+                        <div class="top_text">
+                            <h4>sign book</h4>
+                            <h5>ILLUSTRATOR & PHOTOSHOP</h5>
+                        </div>
+                        <a href="">see project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="responsive_container">
+            <h2>ABout ME & skills</h2>
+            <div class="about_line line"></div>
+            <div class="fields_wrapper">
+                <h5>Progarmmer</h5>
+                <h5>Designer</h5>
+                <h5>UI/UX</h5>
+                <h5>Team Leader</h5>
+            </div>
+            <div class="main_content">
+                <div class="copy_side">
+                    <p class="about_me_copy">Since 2021 I have been working as a&nbsp;programmer. I&nbsp;learned
+                        front-end
+                        coding
+                        at Akademia 108 school. Front-end stole my heart from the first line of code. It gives me
+                        opportunity to combine two of my favourite fields; programming and design which embodies logical
+                        thinking and creative approach. It is a&nbsp;wonderful feeling to be able to first design the
+                        look
+                        and
+                        then bring it to life by coding.
+                    </p>
+                    <div class="skills_wrapper" id="skill">
+                        <h4>WHAT I DO</h4>
+                        <div class="skill_line line"></div>
+                        <div class="skills">
+                            <div class="skill">
+                                <img src="img/development.svg" alt="">
+                                <p>web&nbsp;development</p>
+                            </div>
+                            <div class="skill">
+                                <img src="img/web_design.svg" alt="">
+                                <p>web design</p>
+                            </div>
+
+                            <div class="skill">
+                                <img src="img/responsive.svg" alt="">
+                                <p>responsive&nbsp;design</p>
+                            </div>
+                            <div class="skill">
+                                <img src="img/ui_ux.svg" alt="">
+                                <p>ui/ux</p>
+                            </div>
+                            <div class="skill">
+                                <img src="img/ad.svg" alt="">
+                                <p>advertisements</p>
+                            </div>
+                            <div class="skill">
+                                <img src="img/wordpress.svg" alt="">
+                                <p>wordpress</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills_side" id="skills">
+                    <img src="img/me_skills.webp" class="me_skills" alt="">
+                    <div class="skill_ball_wrapper" id="photoshop">
+                        <div class="skill_ball skill_ball_animation">
+                            <p class="skill_name">Photoshop</p>
+                        </div>
+                    </div>
+                    <div class="skill_ball_wrapper" id="js">
+                        <div class="skill_ball skill_ball_animation_reverse">
+                            <p class="skill_name">JS</p>
+                        </div>
+                    </div>
+                    <div class="skill_ball_wrapper" id="css">
+                        <div class="skill_ball skill_ball_animation">
+                            <p class="skill_name">CSS</p>
+                        </div>
+                    </div>
+                    <div class="skill_ball_wrapper" id="figma">
+                        <div class="skill_ball skill_ball_animation_reverse">
+                            <p class="skill_name">FIGMA</p>
+                        </div>
+                    </div>
+                    <div class="skill_ball_wrapper" id="html">
+                        <div class="skill_ball skill_ball_animation">
+                            <p class="skill_name">HTML</p>
+                        </div>
+                    </div>
+                    <div class="skill_ball_wrapper" id="illustrator">
+                        <div class="skill_ball skill_ball_animation_reverse">
+                            <p class="skill_name">illustrator</p>
+                        </div>
+                    </div>
+                    <div class="skill_ball_wrapper" id="git">
+                        <div class="skill_ball skill_ball_animation">
+                            <p class="skill_name">git</p>
+                        </div>
+                    </div>
+                    <div class="skill_ball_wrapper" id="react">
+                        <div class="skill_ball skill_ball_animation_reverse">
+                            <p class="skill_name">react</p>
+                        </div>
+                    </div>
+                    <div class="skill_ball_wrapper" id="wordpress">
+                        <div class="skill_ball skill_ball_animation">
+                            <p class="skill_name">wordpress</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="contact">
+        <img src="img/footer_bg_mb.webp" class="footer_bg" alt="">
+        <img src="img/footer.webp" class="footer_bg_big" alt="">
+        <div class="contact_wrapper">
+            <h3>Interested in working with me?</h3>
+            <div class="icons">
+                <a href="" class="github">
+                    <img src="img/github.svg" alt="">
+                </a>
+                <a href="" class="linkedin">
+                    <img src="img/linkedin.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <p class="last_copy">CREATED WITH PASSION BY ANNA KOPOWICZ <span class="year"></span></p>
+    </footer>
+    <script src="js/main.js"></script>
 </body>
+
 </html>

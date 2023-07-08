@@ -1,0 +1,204 @@
+#portfolio {
+    padding: 25% 0;
+
+    .responsive_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio_wrapper {
+        position: relative;
+        width: 90%;
+        margin-top: 15%;
+
+        .portfolio_item {
+            position: relative;
+            width: 100%;
+            display: flex;
+            box-shadow: $portfolio-border-shaow;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 12%;
+
+            &:hover {
+                img {
+                    -webkit-filter: brightness(1.15);
+                    filter: brightness(1.15);
+                }
+              
+
+            }
+
+            .image_side {
+                position: relative;
+                width: 50%;
+
+                img {
+                    position: relative;
+                    width: 100%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%);
+                    transform: translate(-50%);
+                    transition: $transition-fast;
+                }
+            }
+
+            .text_side {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                padding: 4% 0;
+                width: 50%;
+
+                h4 {
+                    text-align: center;
+                    font-size: $small-font-size;
+                    color: $dark-blue;
+                    text-transform: uppercase;
+                }
+
+                h5 {
+                    margin-top: 5%;
+                    text-align: center;
+                    text-align: center;
+                    font-size: $mobile_button_size;
+                    color: $text-light-grey;
+                    font-weight: 600
+                }
+
+                a {
+                    @extend %btn;
+                    font-size: $mobile_button_size;
+                    font-family: $copy-font;
+                    padding: .7rem 1.5rem;
+                    border: unset;
+                    text-transform: uppercase;
+                    background-image: $rich-media-gradient;
+                    color: #fff;
+                    font-weight: 500;
+
+                    &:hover {
+                        -webkit-transform: scale(1.1);
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            &.travel_blog {
+                flex-direction: row-reverse;
+
+                a {
+                    background-image: $travel-blog-gradient;
+                }
+            }
+
+            &.kabarday_portfolio {
+
+                a {
+                    background-image: $kabarday-gradient;
+                }
+            }
+
+            &.quotes_generator {
+                flex-direction: row-reverse;
+
+                h4 {
+                    padding: 0 2%;
+                }
+
+                a {
+                    background-image: $travel-blog-gradient;
+                }
+            }
+
+            &.photomontage {
+                a {
+                    font-weight: 900;
+                    color: $figma-text-color;
+                    background-image: $photomontage-gradient;
+                }
+            }
+
+            &.sign_book {
+                flex-direction: row-reverse;
+
+                a {
+                    font-weight: 900;
+                    background-image: $sign-book-gradient;
+                    color: $css-text-color;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $medium) {
+    #portfolio {
+        padding: 12% 0;
+
+        .portfolio_wrapper {
+            width: 80%;
+            margin-top: 12%;
+
+            .portfolio_item {
+
+                .text_side {
+                    h4 {
+                        font-size: $medium-font-size;
+                    }
+
+                    h5 {
+                        font-size: $small-font-size;
+                    }
+
+                    a {
+                        font-size: $small-font-size;
+                        padding: 1rem 1.75rem;
+                    }
+                }
+
+                &.kabarday_portfolio {
+                    h4 {
+                        padding: 0 2%;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $large) {
+    #portfolio {
+        padding: 15% 0 10%;
+
+        .portfolio_wrapper {
+            width: 90%;
+            margin-top: 10%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .portfolio_item {
+                width: 47%;
+                margin-bottom: 10%;
+
+                &.kabarday_portfolio {
+                    flex-direction: row-reverse;
+                }
+                
+                &.quotes_generator {
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $extra-large) {
+    #portfolio {
+        padding: 15% 0 7%;
+    }
+}

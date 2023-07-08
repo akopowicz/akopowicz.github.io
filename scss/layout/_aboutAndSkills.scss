@@ -1,0 +1,455 @@
+#about {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+
+    .responsive_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .line {
+        background-color: $blue;
+    }
+
+    .fields_wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        padding: 10% 2%;
+
+        h5 {
+            font-family: $header-font;
+            color: $light-green;
+        }
+    }
+
+    .main_content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        align-items: center;
+
+        .copy_side {
+            width: 100%;
+            position: relative;
+
+            .about_me_copy {
+                font-size: $small-font-size;
+                line-height: $medium-font-size;
+            }
+
+            .skills_wrapper {
+                position: relative;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20% 0 0;
+
+                .skills {
+                    padding: 10% 0 0;
+                    position: relative;
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+
+                    .skill {
+                        width: 30%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        font-size: $mobile_button_size;
+                        margin-bottom: 10%;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        justify-content: flex-end;
+
+                        img {
+                            width: 60%;
+                            margin-bottom: 7%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .skills_side {
+            position: relative;
+            width: 100%;
+            -webkit-transform: translateY(11%);
+            transform: translateY(11%);
+
+            .me_skills {
+                position: relative;
+                width: 100%;
+            }
+
+            .skill_ball_wrapper {
+                position: absolute;
+                font-family: $header-font;
+                font-weight: 700;
+                font-size: $mobile_button_size;
+
+                .skill_ball {
+                    box-shadow: $skills-shadow;
+                    border-radius: 50%;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-shadow: $skills-text-shadow;
+                    text-transform: uppercase;
+
+                    &.animation {
+                        -webkit-animation: skill_animation 5s infinite;
+                        animation: skill_animation 5s infinite;
+                    }
+
+                    &.animation_reverse {
+                        -webkit-animation: skill_animation_reverse 5s infinite;
+                        animation: skill_animation_reverse 5s infinite;
+                    }
+
+                    @keyframes skill_animation {
+                        0% {
+                            -webkit-transform: translate(0, 0);
+                            transform: translate(0, 0);
+                        }
+
+                        25% {
+                            -webkit-transform: translate(1%, -1%);
+                            transform: translate(1%, -1%);
+                        }
+
+                        50% {
+                            -webkit-transform: translate(2%, 0%);
+                            transform: translate(2%, 0%);
+                        }
+
+                        75% {
+                            -webkit-transform: translate(1%, 1%);
+                            transform: translate(1%, 1%);
+                        }
+
+                        100% {
+                            -webkit-transform: translate(0%, 0%);
+                            transform: translate(0%, 0%);
+                        }
+                    }
+
+                    @keyframes skill_animation_reverse {
+                        0% {
+                            -webkit-transform: translate(0, 0);
+                            transform: translate(0, 0);
+                        }
+
+                        25% {
+                            -webkit-transform: translate(1%, 1%);
+                            transform: translate(1%, 1%);
+                        }
+
+                        50% {
+                            -webkit-transform: translate(2%, 0%);
+                            transform: translate(2%, 0%);
+                        }
+
+                        75% {
+                            -webkit-transform: translate(1%, -1%);
+                            transform: translate(1%, -1%);
+
+                        }
+
+                        100% {
+                            -webkit-transform: translate(0%, 0%);
+                            transform: translate(0%, 0%);
+                        }
+                    }
+                }
+
+                &#photoshop {
+                    width: 6.8rem;
+                    height: 6.8rem;
+                    top: 5%;
+                    left: 50%;
+                    -webkit-transform: translate(-140%);
+                    transform: translate(-140%);
+
+                    .skill_ball {
+                        background: $photoshop-gradient;
+                        color: $photoshop-text-color;
+                    }
+                }
+
+                &#html {
+                    width: 4.2rem;
+                    height: 4.2rem;
+                    top: 0;
+                    left: 50%;
+                    -webkit-transform: translate(-30%);
+                    transform: translate(-30%);
+
+                    .skill_ball {
+                        background: $html-gradient;
+                        color: $html-text-color;
+                    }
+                }
+
+                &#js {
+                    width: 4.1rem;
+                    height: 4.1rem;
+                    top: 32%;
+                    left: 50%;
+                    -webkit-transform: translate(-210%);
+                    transform: translate(-210%);
+
+                    .skill_ball {
+                        background: $js-gradient;
+                        color: $photoshop-text-color;
+                    }
+                }
+
+                &#css {
+                    width: 4.2rem;
+                    height: 4.2rem;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-220%);
+                    transform: translate(-220%);
+
+                    .skill_ball {
+                        background: $css-gradient;
+                        color: $css-text-color;
+                    }
+                }
+
+                &#figma {
+                    width: 4.2rem;
+                    height: 4.2rem;
+                    top: 67%;
+                    left: 50%;
+                    -webkit-transform: translate(-250%);
+                    transform: translate(-250%);
+
+                    .skill_ball {
+                        background: $figma-gradient;
+                        color: $figma-text-color;
+                    }
+                }
+
+                &#illustrator {
+                    width: 6.7rem;
+                    height: 6.7rem;
+                    top: 7%;
+                    left: 50%;
+                    -webkit-transform: translate(50%);
+                    transform: translate(50%);
+
+                    .skill_ball {
+                        background: $illustrator-gradient;
+                        color: $illustartor-text-color;
+                    }
+                }
+
+                &#git {
+                    width: 4.1rem;
+                    height: 4.1rem;
+                    top: 35%;
+                    left: 50%;
+                    -webkit-transform: translate(150%);
+                    transform: translate(150%);
+
+                    .skill_ball {
+                        background: $git-gradient;
+                        color: $git-text-color;
+                    }
+                }
+
+                &#react {
+                    width: 4.2rem;
+                    height: 4.2rem;
+                    top: 55%;
+                    left: 50%;
+                    -webkit-transform: translate(150%);
+                    transform: translate(150%);
+
+                    .skill_ball {
+                        background: $js-gradient;
+                        color: $photoshop-text-color;
+                    }
+                }
+
+                &#wordpress {
+                    width: 7rem;
+                    height: 7rem;
+                    top: 72%;
+                    left: 50%;
+                    -webkit-transform: translate(30%);
+                    transform: translate(30%);
+
+                    .skill_ball {
+                        background: $photoshop-gradient;
+                        color: $photoshop-text-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $medium) {
+    #about {
+        .fields_wrapper {
+            width: 90%;
+            padding: 8% 2%;
+        }
+
+        .main_content {
+            width: 90%;
+
+            .copy_side {
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .about_me_copy {
+                    font-size: $medium-font-size;
+                    line-height: $welcone-font-size;
+                }
+
+                .skills_wrapper {
+                    width: 85%;
+                    padding: 15% 0 0;
+
+                    .skills {
+                        .skill {
+                            font-size: $small-font-size;
+                        }
+                    }
+                }
+            }
+
+            .skills_side {
+                width: 90%;
+
+                .skill_ball_wrapper {
+                    font-size: $midium-second-font-size;
+
+                    &#photoshop {
+                        width: 9.2rem;
+                        height: 9.2rem;
+                        top: 8%;
+                    }
+
+                    &#html {
+                        width: 6.1rem;
+                        height: 6.1rem;
+                    }
+
+                    &#js {
+                        width: 6.1rem;
+                        height: 6.1rem;
+                    }
+
+                    &#css {
+                        width: 6.1rem;
+                        height: 6.1rem;
+                    }
+
+                    &#figma {
+                        width: 6.2rem;
+                        height: 6.2rem;
+                    }
+
+                    &#illustrator {
+                        width: 9rem;
+                        height: 9rem;
+                    }
+
+                    &#git {
+                        width: 6.2rem;
+                        height: 6.2rem;
+                    }
+
+                    &#react {
+                        width: 6.2rem;
+                        height: 6.2rem;
+                        -webkit-transform: translate(130%);
+                        transform: translate(130%);
+                    }
+
+                    &#wordpress {
+                        width: 9.2rem;
+                        height: 9.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $large) {
+    #about {
+        .responsive_container {
+            width: 100%;
+        }
+
+        .fields_wrapper {
+            width: 70%;
+            padding: 6% 2%;
+        }
+
+        .main_content {
+            flex-direction: row-reverse;
+            width: 90%;
+
+            .copy_side {
+                width: 50%;
+
+                .skills_wrapper {
+                    padding: 15% 0 0;
+                    width: 90%;
+                }
+            }
+
+            .skills_side {
+                width: 50%;
+                -webkit-transform: translateY(7%);
+                transform: translateY(7%);
+            }
+        }
+    }
+}
+
+@media (min-width: $extra-large) {
+    #about {
+    
+        .fields_wrapper {
+            padding: 6% 2% 0;
+        }
+    
+        .main_content {
+            width: 100%;
+            justify-content: space-between;
+            -webkit-transform: translateY(11%);
+            transform: translateY(11%);
+    
+            .copy_side {
+    
+                .skills_wrapper {
+                    width: 70%;
+                }
+            }
+    
+            .skills_side {
+                width: 40%;
+                transform: unset;
+            }
+        }
+    }
+}
