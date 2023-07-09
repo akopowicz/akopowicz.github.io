@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <base target="_blank" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <title>Ad</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      position: relative;
+      background-color: black;
+      transition: 0.3s;
+    }
+
+    .call-to-action {
+      text-decoration: none;
+      position: absolute;
+      width: 100%;
+      height: 12%;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+    }
+
+    .stories {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content {
+      flex-grow: 1;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bottom-margin {
+      height: 12%;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+
+    button {
+      position: absolute;
+      height: 39px;
+      width: 150px;
+      border-radius: 50px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      border: none;
+      font-size: 12px;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -23%);
+      transform: translate(-50%, -23%);
+      background-color: #4b4b4b;
+      color: #fff;
+      transition: 0.5s;
+    }
+
+    .page-wrapper {
+      position: absolute;
+      top: 0%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: 0.01s;
+    }
+
+    .page {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .time-animation {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 4%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .bottom_margin_background {
+      height: calc(100% - 10px);
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      background-color: black;
+    }
+
+    .time {
+      width: 32%;
+      height: 4px;
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .percent {
+      height: 100%;
+      border-radius: 10px;
+      width: 0%;
+      background-color: #fff;
+    }
+
+    .percent-animation {
+      -webkit-animation: percent-animation 4.9s linear forwards;
+      animation: percent-animation 4.9s linear forwards;
+    }
+
+    .arrow {
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      top: 0;
+    }
+
+    .left_arrow {
+      left: 0;
+    }
+
+    .right_arrow {
+      right: 0;
+    }
+
+    .brand-details {
+      position: absolute;
+      height: 6%;
+      top: 3%;
+      left: 2%;
+      display: flex;
+    }
+
+    .logo {
+      height: 100%;
+    }
+
+    .brand_inscriptions {
+      padding-left: 20px;
+      height: 100%;
+    }
+
+    .brand_inscriptions p {
+      color: #fff;
+      line-height: 0;
+      font-size: 18px;
+    }
+
+    .brand_inscriptions .brand_name {
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      white-space: nowrap;
+    }
+
+    .brand_inscriptions .inscription {
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+    }
+
+    .brand_name_wrapper {
+      white-space: nowrap;
+      width: 200%;
+      height: 50%;
+      position: absolute;
+    }
+
+    .stories_wrapper {
+      height: 50%;
+      position: absolute;
+      top: 50%;
+    }
+
+    .meetrics {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .image {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      -webkit-transform: translate(-50%);
+      transform: translate(-50%);
+    }
+
+    .logo-holder {
+      height: 50px;
+      width: 50px;
+      background-color: #fff;
+      border-radius: 50%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    @-webkit-keyframes percent-animation {
+      0% {
+        width: 0;
+      }
+
+      100% {
+        width: 100%;
+      }
+    }
+
+    @keyframes percent-animation {
+      0% {
+        width: 0;
+      }
+
+      100% {
+        width: 100%;
+      }
+    }
+
+    @media (max-height: 570px) {
+      .bottom-margin {
+        position: absolute;
+        bottom: 0;
+        background-color: transparent;
+      }
+
+      .bottom_margin_background {
+        display: none;
+      }
+
+      .content {
+        border-radius: unset;
+      }
+
+      button {
+        height: 39px;
+        width: 150px;
+        font-size: 12px;
+        -webkit-transform: translate(-50%, -38%);
+        transform: translate(-50%, -38%);
+      }
+
+      .brand-details {
+        position: absolute;
+        height: 8%;
+        top: 3.5%;
+        left: 2%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="meetrics" id="meetrics">
+    <div class="stories">
+      <div class="content">
+        <div class="page-wrapper">
+          <div class="page page1">
+            <img src="img/1.webp" class="image image1" alt="" />
+          </div>
+          <div class="page page2">
+            <img src="img/2.webp" class="image image2" alt="" />
+          </div>
+          <div class="page page3">
+            <img src="img/3.webp" class="image image3" alt="" />
+          </div>
+        </div>
+        <div class="time-animation">
+          <div class="time time1">
+            <div class="percent percent1"></div>
+          </div>
+          <div class="time time2">
+            <div class="percent percent2"></div>
+          </div>
+          <div class="time time3">
+            <div class="percent percent3"></div>
+          </div>
+        </div>
+        <div class="brand-details">
+          <div class="logo-holder">
+            <img src="img/logo.webp" class="logo" alt="" />
+          </div>
+          <div class="brand_inscriptions">
+            <div class="brand_name_wrapper">
+              <p class="brand_name">KABARDAY</p>
+            </div>
+            <div class="stories_wrapper">
+              <p class="inscription">Reklama</p>
+            </div>
+          </div>
+        </div>
+        <div class="arrow left_arrow"></div>
+        <div class="arrow right_arrow"></div>
+      </div>
+      <div class="bottom-margin">
+        <div class="bottom_margin_background"></div>
+        <button class="main-button">Więcej informacji</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    let percent1 = document.querySelector(".percent1");
+    let percent2 = document.querySelector(".percent2");
+    let percent3 = document.querySelector(".percent3");
+    let button = document.querySelector(".main-button");
+    let offset = 0;
+    let animationInProgress = false;
+    let currentDir;
+    let nextDir;
+    let pageNumber = 1;
+    let rightArrow = document.querySelector(".right_arrow");
+    let leftArrow = document.querySelector(".left_arrow");
+    let buttonChangeColorTimeout;
+    let clickStart;
+    let pages = document.querySelectorAll(".page");
+    let pageWrapper = document.querySelector(".page-wrapper");
+
+    const buttonAnimationWhite = () => {
+      buttonChangeColorTimeout = setTimeout(() => {
+        button.style.backgroundColor = "#fff";
+        button.style.color = "#000";
+      }, 2500);
+    };
+
+    const buttonAnimationGrey = () => {
+      button.style.backgroundColor = "#4b4b4b";
+      button.style.color = "#fff";
+    }
+
+    const queueSwipe = (direction) => {
+      clearTimeout(buttonChangeColorTimeout)
+      buttonAnimationGrey();
+      buttonAnimationWhite();
+      nextDir = direction;
+      if (!animationInProgress) {
+        executeSwipe();
+      }
+    };
+
+    const pagePosition = (offset, pageIndex, pageCount) => {
+      return (
+        Math.floor((offset - pageIndex - 1) / pageCount + 1) * pageCount +
+        pageIndex
+      );
+    }
+
+    const applyPageOffset = (offset) => {
+      for (let i = 0; i < pages.length; i++) {
+        pages[i].style.left = pagePosition(offset, i, pages.length) + "00%";
+      }
+    }
+
+    const executeSwipe = () => {
+      animationInProgress = true;
+      currentDir = nextDir;
+      nextDir = null;
+      offset += currentDir;
+
+      pageWrapper.style.left = -offset + "00%";
+
+      if (currentDir === -1) {
+        applyPageOffset(offset);
+      }
+    }
+
+    const autoSwipe = () => {
+      queueSwipe(+1);
+      if (pageNumber < pages.length) {
+        pageNumber++;
+      } else {
+        pageNumber = 1
+      }
+    };
+
+    const finalizeSwipe = () => {
+      animationInProgress = false;
+      if (currentDir === +1) {
+        applyPageOffset(offset);
+      }
+
+      if (nextDir) {
+        executeSwipe();
+      }
+
+      percent1.classList.remove("percent-animation");
+      percent2.classList.remove("percent-animation");
+      percent3.classList.remove("percent-animation");
+
+      switch (pageNumber) {
+        case 1:
+          percent2.style.width = "0";
+          percent1.classList.add("percent-animation");
+          break;
+        case 2:
+          percent1.style.width = "100%";
+          percent2.classList.add("percent-animation");
+          percent3.style.width = "0";
+          break;
+        case 3:
+          percent2.style.width = "100%";
+          percent1.style.width = "100%";
+          percent3.classList.add("percent-animation");
+      }
+    }
+
+    window.onload = () => {
+      buttonAnimationWhite();
+      percent1.classList.add("percent-animation");
+    };
+
+    percent1.addEventListener("animationend", () => {
+      autoSwipe();
+    });
+
+    percent2.addEventListener("animationend", () => {
+      autoSwipe();
+    });
+
+    percent3.addEventListener("animationend", () => {
+      autoSwipe();
+    });
+
+    const stopRunning = (e) => {
+      e.preventDefault()
+      clickStart = new Date();
+      document.querySelectorAll(".percent-animation").forEach((animation) => {
+        animation.style.animationPlayState = "paused";
+      });
+    };
+
+    const startRunning = () => {
+      document
+        .querySelectorAll(".percent-animation")
+        .forEach((animation) => {
+          animation.style.animationPlayState = "running";
+        });
+    };
+
+
+    const clickOrStop = (clickEnd, direction) => {
+      if (clickEnd - clickStart < 150) {
+        queueSwipe(direction);
+
+        if (direction > 0) {
+          if (pageNumber < 3) {
+            pageNumber++;
+          } else {
+            pageNumber = 1
+          }
+        } else {
+          if (pageNumber != 1) {
+            pageNumber--;
+          } else {
+            pageNumber = pages.length
+          }
+        }
+
+      }
+    }
+
+    rightArrow.addEventListener("touchstart", (e) => {
+      stopRunning(e)
+    });
+
+    rightArrow.addEventListener("touchend", (e) => {
+      startRunning()
+      let clickEnd = new Date();
+      clickOrStop(clickEnd, +1)
+    });
+
+
+    leftArrow.addEventListener("touchstart", (e) => {
+      stopRunning(e)
+    });
+
+    leftArrow.addEventListener("touchend", (e) => {
+      startRunning()
+      let clickEnd = new Date();
+      clickOrStop(clickEnd, -1)
+    });
+
+    pageWrapper.addEventListener("transitionend", finalizeSwipe, false);
+    pageWrapper.addEventListener("webkitTransitionEnd", finalizeSwipe, false);
+
+    applyPageOffset(offset);
+
+  </script>
+
+
+</body>
+
+</html>

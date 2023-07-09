@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ad</title>
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      position: relative;
+      background-color: transparent;
+      transition: .3s;
+    }
+
+    #meetrics {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0%;
+      left: 0%;
+    }
+
+    .call-to-action {
+      text-decoration: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+    }
+
+    .slider-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      height: 100%;
+    }
+
+    .slider-image-static {
+      display: block;
+      height: 100%;
+    }
+
+    .slider-image-dynamic {
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+    }
+
+    .slider-image-dynamic .bg-dynamic {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      display: block;
+    }
+
+    .slider {
+      opacity: 0;
+      position: absolute;
+      height: 200px;
+      top: 52%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      z-index: 1011;
+    }
+
+    /* Increase the draggable area on iOS */
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 100px;
+      width: 100px;
+      cursor: pointer;
+      margin-top: 0;
+    }
+
+    .slider_thumb_div {
+      position: absolute;
+      height: 10%;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, 50%);
+      transform: translate(-50%, 50%);
+      pointer-events: none;
+    }
+
+    .slider-thumb {
+      position: relative;
+      height: 100%;
+    }
+
+    .slider-bar {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      -webkit-transform: translate(-50%);
+      transform: translate(-50%);
+    }
+
+    .cta {
+      position: absolute;
+      height: 8%;
+      top: 89%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      -webkit-animation: cta-animation 2s linear infinite;
+      animation: cta-animation 2s linear infinite;
+      filter: drop-shadow(0px 5px 4px #00000043);
+    }
+
+    .hand {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .hand_animation {
+      -webkit-animation: hand_animation 1s linear infinite alternate;
+      animation: hand_animation 1s linear infinite alternate;
+    }
+
+    @keyframes hand_animation {
+      0% {
+        -webkit-animation: translate(-10%);
+        transform: translate(-10%);
+      }
+
+      100% {
+        -webkit-animation: translate(20%);
+        transform: translate(20%);
+      }
+    }
+
+    @keyframes cta-animation {
+
+      0%,
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+
+      50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+      }
+    }
+
+    img {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="meetrics">
+    <div class="slider-wrapper">
+      <img class="slider-image-static" src="img/2.webp" />
+      <div class="slider-image-dynamic">
+        <img src="img/1.webp" class="bg-dynamic" />
+      </div>
+      <img src="img/slider.webp" alt="" class="slider-bar" />
+      <div class="slider_thumb_div">
+        <img class="slider-thumb" src="img/elipsa.webp" />
+        <img src="img/lapka.webp" class="hand hand_animation" alt="">
+      </div>
+    </div>
+    <input class="slider" type="range" min="1" max="100" value="50" />
+    <img src="img/cta.webp" alt="" class="cta" />
+    <a href="https://akopowicz.github.io/Kabarday/portfolio.html" class="call-to-action"></a>
+  </div>
+  <script type="text/javascript">
+    let sliderBar = document.querySelector(".slider-bar");
+    let value = 50;
+    let slider = document.querySelector(".slider");
+    let sliderThumb = document.querySelector(".slider_thumb_div");
+    let sliderImage = document.querySelector(".slider-image-dynamic");
+    let hand = document.querySelector(".hand");
+
+    slider.addEventListener(
+      "input",
+      (e) => {
+        hand.classList.remove("hand_animation");
+        isUserInteraction = true;
+        value = e.target.value;
+        sliderBar.style.left = value + "%";
+        sliderThumb.style.left = value + "%";
+        sliderImage.style.width = value + "%";
+      },
+      false
+    );
+
+    slider.addEventListener("touchend", ()=>{
+      hand.classList.add("hand_animation");
+    })
+  </script>
+
+</body>
+
+</html>
