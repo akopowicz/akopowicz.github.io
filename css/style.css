@@ -125,7 +125,7 @@ img {
 #navigation .responsive_container .logo_href {
   margin-left: 4%;
   display: block;
-  width: 15%;
+  width: 12%;
   z-index: 10;
 }
 #navigation .responsive_container .logo {
@@ -194,7 +194,7 @@ img {
   }
   #navigation .responsive_container .logo_href {
     margin-left: unset;
-    width: 10%;
+    width: 7%;
   }
   #navigation .responsive_container .navigation_items {
     min-width: fit-content;
@@ -226,7 +226,7 @@ img {
 }
 @media (min-width: 1200px) {
   #navigation .responsive_container .logo_href {
-    width: 4vw;
+    width: 3vw;
   }
 }
 #header {

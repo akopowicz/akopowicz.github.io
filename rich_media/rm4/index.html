@@ -494,6 +494,17 @@
       clickOrStop(clickEnd, +1)
     });
 
+    rightArrow.addEventListener("mousedown", (e) => {
+      stopRunning(e)
+    });
+
+    rightArrow.addEventListener("mouseup", (e) => {
+      startRunning()
+      let clickEnd = new Date();
+      clickOrStop(clickEnd, +1)
+    });
+
+
 
     leftArrow.addEventListener("touchstart", (e) => {
       stopRunning(e)
@@ -505,6 +516,15 @@
       clickOrStop(clickEnd, -1)
     });
 
+    leftArrow.addEventListener("mousedown", (e) => {
+      stopRunning(e)
+    });
+
+    leftArrow.addEventListener("mouseup", (e) => {
+      startRunning()
+      let clickEnd = new Date();
+      clickOrStop(clickEnd, -1)
+    });
     pageWrapper.addEventListener("transitionend", finalizeSwipe, false);
     pageWrapper.addEventListener("webkitTransitionEnd", finalizeSwipe, false);
 
