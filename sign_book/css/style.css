@@ -184,7 +184,6 @@ img {
 .arrow {
     position: relative;
     width: 6%;
-    padding: 1% 2%;
     cursor: pointer;
 }
 
@@ -195,7 +194,6 @@ img {
 
 .close {
     width: 8%;
-    padding: 2%;
     align-self: flex-end;
     cursor: pointer;
 }
@@ -326,7 +324,6 @@ img {
     .arrow {
         position: relative;
         width: 2%;
-        padding: 1% 2%;
     }
 
     .arrow_right {
@@ -340,7 +337,6 @@ img {
         height: 5%;
         top: 0;
         right: 0;
-        padding: 2%;
         align-self: flex-end;
     }
 
