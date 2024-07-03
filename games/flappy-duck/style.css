@@ -1,0 +1,11 @@
+body {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100svh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
