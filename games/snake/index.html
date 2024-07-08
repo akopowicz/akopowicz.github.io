@@ -15,6 +15,40 @@
 
         body {
             background-color: black;
+            color: #fff;
+        }
+
+        .joystick_wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 400px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        .button {
+            font-size: 2rem;
+            display: block;
+            width: fit-content;
+            height: fit-content;
+            padding: 5%;
+            cursor: pointer;
+        }
+
+        .left {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-136%, -50%);
+        }
+
+        .right {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(37%, -50%);
         }
     </style>
 </head>
@@ -22,9 +56,17 @@
 <body>
     <canvas id="canvas" width="400" height="400"></canvas>
 
+    <div class="joystick_wrapper">
+        <div class="up button" data-direction="up">&uarr;</div>
+        <div class="down button" data-direction="down">&darr;</div>
+        <div class="left button" data-direction="left">&larr;</div>
+        <div class="right button" data-direction="right">&rarr;</div>
+    </div>
     <script>
         (function () {
-            let canvas;
+            const canvas = document.getElementById("canvas");
+            const buttons = document.querySelectorAll(".button");
+            const joystick_wrapper = document.querySelector(".joystick_wrapper")
             let context2d;
             let wallSize = 10;
             let dx = 0;
@@ -72,26 +114,43 @@
                 snake.pop();
             }
 
+            const checkColisionWithSnake = () => {
+                snake.forEach((el, index) => {
+
+                    if (index != 0 && el.x == snake[0].x && el.y == snake[0].y) {
+                        resetGame();
+                    }
+                })
+            }
+
             const keyDown = (e) => {
+                changeSnakeDirection(e.keyCode)
+            }
+
+            const changeSnakeDirection = (dir) => {
                 if (pauseGame) pauseGame = false;
-                switch (e.keyCode) {
+                switch (dir) {
                     case 37: //left
-                    case 65: 
+                    case 65:
+                    case "left":
                         dy = 0;
                         dx = -10;
                         break;
                     case 38: //up
                     case 87:
+                    case "up":
                         dy = -10;
                         dx = 0;
                         break;
                     case 39://right
                     case 68:
+                    case "right":
                         dy = 0;
                         dx = 10;
                         break;
                     case 40://down
                     case 83:
+                    case "down":
                         dy = 10;
                         dx = 0;
                         break;
@@ -101,13 +160,13 @@
 
             const randomFood = () => {
                 const randV = (min, max) => {
-                    return Math.floor((Math.random() * (max - min) + min)/wallSize)* wallSize;
+                    return Math.floor((Math.random() * (max - min) + min) / wallSize) * wallSize;
                 }
 
                 let colors = ["yellow", "silver", "white", "blue"];
 
-                food.x = randV(20, canvas.width-20);
-                food.y = randV (20, canvas.height -20);
+                food.x = randV(20, canvas.width - 20);
+                food.y = randV(20, canvas.height - 20);
                 food.color = colors[Math.floor(Math.random() * colors.length)];
 
             }
@@ -118,38 +177,43 @@
             }
 
             const checkWallsColision = () => {
-                snake.forEach((el)=> {
-                    if (el.x>canvas.width || el.x< 0 || el.y > canvas.height || el.y <0)  resetGame();
+                snake.forEach((el) => {
+                    if (el.x > canvas.width || el.x < 0 || el.y > canvas.height || el.y < 0) resetGame();
                 })
             }
 
             const checkFoodColision = () => {
-                if (food.x== snake[0].x && food.y == snake[0].y) {
-                    snake.push(Object.assign({},snake[snake.length-1]));
+                if (food.x == snake[0].x && food.y == snake[0].y) {
+                    snake.push(Object.assign({}, snake[snake.length - 1]));
                     randomFood();
                     points++;
                 }
             }
 
             const drawPoints = () => {
-                    context2d.font = "20px Arial";
-                    context2d.fillStyle = "white";
+                context2d.font = "20px Arial";
+                context2d.fillStyle = "white";
 
-                    context2d.fillText(`Points: ${points}`, 10, 20);
+                context2d.fillText(`Points: ${points}`, 10, 20);
 
             }
 
             const startApp = () => {
-                canvas = document.getElementById("canvas");
                 context2d = canvas.getContext("2d");
 
                 document.addEventListener("keydown", keyDown);
+                buttons.forEach((button) => {
+                   button.addEventListener("click", (el) => {
+                    changeSnakeDirection(el.target.dataset.direction)
+                    })
+                })
                 resetGame();
 
                 setInterval(() => {
                     clearCanvas();
                     checkWallsColision();
                     checkFoodColision();
+                    checkColisionWithSnake();
                     if (!pauseGame) {
                         moveSnake(dx, dy);
                     }
@@ -159,7 +223,19 @@
                 }, 100)
             }
             window.onload = () => {
+
+                if (screen.width < 400) {
+                    canvas.width = screen.width - 20;
+                    canvas.height = screen.width;
+                }
+
+                if (screen.height < canvas.height + joystick_wrapper.clientHeight ) {
+                    canvas.height = screen.height - joystick_wrapper.clientHeight - 20;
+                 
+                }
+
                 startApp();
+
             }
         })()
     </script>
