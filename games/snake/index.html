@@ -66,7 +66,7 @@
         (function () {
             const canvas = document.getElementById("canvas");
             const buttons = document.querySelectorAll(".button");
-            const joystick_wrapper = document.querySelector(".joystick_wrapper")
+            const joystick_wrapper = document.querySelector(".joystick_wrapper");
             let context2d;
             let wallSize = 10;
             let dx = 0;
@@ -83,8 +83,8 @@
 
             const makeSnake = (snakeLenght) => {
                 for (let i = 0; i < snakeLenght; i++) {
-                    let x = canvas.width / 2 + i * wallSize;
-                    let y = canvas.height / 2;
+                    let x = Math.floor(canvas.width / 20) * wallSize + i * wallSize;
+                    let y = Math.floor(canvas.height / 20) * wallSize;
                     snake.push({ x: x, y: y });
                 }
             }
@@ -124,7 +124,7 @@
             }
 
             const keyDown = (e) => {
-                changeSnakeDirection(e.keyCode)
+                changeSnakeDirection(e.keyCode);
             }
 
             const changeSnakeDirection = (dir) => {
@@ -154,7 +154,6 @@
                         dy = 10;
                         dx = 0;
                         break;
-
                 }
             }
 
@@ -164,7 +163,6 @@
                 }
 
                 let colors = ["yellow", "silver", "white", "blue"];
-
                 food.x = randV(20, canvas.width - 20);
                 food.y = randV(20, canvas.height - 20);
                 food.color = colors[Math.floor(Math.random() * colors.length)];
@@ -203,8 +201,8 @@
 
                 document.addEventListener("keydown", keyDown);
                 buttons.forEach((button) => {
-                   button.addEventListener("click", (el) => {
-                    changeSnakeDirection(el.target.dataset.direction)
+                    button.addEventListener("click", (el) => {
+                        changeSnakeDirection(el.target.dataset.direction);
                     })
                 })
                 resetGame();
@@ -222,16 +220,15 @@
                     drawPoints();
                 }, 100)
             }
+
             window.onload = () => {
 
                 if (screen.width < 400) {
-                    canvas.width = screen.width - 20;
-                    canvas.height = screen.width;
+                    canvas.width = Math.floor((screen.width - 20) / 10) * 10;
                 }
 
-                if (screen.height < canvas.height + joystick_wrapper.clientHeight ) {
-                    canvas.height = screen.height - joystick_wrapper.clientHeight - 20;
-                 
+                if (screen.height < canvas.height + joystick_wrapper.clientHeight) {
+                    canvas.height = Math.floor((screen.height - joystick_wrapper.clientHeight - 20) / wallSize) * wallSize;
                 }
 
                 startApp();
