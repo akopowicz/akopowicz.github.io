@@ -1,0 +1,8 @@
+
+Textures are downloaded from https://polyhaven.com/textures
+License allows them for commercial use fo free, 
+please support their website
+
+
+Ground texture with normal map from:
+https://opengameart.org/content/36-free-ground-textures-diffuse-normals

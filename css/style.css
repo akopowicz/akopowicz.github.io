@@ -1,19 +1,22 @@
-#portfolio .portfolio_wrapper .portfolio_item .text_side a, #header .responsive_container .text_side .text_placement a {
+#portfolio .portfolio_wrapper .portfolio_item .text_side a,
+#header .responsive_container .text_side .text_placement a {
   font-weight: 600;
   font-family: "Inter", sans-serif;
-  border: 3px solid #0251B8;
+  border: 3px solid #0251b8;
   border-radius: 3.125rem;
   transition: 0.5s;
   padding: 1rem 1.7rem;
   box-shadow: 0px 4px 4px 0px rgba(59, 59, 59, 0.29);
   cursor: pointer;
 }
-#portfolio .portfolio_wrapper .portfolio_item .text_side a:hover, #header .responsive_container .text_side .text_placement a:hover {
+#portfolio .portfolio_wrapper .portfolio_item .text_side a:hover,
+#header .responsive_container .text_side .text_placement a:hover {
   background-color: transparent;
 }
 
 @media (min-width: 768px) {
-  #portfolio .portfolio_wrapper .portfolio_item .text_side a, #header .responsive_container .text_side .text_placement a {
+  #portfolio .portfolio_wrapper .portfolio_item .text_side a,
+  #header .responsive_container .text_side .text_placement a {
     padding: 1.5rem 2.5rem;
   }
 }
@@ -74,7 +77,7 @@ img {
 .line {
   width: 0;
   height: 0.1875rem;
-  background-color: #C24A76;
+  background-color: #c24a76;
   margin-top: 2%;
 }
 .line.line_animation {
@@ -162,10 +165,10 @@ img {
   transition: 0.5s;
 }
 #navigation .responsive_container .navigation_items ul li a:hover {
-  color: #C24A76;
+  color: #c24a76;
 }
 #navigation .responsive_container .navigation_items ul li a.active {
-  color: #C24A76;
+  color: #c24a76;
 }
 #navigation .responsive_container .hamburger {
   position: relative;
@@ -245,7 +248,8 @@ img {
   animation: plane_animation 7s ease-in infinite;
 }
 @keyframes plane_animation {
-  0%, 30% {
+  0%,
+  30% {
     left: 130%;
     transform: translateY(0);
   }
@@ -291,7 +295,11 @@ img {
   right: 21%;
   transform-origin: right;
 }
-#header .responsive_container .animation_side .graphic_container .leaf.animation {
+#header
+  .responsive_container
+  .animation_side
+  .graphic_container
+  .leaf.animation {
   animation: leaf_animation 2s linear infinite alternate;
 }
 #header .responsive_container .animation_side .graphic_container .leaves {
@@ -299,7 +307,11 @@ img {
   left: 50%;
   top: 20%;
 }
-#header .responsive_container .animation_side .graphic_container .flower_purple {
+#header
+  .responsive_container
+  .animation_side
+  .graphic_container
+  .flower_purple {
   width: 61.8%;
   right: 64%;
   top: 37%;
@@ -323,11 +335,19 @@ img {
     top: 42%;
   }
 }
-#header .responsive_container .animation_side .graphic_container .bird_fly_wrapper {
+#header
+  .responsive_container
+  .animation_side
+  .graphic_container
+  .bird_fly_wrapper {
   position: relative;
   width: 100%;
 }
-#header .responsive_container .animation_side .graphic_container .bird_fly_wrapper.animation {
+#header
+  .responsive_container
+  .animation_side
+  .graphic_container
+  .bird_fly_wrapper.animation {
   animation: bird_fly_wrapper_animation 1s linear alternate infinite;
 }
 #header .responsive_container .animation_side .graphic_container .bird {
@@ -341,7 +361,11 @@ img {
   top: 0;
   transform-origin: right;
 }
-#header .responsive_container .animation_side .graphic_container .wing.animation {
+#header
+  .responsive_container
+  .animation_side
+  .graphic_container
+  .wing.animation {
   animation: wing_animation 0.2s linear infinite alternate;
 }
 @keyframes leaf_animation {
@@ -378,7 +402,7 @@ img {
 }
 #header .responsive_container .text_side .text_placement .welcome {
   font-size: 1.5rem;
-  color: #4D4D4D;
+  color: #4d4d4d;
 }
 #header .responsive_container .text_side .text_placement h1 {
   font-size: 3rem;
@@ -386,7 +410,7 @@ img {
   font-family: "Inter", sans-serif;
 }
 #header .responsive_container .text_side .text_placement h1 span {
-  color: #C24A76;
+  color: #c24a76;
 }
 #header .responsive_container .text_side .text_placement .front-end-designer {
   text-transform: uppercase;
@@ -397,36 +421,39 @@ img {
 }
 #header .responsive_container .text_side .text_placement a {
   font-size: 0.875rem;
-  background-color: #0251B8;
+  background-color: #0251b8;
   color: #fff;
 }
 #header .responsive_container .text_side .text_placement a:hover {
-  color: #0251B8;
+  color: #0251b8;
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0);
 }
-#header .responsive_container .scroll {
+/* #header .responsive_container .scroll { */
+#header .scroll {
   position: absolute;
   width: 2.125rem;
   height: 4.6rem;
   border-radius: 1.25rem;
-  border: 3px solid #E1E1E1;
+  border: 3px solid #e1e1e1;
   bottom: 0vh;
   left: 50%;
   transform: translate(-50%, 100%);
   overflow: hidden;
   display: none;
 }
-#header .responsive_container .scroll .scroll_circle {
+/* #header .responsive_container .scroll .scroll_circle { */
+#header .scroll .scroll_circle {
   position: absolute;
   width: 1.6rem;
   height: 1.6rem;
-  background-color: #E1E1E1;
+  background-color: #e1e1e1;
   border-radius: 50%;
   left: 50%;
   transform: translate(-50%);
   top: 3%;
 }
-#header .responsive_container .scroll .scroll_circle.animation {
+/* #header .responsive_container .scroll .scroll_circle.animation { */
+#header .scroll .scroll_circle.animation {
   animation: scroll_animation 3s 2s infinite;
 }
 @keyframes scroll_animation {
@@ -459,7 +486,7 @@ img {
     font-size: 4rem;
   }
   #header .responsive_container .text_side .text_placement h1 span {
-    color: #C24A76;
+    color: #c24a76;
   }
   #header .responsive_container .text_side .text_placement .front-end-designer {
     font-size: 1.875rem;
@@ -481,13 +508,15 @@ img {
     align-items: center;
   }
   #header .responsive_container .animation_side {
-    width: 50%;
+    /* width: 50%; */
+    width: 55%;
   }
   #header .responsive_container .animation_side .graphic_container {
     width: 45%;
   }
   #header .responsive_container .text_side {
-    width: 50%;
+    /* width: 50%; */
+    width: 45%;
     padding: unset;
   }
   #header .responsive_container .text_side .text_placement .front-end-designer {
@@ -496,13 +525,18 @@ img {
   #header .responsive_container .text_side .text_placement a {
     padding: 1.2rem 2.5rem;
   }
-  #header .responsive_container .scroll {
+  /* #header .responsive_container .scroll {
+    display: block;
+  } */
+
+  #header .scroll {
     display: block;
   }
 }
 @media (min-width: 1200px) {
   #header {
-    padding-top: 30vh;
+    /* padding-top: 30vh; */
+    padding-top: 25vh;
   }
   #header .responsive_container .text_side .text_placement {
     padding-left: unset;
@@ -529,6 +563,7 @@ img {
   border-radius: 20px;
   overflow: hidden;
   margin-bottom: 12%;
+  aspect-ratio: 1/0.55;
 }
 #portfolio .portfolio_wrapper .portfolio_item:hover img {
   filter: brightness(1.15);
@@ -536,13 +571,14 @@ img {
 #portfolio .portfolio_wrapper .portfolio_item .image_side {
   position: relative;
   width: 50%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: pink;
 }
 #portfolio .portfolio_wrapper .portfolio_item .image_side img {
   position: relative;
   width: 100%;
-  left: 50%;
-  transform: translate(-50%);
-  transition: 0.5s;
 }
 #portfolio .portfolio_wrapper .portfolio_item .text_side {
   display: flex;
@@ -555,7 +591,7 @@ img {
 #portfolio .portfolio_wrapper .portfolio_item .text_side h4 {
   text-align: center;
   font-size: 1rem;
-  color: #16437D;
+  color: #16437d;
   text-transform: uppercase;
 }
 #portfolio .portfolio_wrapper .portfolio_item .text_side h5 {
@@ -572,7 +608,7 @@ img {
   padding: 0.7rem 1.5rem;
   border: unset;
   text-transform: uppercase;
-  background-image: linear-gradient(122deg, #C24A76 0%, #F171A0 100%);
+  background-image: linear-gradient(122deg, #c24a76 0%, #f171a0 100%);
   color: #fff;
   font-weight: 500;
 }
@@ -583,10 +619,10 @@ img {
   flex-direction: row-reverse;
 }
 #portfolio .portfolio_wrapper .portfolio_item.travel_blog a {
-  background-image: linear-gradient(122deg, #4B646F 0%, #7E9FAF 100%);
+  background-image: linear-gradient(122deg, #4b646f 0%, #7e9faf 100%);
 }
 #portfolio .portfolio_wrapper .portfolio_item.kabarday_portfolio a {
-  background-image: linear-gradient(122deg, #67394A 0%, #C24A76 100%);
+  background-image: linear-gradient(122deg, #67394a 0%, #c24a76 100%);
 }
 #portfolio .portfolio_wrapper .portfolio_item.quotes_generator {
   flex-direction: row-reverse;
@@ -595,19 +631,19 @@ img {
   padding: 0 2%;
 }
 #portfolio .portfolio_wrapper .portfolio_item.quotes_generator a {
-  background-image: linear-gradient(122deg, #4B646F 0%, #7E9FAF 100%);
+  background-image: linear-gradient(122deg, #4b646f 0%, #7e9faf 100%);
 }
 #portfolio .portfolio_wrapper .portfolio_item.photomontage a {
   font-weight: 900;
-  color: #67394A;
-  background-image: linear-gradient(143deg, #FFE1EC 5.4%, #C24A76 100%);
+  color: #67394a;
+  background-image: linear-gradient(143deg, #ffe1ec 5.4%, #c24a76 100%);
 }
 #portfolio .portfolio_wrapper .portfolio_item.sign_book {
   flex-direction: row-reverse;
 }
 #portfolio .portfolio_wrapper .portfolio_item.sign_book a {
   font-weight: 900;
-  background-image: linear-gradient(122deg, #F1EBF5 0%, #8B71A3 100%);
+  background-image: linear-gradient(122deg, #f1ebf5 0%, #8b71a3 100%);
   color: #625271;
 }
 
@@ -671,7 +707,7 @@ img {
   align-items: center;
 }
 #about .line {
-  background-color: #0251B8;
+  background-color: #0251b8;
 }
 #about .fields_wrapper {
   display: flex;
@@ -681,7 +717,7 @@ img {
 }
 #about .fields_wrapper h5 {
   font-family: "Inter", sans-serif;
-  color: #7E9FAF;
+  color: #7e9faf;
 }
 #about .main_content {
   position: relative;
@@ -758,7 +794,11 @@ img {
 #about .main_content .skills_side .skill_ball_wrapper .skill_ball.animation {
   animation: skill_animation 5s infinite;
 }
-#about .main_content .skills_side .skill_ball_wrapper .skill_ball.animation_reverse {
+#about
+  .main_content
+  .skills_side
+  .skill_ball_wrapper
+  .skill_ball.animation_reverse {
   animation: skill_animation_reverse 5s infinite;
 }
 @keyframes skill_animation {
@@ -803,8 +843,8 @@ img {
   transform: translate(-140%);
 }
 #about .main_content .skills_side .skill_ball_wrapper#photoshop .skill_ball {
-  background: linear-gradient(137deg, #DEEEF6 0%, #94B3DB 100%);
-  color: #4B646F;
+  background: linear-gradient(137deg, #deeef6 0%, #94b3db 100%);
+  color: #4b646f;
 }
 #about .main_content .skills_side .skill_ball_wrapper#html {
   width: 4.2rem;
@@ -814,8 +854,8 @@ img {
   transform: translate(-30%);
 }
 #about .main_content .skills_side .skill_ball_wrapper#html .skill_ball {
-  background: linear-gradient(154deg, #F4DBDD 0%, #C8919E 100%);
-  color: #6B3F47;
+  background: linear-gradient(154deg, #f4dbdd 0%, #c8919e 100%);
+  color: #6b3f47;
 }
 #about .main_content .skills_side .skill_ball_wrapper#js {
   width: 4.1rem;
@@ -825,8 +865,8 @@ img {
   transform: translate(-210%);
 }
 #about .main_content .skills_side .skill_ball_wrapper#js .skill_ball {
-  background: linear-gradient(139deg, #DEEEF6 0%, #7E9FAF 100%);
-  color: #4B646F;
+  background: linear-gradient(139deg, #deeef6 0%, #7e9faf 100%);
+  color: #4b646f;
 }
 #about .main_content .skills_side .skill_ball_wrapper#css {
   width: 4.2rem;
@@ -836,7 +876,7 @@ img {
   transform: translate(-220%);
 }
 #about .main_content .skills_side .skill_ball_wrapper#css .skill_ball {
-  background: linear-gradient(146deg, #F1EBF5 0%, #B29BC7 100%);
+  background: linear-gradient(146deg, #f1ebf5 0%, #b29bc7 100%);
   color: #625271;
 }
 #about .main_content .skills_side .skill_ball_wrapper#figma {
@@ -847,8 +887,8 @@ img {
   transform: translate(-250%);
 }
 #about .main_content .skills_side .skill_ball_wrapper#figma .skill_ball {
-  background: linear-gradient(146deg, #F4DBDD 0%, #EA778B 100%);
-  color: #67394A;
+  background: linear-gradient(146deg, #f4dbdd 0%, #ea778b 100%);
+  color: #67394a;
 }
 #about .main_content .skills_side .skill_ball_wrapper#illustrator {
   width: 6.7rem;
@@ -858,8 +898,8 @@ img {
   transform: translate(50%);
 }
 #about .main_content .skills_side .skill_ball_wrapper#illustrator .skill_ball {
-  background: linear-gradient(150deg, #DDBFCF 0%, #9A5C7D 100%);
-  color: #4C2B3C;
+  background: linear-gradient(150deg, #ddbfcf 0%, #9a5c7d 100%);
+  color: #4c2b3c;
 }
 #about .main_content .skills_side .skill_ball_wrapper#git {
   width: 4.1rem;
@@ -869,8 +909,8 @@ img {
   transform: translate(150%);
 }
 #about .main_content .skills_side .skill_ball_wrapper#git .skill_ball {
-  background: linear-gradient(141deg, #F5F3F3 0%, #909090 100%);
-  color: #4D4D4D;
+  background: linear-gradient(141deg, #f5f3f3 0%, #909090 100%);
+  color: #4d4d4d;
 }
 #about .main_content .skills_side .skill_ball_wrapper#react {
   width: 4.2rem;
@@ -880,19 +920,19 @@ img {
   transform: translate(150%);
 }
 #about .main_content .skills_side .skill_ball_wrapper#react .skill_ball {
-  background: linear-gradient(139deg, #DEEEF6 0%, #7E9FAF 100%);
-  color: #4B646F;
+  background: linear-gradient(139deg, #deeef6 0%, #7e9faf 100%);
+  color: #4b646f;
 }
-#about .main_content .skills_side .skill_ball_wrapper#wordpress {
+#about .main_content .skills_side .skill_ball_wrapper#typescript {
   width: 7rem;
   height: 7rem;
   top: 72%;
   left: 50%;
   transform: translate(30%);
 }
-#about .main_content .skills_side .skill_ball_wrapper#wordpress .skill_ball {
-  background: linear-gradient(137deg, #DEEEF6 0%, #94B3DB 100%);
-  color: #4B646F;
+#about .main_content .skills_side .skill_ball_wrapper#typescript .skill_ball {
+  background: linear-gradient(137deg, #deeef6 0%, #94b3db 100%);
+  color: #4b646f;
 }
 
 @media (min-width: 768px) {
@@ -960,7 +1000,7 @@ img {
     height: 6.2rem;
     transform: translate(130%);
   }
-  #about .main_content .skills_side .skill_ball_wrapper#wordpress {
+  #about .main_content .skills_side .skill_ball_wrapper#typescript {
     width: 9.2rem;
     height: 9.2rem;
   }
@@ -1110,4 +1150,4 @@ footer .last_copy {
   footer .contact_wrapper .icons {
     width: 15%;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
