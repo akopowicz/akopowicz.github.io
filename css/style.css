@@ -498,7 +498,7 @@ img {
 }
 @media (min-width: 992px) {
   #header {
-    padding-top: 20%;
+    padding-top: 20vh;
   }
   #header .plane {
     width: 30vw;
@@ -574,7 +574,6 @@ img {
   height: 100%;
   overflow: hidden;
   border-radius: 20px;
-  background-color: pink;
 }
 #portfolio .portfolio_wrapper .portfolio_item .image_side img {
   position: relative;
@@ -773,6 +772,7 @@ img {
 #about .main_content .skills_side .me_skills {
   position: relative;
   width: 100%;
+  filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.25));
 }
 #about .main_content .skills_side .skill_ball_wrapper {
   position: absolute;
@@ -788,8 +788,13 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
   text-transform: uppercase;
+  /* cursor:pointer */
+}
+
+#about .main_content .skills_side .skill_ball_wrapper .skill_ball .skill_name {
+  pointer-events: none;
 }
 #about .main_content .skills_side .skill_ball_wrapper .skill_ball.animation {
   animation: skill_animation 5s infinite;
@@ -1067,6 +1072,7 @@ footer .contact_wrapper {
   transform: translateY(-50%);
 }
 footer .contact_wrapper h3 {
+  color: #000;
   font-size: 1.25rem;
   font-family: "Inter", sans-serif;
 }
