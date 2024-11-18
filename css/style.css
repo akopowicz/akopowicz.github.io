@@ -627,6 +627,10 @@ img {
 #portfolio .portfolio_wrapper .portfolio_item.travel_blog a {
   background-image: linear-gradient(122deg, #4b646f 0%, #7e9faf 100%);
 }
+#portfolio .portfolio_wrapper .portfolio_item.annas_kitchen a {
+  background-image: linear-gradient(122deg, #4f622e 0%, #3f3f3f 100%);
+}
+
 #portfolio .portfolio_wrapper .portfolio_item.kabarday_portfolio a {
   background-image: linear-gradient(122deg, #67394a 0%, #c24a76 100%);
 }
